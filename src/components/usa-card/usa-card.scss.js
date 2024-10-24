@@ -1,20 +1,15 @@
-import uswdsCoreStyle from "@uswds/uswds/scss/uswds-core?inline";
-import usaCardStyle from "@uswds/uswds/scss/usa-card?inline";
-import usaButtonStyle from "@uswds/uswds/scss/usa-button?inline";
 import "../../uswds-core/system-vars.css"
 import "../../uswds-core/theme-vars.css"
 
-import { unsafeCSS, css } from "lit";
+import {  css } from "lit";
 
 export const cardStyles = [
-  unsafeCSS(uswdsCoreStyle),
-  unsafeCSS(usaCardStyle),
-  unsafeCSS(usaButtonStyle),
   css`
     :host {
       --usa-theme-card-border-color: var(--usa-system-color-base-lighter);
       --usa-theme-card-border-radius: var(--usa-system-border-radius-lg);
       --usa-theme-card-border-width: 2px;
+      --usa-theme-card-border-width: 10px;
       --usa-theme-card-gap: var(--usa-system-spacing-2);
       /* --usa-theme-card-flag-min-width: var(--usa-spacing-larger-tablet); */ /* Unable to use var in media query */
       --usa-theme-card-flag-image-width: var(--usa-system-unit-tablet);
@@ -25,75 +20,75 @@ export const cardStyles = [
       --usa-theme-card-padding-y: var(--usa-system-unit-2);
 
       --border-calc: calc(var(--usa-theme-card-border-radius) - var(--usa-theme-card-border-width));
-    }
 
-    /* ALTERNATE approach to classes exdent classes ? */
-    /* :host([exdent]) {
-      .usa-card__header,
-      .usa-card__media,
-      .usa-card__body,
-      .usa-card__footer {
-        margin-top: calc(var(--usa-theme-card-border-width) * -1);
-        margin-inline: calc(var(--usa-theme-card-border-width) * -1);
-      }
-    } */
-    
-    .usa-card {
-      margin-bottom: var(--usa-theme-card-margin-bottom)
-    }
-
-    .usa-card__header > h2 {
-      color: red;
-    }
-
-    .usa-button {
-      background-color: red;
-    }
-
-    .usa-card__container {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: var(--usa-theme-color-ink);
+      margin-bottom: var(--usa-theme-card-margin-bottom);
       border-color: var(--usa-theme-card-border-color);
       border-radius: var(--usa-theme-card-border-radius);
+      border-style: solid;
       border-width: var(--usa-theme-card-border-width);
       font-family: var(--usa-theme-card-font-family);
       margin-left: calc(var(--usa-theme-card-gap) / 2);
       margin-right: calc(var(--usa-theme-card-gap) / 2);
     }
 
-    .usa-card:not(.usa-card--flag) .usa-card__container > :only-child {
-      padding: var(--usa-theme-card-padding-perimeter);
-    }
-
-    .usa-card__header {
+    ::slotted([slot="card-header"]) {
       padding: var(--usa-theme-card-padding-perimeter);
       padding-bottom: calc(var(--usa-theme-card-padding-y) / 2);
 
+      // ? is this doing anything? Compare to uswds styles
       &:last-child {
         padding-bottom: var(--usa-theme-card-padding-perimeter);
       }
     }
+    
+    // ? Unable to figure out how to style parts in this file
+    :host::part("card-heading") {
+      font-family: var(--usa-theme-card-header-font-family);
+      background-color: red;
+    }
 
-    .usa-card__heading {
+    ::part("card-heading") {
+      font-family: var(--usa-theme-card-header-font-family);
+      background-color: red;
+    }
+    h2[part="card-heading"] {
       font-family: var(--usa-theme-card-header-font-family);
     }
 
-    .usa-card__header--exdent,
-    .usa-card__media--exdent,
-    .usa-card__body--exdent,
-    .usa-card__footer--exdent {
-      margin-top: calc(var(--usa-theme-card-border-width) * -1);
-      margin-inline: calc(var(--usa-theme-card-border-width) * -1);
+    .usa-card:not(.usa-card--flag) .usa-card__container > :only-child {
+      padding: var(--usa-theme-card-padding-perimeter);
     }
 
-    .usa-card__image::slotted(img) {
+    ::slotted([slot="card-media"]) {
       display: block;
       height: 100%;
       width: 100%;
       object-fit: cover;
+      overflow: hidden;
+      order: -1;
+      position: relative;
       border-top-left-radius: var(--border-calc);
       border-top-right-radius: var(--border-calc);
+      box-sizing: border-box;
     }
 
-    .usa-card__body {
+    ::slotted([slot="card-media"][inset]) {
+      padding-top: var(--usa-theme-card-padding-perimeter);
+      padding-left: var(--usa-theme-card-padding-perimeter);
+      padding-right: var(--usa-theme-card-padding-perimeter);
+    }
+
+    ::slotted([exdent]) {
+      margin-top: calc(var(--usa-theme-card-border-width) * -1);
+      margin-left: calc(var(--usa-theme-card-border-width) * -1);
+      margin-right: calc(var(--usa-theme-card-border-width) * -1);
+    }
+
+    ::slotted(:not([slot])) {
       padding-inline: var(--usa-theme-card-padding-perimeter);
       padding-bottom: calc(var(--usa-theme-card-padding-y) / 2);
       padding-top: calc(var(--usa-theme-card-padding-y) / 2);
@@ -112,15 +107,16 @@ export const cardStyles = [
       }
     }
 
-    .usa-card__footer {
+    ::slotted([slot="card-footer"]) {
       padding-top: calc(var(--usa-theme-card-padding-y) / 2);
       padding-inline: var(--usa-theme-card-padding-perimeter);
       padding-bottom: var(--usa-theme-card-padding-perimeter);
     }
 
-    .usa-card--flag {
+    :host([layout="flag"]) {
       @media (min-width: 40em) {
-        .usa-card__media {
+
+        ::slotted([slot="card-media"]) {
           width: var(--usa-theme-card-flag-image-width);
         }
 
@@ -140,24 +136,10 @@ export const cardStyles = [
           }
         }
 
-        .usa-card__header,
-        .usa-card__body,
-        .usa-card__footer {
+        ::slotted(:not([slot="card-media"])) {
           margin-left: var(--usa-theme-card-flag-image-width);
         }
       }
-    }
-
-    // TODO: Test and remove ↓↓↓
-    /* Cannot target nested header */
-    .card-heading::slotted(div) {
-      font-family: var(--usa-theme-card-header-font-family);
-      line-height: 1.2;
-      margin: 0px;
-    }
-
-    ::slotted(:is(p, h1, h2, h3, h4, h5)) {
-      margin: 0;
     }
   `
 ]
