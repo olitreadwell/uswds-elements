@@ -29,12 +29,12 @@ export class UsaCard extends LitElement {
       return;
     }
 
-    const classes = {
-      "usa-card__header--exdent": this.exdent || this.header.hasAttribute("exdent")
-    }
+    // const classes = {
+    //   "usa-card__header--exdent": this.exdent || this.header.hasAttribute("exdent")
+    // }
 
     return html`
-      <div class="usa-card__header ${classMap(classes)}">
+      <div class="usa-card__header">
         <slot name="card-header"></slot>
       </div>
     `;
@@ -46,13 +46,13 @@ export class UsaCard extends LitElement {
       return;
     }
 
-    const classes = {
-      "usa-card__media--inset": this.media.hasAttribute("inset") && !this.media.hasAttribute("exdent"),
-      "usa-card__media--exdent": this.exdent || this.media.hasAttribute("exdent") && !this.media.hasAttribute("indent"),
-    }
+    // const classes = {
+    //   "usa-card__media--inset": this.media.hasAttribute("inset") && !this.media.hasAttribute("exdent"),
+    //   "usa-card__media--exdent": this.exdent || this.media.hasAttribute("exdent") && !this.media.hasAttribute("indent"),
+    // }
 
     return html`
-    <div class="usa-card__media ${classMap(classes)}">
+    <div class="usa-card__media">
       <div class="usa-card__img">
         <slot name="card-media"></slot>
       </div>
@@ -104,6 +104,7 @@ export class UsaCard extends LitElement {
       "usa-card--flag": this.layout === "flag" || this.layout === "flag-alt",
       "usa-card--media-right": this.layout == "flag-alt",
     }
+
     return html`
         <div class="usa-card ${classMap(classes)}">
           <div class="usa-card__container">

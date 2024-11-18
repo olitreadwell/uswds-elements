@@ -317,9 +317,7 @@ export const FlagMediaRightInset = {
           <h2 part="card-heading">${title || "Flag media right inset"}
           </h2>
         </div>
-        <p>
           ${content}
-        </p>
         </div>
         <div slot="card-footer">
           <a href="#" class="usa-button">${buttonText}</a>
@@ -459,7 +457,7 @@ export const CardGroup = {
             </div>
           </usa-card>
           <usa-card>
-            <h1 part="cardheading" slot="card-header" class="usa-card__heading">Header 1</h1>
+            <h1 part="card-heading" slot="card-header" class="usa-card__heading">Header 1</h1>
             <h2 slot="card-header">Subheading</h2>
             <p>
               This example does not use a div wrapper to next both headings. Instead, it puts "slot='card-header'" on both heading elements. 

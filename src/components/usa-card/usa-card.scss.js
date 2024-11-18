@@ -9,7 +9,6 @@ export const cardStyles = [
       --usa-theme-card-border-color: var(--usa-system-color-base-lighter);
       --usa-theme-card-border-radius: var(--usa-system-border-radius-lg);
       --usa-theme-card-border-width: 2px;
-      --usa-theme-card-border-width: 10px;
       --usa-theme-card-gap: var(--usa-system-spacing-2);
       /* --usa-theme-card-flag-min-width: var(--usa-spacing-larger-tablet); */ /* Unable to use var in media query */
       --usa-theme-card-flag-image-width: var(--usa-system-unit-tablet);
