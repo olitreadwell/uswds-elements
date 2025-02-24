@@ -12,10 +12,10 @@ export const bannerStyles = [
   unsafeCSS(usaBannerStyle),
   css`
     :host {
-      --theme-banner-background-color: var(--usa-base-lightest, #f0f0f0);
+      --theme-banner-background-color: var(--theme-base-lightest, #f0f0f0);
       --theme-banner-font-family: var(--usa-font-ui, system-ui, sans-serif);
       --theme-banner-link-color: var(--theme-link-color, #005ea2);
-      --theme-banner-link-color-hover: var(--theme-link-hover-color, #1a4480);
+      --theme-banner-link-hover-color: var(--theme-link-hover-color, #1a4480);
       // Missing theme-banner-max-width because we can't pass custom property to media queries.
     }
 
