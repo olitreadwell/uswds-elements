@@ -1,2 +1,4 @@
-@import "./colors.css" layer;
+@import "./tokens/css/system-color.css" layer;
+@import "./tokens/css/theme-color.css" layer;
+@import "./theme.css" layer;
 @import "./fonts.css" layer;

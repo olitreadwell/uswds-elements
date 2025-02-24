@@ -1,0 +1,37 @@
+/**
+ * This file was generated from `@uswds/tokens` package
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:where(html) {
+  --theme-base-lightest: var(--gray-5);
+  --theme-base-lighter: var(--gray-cool-10);
+  --theme-base-light: var(--gray-cool-30);
+  --theme-base-medium: var(--gray-cool-50);
+  --theme-base-dark: var(--gray-cool-60);
+  --theme-base-darker: var(--gray-cool-70);
+  --theme-base-darkest: var(--gray-90);
+  --theme-ink: var(--gray-90);
+  --theme-primary-lighter: var(--blue-10);
+  --theme-primary-light: var(--blue-30);
+  --theme-primary-medium: var(--blue-vivid-60);
+  --theme-primary-vivid: var(--blue-warm-vivid-60);
+  --theme-primary-dark: var(--blue-warm-vivid-70);
+  --theme-primary-darker: var(--blue-warm-vivid-80);
+  --theme-secondary-lighter: var(--red-cool-10);
+  --theme-secondary-light: var(--red-30);
+  --theme-secondary-medium: var(--red-50);
+  --theme-secondary-vivid: var(--red-cool-vivid-50);
+  --theme-secondary-dark: var(--red-vivid-60);
+  --theme-secondary-darker: var(--red-vivid-70);
+  --theme-accent-cool-lighter: var(--blue-cool-vivid-5);
+  --theme-accent-cool-light: var(--blue-cool-vivid-20);
+  --theme-accent-cool-medium: var(--cyan-vivid-30);
+  --theme-accent-cool-dark: var(--blue-cool-vivid-40);
+  --theme-accent-cool-darker: var(--blue-cool-vivid-60);
+  --theme-accent-warm-lighter: var(--orange-10);
+  --theme-accent-warm-light: var(--orange-vivid-20);
+  --theme-accent-warm-medium: var(--orange-vivid-30);
+  --theme-accent-warm-dark: var(--orange-vivid-50);
+  --theme-accent-warm-darker: var(--orange-60);
+}

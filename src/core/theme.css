@@ -1,0 +1,4 @@
+:root {
+  --theme-link-color: var(--theme-primary-medium, #005ea2);
+  --theme-link-hover-color: var(--theme-primary-dark, #1a4480);
+}
