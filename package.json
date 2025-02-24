@@ -38,6 +38,7 @@
     "pages": "npm run storybook:build && cp -r storybook-static _site"
   },
   "dependencies": {
+    "@uswds/tokens": "github:uswds/uswds-tokens#cm-build-theme-tokens",
     "@uswds/uswds": "^3.11.0",
     "lit": "^3.2.1",
     "sass": "^1.84.0"
