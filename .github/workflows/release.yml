@@ -1,11 +1,13 @@
 name: Release and publish to NPM
 permissions:
   contents: write
-  pull-requests: write
   id-token: write
+  pull-requests: write
 
 on:
   push:
+    branches:
+      - develop
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -38,4 +40,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HUSKY: 0
-          NPM_TOKEN: '' # Workaround. See https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
+          NPM_TOKEN: '' # setting this to an empty string makes changesets use trusted publishing: https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
