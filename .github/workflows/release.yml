@@ -37,6 +37,7 @@ jobs:
         with:
           publish: npm run release
           commitMode: github-api
+          base: develop
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HUSKY: 0
