@@ -2,122 +2,110 @@ import { describe, it, expect } from "vitest";
 import type { TransformedToken, PlatformConfig } from "style-dictionary/types";
 import { generateTokenName, getTokenValueWithUnit } from "./index";
 
-describe("generateTokenName", () => {
-  const token: TransformedToken = {
+const baseToken: TransformedToken = {
+  $value: { value: "75", unit: "rem" },
+  filePath: "tokens/breakpoints/breakpoints.json",
+  isSource: true,
+  $type: "dimension",
+  key: "{breakpoint.desktop-lg}",
+  original: {
     $value: { value: "75", unit: "rem" },
-    filePath: "tokens/breakpoints/breakpoints.json",
-    isSource: true,
     $type: "dimension",
     key: "{breakpoint.desktop-lg}",
-    original: {
-      $value: { value: "75", unit: "rem" },
-      $type: "dimension",
-      key: "{breakpoint.desktop-lg}",
-    },
-    name: "desktop-lg",
-    attributes: {},
-    path: ["breakpoint", "desktop-lg"],
-  };
+  },
+  name: "desktop-lg",
+  attributes: {},
+  path: ["breakpoint", "desktop-lg"],
+};
 
-  const options: PlatformConfig = {
-    prefix: "usa",
-    transforms: [],
-    buildPath: "",
-    files: [],
-    log: {},
-    actions: [],
-  };
+const options: PlatformConfig = {
+  prefix: "usa",
+  transforms: [],
+  buildPath: "",
+  files: [],
+  log: {},
+  actions: [],
+};
 
+function createToken(
+  overrides: Partial<TransformedToken> = {},
+): TransformedToken {
+  return { ...baseToken, ...overrides };
+}
+
+describe("generateTokenName", () => {
   it("should generate token name for breakpoint prefix", () => {
-    const result = generateTokenName(token, options);
+    const result = generateTokenName(baseToken, options);
     expect(result).toBe("usa-breakpoint-desktop-lg");
   });
 
   it("should generate token name for spacing prefix", () => {
-    const spacingToken: TransformedToken = {
-      ...token,
-      path: ["site-margins", "width"],
-    };
-    const result = generateTokenName(spacingToken, options);
+    const result = generateTokenName(
+      createToken({ path: ["site-margins", "width"] }),
+      options,
+    );
     expect(result).toBe("usa-site-margins-width");
   });
 
   it("should generate token name for color with single nested key", () => {
-    const colorTokenSingle: TransformedToken = {
-      ...token,
-      filePath: "tokens/colors/global.json",
-      path: ["color", "black"],
-    };
-    const result = generateTokenName(colorTokenSingle, options);
+    const result = generateTokenName(
+      createToken({
+        filePath: "tokens/colors/global.json",
+        path: ["color", "black"],
+      }),
+      options,
+    );
     expect(result).toBe("usa-color-black");
   });
 
   it("should generate token name for color with multiple nested keys", () => {
-    const colorTokenMulti: TransformedToken = {
-      ...token,
-      filePath: "tokens/colors/blue.json",
-      path: ["color", "blue", "5"],
-    };
-    const result = generateTokenName(colorTokenMulti, options);
+    const result = generateTokenName(
+      createToken({
+        filePath: "tokens/colors/blue.json",
+        path: ["color", "blue", "5"],
+      }),
+      options,
+    );
     expect(result).toBe("usa-color-blue-5");
   });
 
   it("should generate token name for color with vivid variant", () => {
-    const colorTokenVivid: TransformedToken = {
-      ...token,
-      filePath: "tokens/colors/blue.json",
-      path: ["color", "blue", "vivid", "50"],
-    };
-    const result = generateTokenName(colorTokenVivid, options);
+    const result = generateTokenName(
+      createToken({
+        filePath: "tokens/colors/blue.json",
+        path: ["color", "blue", "vivid", "50"],
+      }),
+      options,
+    );
     expect(result).toBe("usa-color-blue-vivid-50");
   });
 
   it("should generate token name fallback for other cases", () => {
-    const otherToken: TransformedToken = {
-      ...token,
-      path: ["font", "base-size"],
-    };
-    const result = generateTokenName(otherToken, options);
+    const result = generateTokenName(
+      createToken({ path: ["font", "base-size"] }),
+      options,
+    );
     expect(result).toBe("usa-font-base-size");
   });
 });
 
 describe("getTokenValueWithUnit", () => {
-  const defaultToken: TransformedToken = {
-    $value: { value: "75", unit: "rem" },
-    $type: "dimension",
-    isSource: true,
-    key: "desktop-lg",
-    name: "desktop-lg",
-    attributes: {},
-    path: ["breakpoint", "desktop-lg"],
-    original: {
-      $value: { value: "75", unit: "rem" },
-      $type: "dimension",
-      key: "desktop-lg",
-    },
-  };
-
   it("should return value + unit for dimension tokens with object value", () => {
-    const result = getTokenValueWithUnit(defaultToken);
+    const result = getTokenValueWithUnit(baseToken);
     expect(result).toBe("75rem");
   });
 
   it("should return value string when unit is missing in dimension object", () => {
-    const token = {
-      ...defaultToken,
-      $value: { value: "30" },
-    };
-    const result = getTokenValueWithUnit(token);
+    const result = getTokenValueWithUnit(
+      createToken({ $value: { value: "30" } }),
+    );
     expect(result).toBe("30");
   });
 
   it("should return raw value if token type is not dimension", () => {
-    const token = {
-      $value: "#fff2f5",
-      $type: "color",
-    };
-    const result = getTokenValueWithUnit(token);
+    const result = getTokenValueWithUnit(
+      createToken({ $value: "#fff2f5", $type: "color" }),
+    );
     expect(result).toBe("#fff2f5");
   });
 });
