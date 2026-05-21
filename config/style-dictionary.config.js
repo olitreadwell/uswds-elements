@@ -25,7 +25,7 @@ function makePlatform(format) {
     files: tokenGroups.map((group) => ({
       destination: format === "scss" ? `_${group}.scss` : `${group}.css`,
       format: `${format}/variables`,
-      filter: (token) => token.filePath.includes(`tokens/${group}/`),
+      filter: (token) => token.filePath?.includes(`tokens/${group}/`),
     })),
   };
 }
