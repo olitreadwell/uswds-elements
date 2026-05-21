@@ -1,5 +1,6 @@
 {
   "spacing": {
+    "$type": "dimension",
     "05": {
       "$value": { "value": ".25", "unit": "rem" }
     },
@@ -23,6 +24,7 @@
     }
   },
   "site-margins": {
+    "$type": "dimension",
     "mobile-width": {
       "$value": "{spacing.2}"
     },
@@ -31,9 +33,9 @@
     }
   },
   "size": {
+    "$type": "dimension",
     "touch-target": {
       "$value": "{spacing.6}"
     }
-  },
-  "$type": "dimension"
+  }
 }

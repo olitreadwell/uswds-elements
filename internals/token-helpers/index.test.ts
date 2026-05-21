@@ -42,24 +42,34 @@ describe("generateTokenName", () => {
     expect(result).toBe("usa-site-margins-width");
   });
 
-  it("should generate token name for color directory with single path key", () => {
+  it("should generate token name for color with single nested key", () => {
     const colorTokenSingle: TransformedToken = {
       ...token,
-      filePath: "tokens/colors/primary.json",
-      path: ["black"],
+      filePath: "tokens/colors/global.json",
+      path: ["color", "black"],
     };
     const result = generateTokenName(colorTokenSingle, options);
     expect(result).toBe("usa-color-black");
   });
 
-  it("should generate token name for color directory with multiple path keys", () => {
+  it("should generate token name for color with multiple nested keys", () => {
     const colorTokenMulti: TransformedToken = {
       ...token,
-      filePath: "tokens/colors/primary.json",
-      path: ["primary", "light"],
+      filePath: "tokens/colors/blue.json",
+      path: ["color", "blue", "5"],
     };
     const result = generateTokenName(colorTokenMulti, options);
-    expect(result).toBe("usa-color-primary-light");
+    expect(result).toBe("usa-color-blue-5");
+  });
+
+  it("should generate token name for color with vivid variant", () => {
+    const colorTokenVivid: TransformedToken = {
+      ...token,
+      filePath: "tokens/colors/blue.json",
+      path: ["color", "blue", "vivid", "50"],
+    };
+    const result = generateTokenName(colorTokenVivid, options);
+    expect(result).toBe("usa-color-blue-vivid-50");
   });
 
   it("should generate token name fallback for other cases", () => {

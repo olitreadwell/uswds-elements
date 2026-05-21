@@ -4,9 +4,6 @@ export const generateTokenName = (
   token: TransformedToken,
   options: PlatformConfig,
 ) => {
-  if (token.filePath?.includes("tokens/colors/")) {
-    return `${options.prefix}-color-${token.path.join("-")}`;
-  }
   return `${options.prefix}-${token.path.join("-")}`;
 };
 

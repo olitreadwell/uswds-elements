@@ -1,5 +1,6 @@
 {
   "breakpoint": {
+    "$type": "dimension",
     "card": {
       "$value": { "value": "10", "unit": "rem" }
     },
@@ -27,6 +28,5 @@
     "widescreen": {
       "$value": { "value": "87.5", "unit": "rem" }
     }
-  },
-  "$type": "dimension"
+  }
 }
