@@ -1,4 +1,5 @@
 import StyleDictionary from "style-dictionary";
+import tokenGroups from "../tokens/index.js";
 import {
   generateTokenName,
   getTokenValueWithUnit,
@@ -16,25 +17,6 @@ StyleDictionary.registerTransform({
   transform: getTokenValueWithUnit,
 });
 
-const outputs = [
-  {
-    name: "breakpoints",
-    filter: (token) => token.path[0] === "breakpoint",
-  },
-  {
-    name: "colors",
-    filter: (token) =>
-      token.filePath && token.filePath.includes("tokens/color/"),
-  },
-  {
-    name: "spacing",
-    filter: (token) =>
-      token.path[0] === "spacing" ||
-      token.path[0] === "site-margins" ||
-      token.path[0] === "size",
-  },
-];
-
 export default {
   source: ["tokens/**/*.json"],
   platforms: {
@@ -42,20 +24,20 @@ export default {
       transforms: ["name/uswds-theme", "value/uswds-units"],
       prefix: "usa",
       buildPath: "build/scss/",
-      files: outputs.map(({ name, filter }) => ({
-        destination: `_${name}.scss`,
+      files: tokenGroups.map((group) => ({
+        destination: `_${group}.scss`,
         format: "scss/variables",
-        filter,
+        filter: (token) => token.filePath.includes(`tokens/${group}/`),
       })),
     },
     css: {
       transforms: ["name/uswds-theme", "value/uswds-units"],
       prefix: "usa",
       buildPath: "build/css/",
-      files: outputs.map(({ name, filter }) => ({
-        destination: `${name}.css`,
+      files: tokenGroups.map((group) => ({
+        destination: `${group}.css`,
         format: "css/variables",
-        filter,
+        filter: (token) => token.filePath.includes(`tokens/${group}/`),
       })),
     },
   },

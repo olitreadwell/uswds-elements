@@ -5,7 +5,7 @@ import { generateTokenName, getTokenValueWithUnit } from "./index";
 describe("generateTokenName", () => {
   const token: TransformedToken = {
     $value: { value: "75", unit: "rem" },
-    filePath: "tokens/dimension/breakpoints.json",
+    filePath: "tokens/breakpoints/breakpoints.json",
     isSource: true,
     $type: "dimension",
     key: "{breakpoint.desktop-lg}",
@@ -45,7 +45,7 @@ describe("generateTokenName", () => {
   it("should generate token name for color directory with single path key", () => {
     const colorTokenSingle: TransformedToken = {
       ...token,
-      filePath: "tokens/color/primary.json",
+      filePath: "tokens/colors/primary.json",
       path: ["black"],
     };
     const result = generateTokenName(colorTokenSingle, options);
@@ -55,7 +55,7 @@ describe("generateTokenName", () => {
   it("should generate token name for color directory with multiple path keys", () => {
     const colorTokenMulti: TransformedToken = {
       ...token,
-      filePath: "tokens/color/primary.json",
+      filePath: "tokens/colors/primary.json",
       path: ["primary", "light"],
     };
     const result = generateTokenName(colorTokenMulti, options);
