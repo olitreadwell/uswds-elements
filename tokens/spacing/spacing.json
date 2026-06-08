@@ -1,0 +1,41 @@
+{
+  "spacing": {
+    "$type": "dimension",
+    "05": {
+      "$value": { "value": ".25", "unit": "rem" }
+    },
+    "1": {
+      "$value": { "value": ".5", "unit": "rem" }
+    },
+    "2": {
+      "$value": { "value": "1", "unit": "rem" }
+    },
+    "3": {
+      "$value": { "value": "1.5", "unit": "rem" }
+    },
+    "4": {
+      "$value": { "value": "2", "unit": "rem" }
+    },
+    "5": {
+      "$value": { "value": "2.5", "unit": "rem" }
+    },
+    "6": {
+      "$value": { "value": "3", "unit": "rem" }
+    }
+  },
+  "site-margins": {
+    "$type": "dimension",
+    "mobile-width": {
+      "$value": "{spacing.2}"
+    },
+    "width": {
+      "$value": "{spacing.4}"
+    }
+  },
+  "size": {
+    "$type": "dimension",
+    "touch-target": {
+      "$value": "{spacing.6}"
+    }
+  }
+}
