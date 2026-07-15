@@ -28,7 +28,7 @@ We're releasing these USWDS Web Components (USWDS Elements) as soon as each is r
 
     ```shell
     npm -v
-    10.9.4 # This line may vary depending on what version of Node you've installed.
+    10.9.4 # This line may vary depending on which version of Node you've installed.
     ```
 
 3. Create a `package.json` file. You can do this manually, but it's easier to use the `npm init` command, which will prompt you with a few questions to create your `package.json` file.
