@@ -17,15 +17,26 @@ StyleDictionary.registerTransform({
   transform: getTokenValueWithUnit,
 });
 
+/**
+ * Builds a Style Dictionary platform config for the given output format.
+ * Output files are keyed per-tier-per-category:
+ *
+ *   css  → build/css/<tier>/<category>.css
+ *   scss → build/scss/<tier>/_<category>.scss
+ */
 function makePlatform(format) {
   return {
     transforms: ["name/uswds-theme", "value/uswds-units"],
     prefix: "usa",
     buildPath: `build/${format}/`,
-    files: tokenGroups.map((group) => ({
-      destination: format === "scss" ? `_${group}.scss` : `${group}.css`,
+    files: tokenGroups.map(({ tier, category }) => ({
+      destination:
+        format === "scss"
+          ? `${tier}/_${category}.scss`
+          : `${tier}/${category}.css`,
       format: `${format}/variables`,
-      filter: (token) => token.filePath?.includes(`tokens/${group}/`),
+      filter: (token) =>
+        token.filePath?.includes(`tokens/${tier}/${category}/`),
     })),
   };
 }

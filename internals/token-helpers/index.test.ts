@@ -87,6 +87,50 @@ describe("generateTokenName", () => {
     );
     expect(result).toBe("usa-font-base-size");
   });
+
+  it("should strip the 'system' tier segment from path (ADR-0010)", () => {
+    const result = generateTokenName(
+      createToken({
+        filePath: "tokens/system/color/blue.json",
+        path: ["system", "color", "blue", "5"],
+      }),
+      options,
+    );
+    expect(result).toBe("usa-color-blue-5");
+  });
+
+  it("should strip the 'system' tier segment for breakpoints (ADR-0010)", () => {
+    const result = generateTokenName(
+      createToken({
+        filePath: "tokens/system/breakpoints/breakpoints.json",
+        path: ["system", "breakpoint", "desktop-lg"],
+      }),
+      options,
+    );
+    expect(result).toBe("usa-breakpoint-desktop-lg");
+  });
+
+  it("should strip the 'theme' tier segment from path (ADR-0010)", () => {
+    const result = generateTokenName(
+      createToken({
+        filePath: "tokens/theme/color/primary.json",
+        path: ["theme", "color", "primary"],
+      }),
+      options,
+    );
+    expect(result).toBe("usa-color-primary");
+  });
+
+  it("should strip the 'state' tier segment from path (ADR-0010)", () => {
+    const result = generateTokenName(
+      createToken({
+        filePath: "tokens/state/color/error.json",
+        path: ["state", "color", "error"],
+      }),
+      options,
+    );
+    expect(result).toBe("usa-color-error");
+  });
 });
 
 describe("getTokenValueWithUnit", () => {
