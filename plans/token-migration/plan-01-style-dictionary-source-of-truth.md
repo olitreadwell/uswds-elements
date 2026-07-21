@@ -1,5 +1,17 @@
 # Plan: Style Dictionary as the USWDS Token Source of Truth
 
+> **Amendment (2026-07-21, ADR-0010):** The token layout is now **tier-first**
+> (`tokens/<tier>/<category>/…` with tiers `system`/`theme`/`state`), not the category-first
+> `tokens/{colors,spacing,breakpoints}/*.json` this plan originally described. Exports are
+> **per-tier-per-category** (`@uswds/tokens/system/color`, `theme/color`, `state/color`, …);
+> theme/state emit **references** (`var()`/`$var`) chained `system ← theme ← state`; every token
+> carries `$extensions.uswds` meta (`tier`, `legacyName` list, plus `formula`/`disabled`); the
+> tier does **not** appear in token names. The semantic tier (ADR-0003) lands in `theme/`/`state/`
+> rather than a `semantic/` directory. Where this plan says `tokens/colors/*.json`,
+> `tokens/colors/semantic.json`, `tokens/utility/*`, `tokens/typography/*`, `tokens/grid/*`, read
+> the equivalent `tokens/system/<category>/…` / `tokens/theme/color/…` / `tokens/state/color/…`.
+> ADR-0010 is authoritative on structure, exports, and metadata.
+
 ## Context
 
 The token inventory of USWDS core is complete and classified per Nathan Curtis' naming taxonomy:
@@ -17,7 +29,9 @@ This plan makes the Style Dictionary in `tokens/` the comprehensive source of tr
 
 Decisions with alternatives are recorded in [`adr/`](adr/README.md). Prior accepted decisions live
 in [architecture-decisions.md](architecture-decisions.md). The audit/enforcement workstream is
-[plan-02](plan-02-port-audit-enforce.md) and is folded into Phase 6.
+[plan-02](plan-02-port-audit-enforce.md) and is folded into Phase 6. The tier-first structure,
+per-tier-per-category exports, and `$extensions.uswds` metadata convention are recorded in
+[ADR-0010](adr/0010-tier-first-structure-and-meta.md).
 
 ### Current state (summary)
 

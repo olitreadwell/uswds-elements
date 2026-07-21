@@ -22,6 +22,7 @@ Component), `--usa-*` prefix, USWDS 10-scale + vivid, `light-dark()` theming, no
 | [0007](0007-sass-function-values.md)          | Handling Sass function-call token values                  | Proposed |
 | [0008](0008-false-sentinels.md)               | Representing `false` sentinels and disabled slots         | Proposed |
 | [0009](0009-utility-scale-property-tokens.md) | Utility-scale property tokens — scope and negative values | Proposed |
+| [0010](0010-tier-first-structure-and-meta.md) | Tier-first token structure, `$extensions.uswds` meta, three SCSS builds | Proposed |
 
 ## Conventions
 

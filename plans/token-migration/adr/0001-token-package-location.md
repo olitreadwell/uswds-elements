@@ -2,7 +2,14 @@
 
 **Status:** Proposed
 **Date:** 2026-07-02
-**Related:** [architecture-decisions.md](../architecture-decisions.md) (accepted: 3 tiers, `--usa-*` prefix), [plan-01](../plan-01-style-dictionary-source-of-truth.md) Phase 5
+**Related:** [architecture-decisions.md](../architecture-decisions.md) (accepted: 3 tiers, `--usa-*` prefix), [plan-01](../plan-01-style-dictionary-source-of-truth.md) Phase 5, ADR-0010 (tier-first structure + exports)
+
+> **Amendment (2026-07-21, ADR-0010):** The per-category export shape shown below
+> (`./css/colors.css`, `./scss/colors`, `./json/colors.json`) is superseded by
+> **per-tier-per-category** exports: `./system/color.css`, `./theme/color.css`, `./state/color.css`
+> (and `.scss`/`.json` variants), plus `./scss/uswds-core/*` (ADR-0005). The standalone
+> `@uswds/tokens` package, its independent release cadence, and the versioning policy in this ADR
+> are otherwise unchanged.
 
 ## Context
 
