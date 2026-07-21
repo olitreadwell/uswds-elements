@@ -1,35 +1,37 @@
 > [!CAUTION]
-> This repository hosts work on development of the HTML Web Component version of the U.S. Web Design System, called USWDS Elements (some call it USWDS 4.0). This code may not all be suitable for production use. Work on USWDS Elements is currently taking a community-driven iterative approach to development, which is currently fairly slow. Each USWDS Elements component in this repository is in a different state of development, with USWDS Banner always intended to be closest to stable due to its [inclusion in Federal Website Standards](https://standards.digital.gov/standards/banner/). Please refer to the documentation for the status of each component.
+> This repository hosts development work for the HTML Web Component version of the U.S. Web Design System, called USWDS Elements (some call it USWDS 4.0). This code may not all be suitable for production use. Work on USWDS Elements is currently taking a gradual, community-driven iterative approach to development. Everything in this repository is in a different state of development, with USWDS Banner always intended to be closest to stable due to its [inclusion in the Federal Website Standards](https://standards.digital.gov/standards/banner/), which are required by the [21st Century Integrated Digital Experience Act](https://digital.gov/resources/delivering-digital-first-public-experience#what-is-21st-century-idea) (21st Century IDEA), and reinforced by [OMB Memo M-23-22]([https://bidenwhitehouse.archives.gov/omb/management/ofcio/delivering-a-digital-first-public-experience/](https://bidenwhitehouse.archives.gov/omb/management/ofcio/delivering-a-digital-first-public-experience/#III)). The documentation of each item will include its current status — for components, check the ```docs.mdx``` in ```/src/components/[usa-component-name]```. 
 
 # USWDS Elements
 
-The [United States Web Design System](https://designsystem.digital.gov) is a toolkit of principles, guidance, and code that includes a library of open source user interface components and a visual style guide for U.S. federal government websites.
+The [United States Web Design System](https://designsystem.digital.gov) is a toolkit of principles, guidance, and code — a library of public domain and open source user interface components and a visual style guide designed for U.S. federal government websites, but useful in many other applications.
 
 This repository contains the code for the Web Component-based version of the design system, which is currently in pre-release status. We maintain other repositories for the [current version of the design system](https://github.com/uswds/uswds), which we call USWDS Core, as well as [its documentation and website](https://github.com/uswds/uswds-site). For USWDS Core and its documentation, visit [https://designsystem.digital.gov](https://designsystem.digital.gov).
 
-We're working on incrementally building new [Web Component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)-based implementations of USWDS Core components. As we ship new USWDS Elements Web Components, our intent is that you'll be able to use them alongside existing USWDS code. Contributions now welcome, though the USWDS Elements review process prioritizes USWDS partnerships: email [uswds@gsa.gov](mailto:uswds@gsa.gov) if interested.
+We're working on incrementally building new [Web Component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)-based implementations of USWDS Core components. Once each new USWDS Elements Web Component progresses into production-ready mode, you'll be able to use them alongside existing USWDS code. You can try out the first published example of a USWDS Web Component variant now: the [USWDS Banner Web Component variant](https://designsystem.digital.gov/components/banner/#banner-web-component-2). 
+
+Contributions are now welcome, though the USWDS Elements review process prioritizes [USWDS Open Source Community member](https://github.com/uswds/uswds/blob/develop/COMMUNITY.md#communitymd) and [USWDS partnership](https://github.com/uswds/uswds/blob/develop/COMMUNITY.md#uswds-current--former-partners) contributions.
 
 - [For context, here's our Architectural Decision Record explaining why system development is focusing on Web Components](https://github.com/uswds/uswds-proposals/blob/main/decisions/0001-use-web-components.md)
 
 ## Upgrading to Web Components
 
-We're releasing these USWDS Web Components (USWDS Elements) incrementally so they can be added gradually to existing sites currently using USWDS Core (3.x). If you aren't currently using USWDS or you're using a version older than the USWDS 3, we recommend adopting version 3 in the near term rather than waiting until all of USWDS Elements is production-ready.
+We're releasing these USWDS Web Components (USWDS Elements) as soon as each is ready so they can be added gradually to existing sites currently using USWDS Core (3.x). If you aren't currently using USWDS or you're using a version older than the USWDS 3, we recommend adopting version 3 in the near term rather than waiting until all of USWDS Elements is production-ready.
 
 ## Installation using node and npm
 
-1. Install `node/npm`. In the link below you can find the install method that coincides with your operating system:
+1. Install `node/npm`. Be sure to use the right install method for your operating system:
     - Node (see [.nvmrc](https://github.com/uswds/uswds-elements/blob/develop/.nvmrc) for version number), [Installation guides](https://nodejs.org/en/download)
 
-    **Note for Windows users:** If you are using Windows and are unfamiliar with Node or npm, we recommend following [Team Treehouse's tutorial](http://blog.teamtreehouse.com/install-node-js-npm-windows) for more information or [installing and running your project from Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl#install-nvm-nodejs-and-npm)
+    **Note for Windows users:** If you're using Windows but aren't familiar with Node or npm, we recommend following [Team Treehouse's tutorial](http://blog.teamtreehouse.com/install-node-js-npm-windows) for more information or [installing and running your project from Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl#install-nvm-nodejs-and-npm)
 
-2. Make sure you have installed it correctly:
+2. Make sure you installed it correctly:
 
     ```shell
     npm -v
-    10.9.4 # This line may vary depending on what version of Node you've installed.
+    10.9.4 # This line may vary depending on which version of Node you've installed.
     ```
 
-3. Create a `package.json` file. You can do this manually, but an easier method is to use the `npm init` command. This command will prompt you with a few questions to create your `package.json` file.
+3. Create a `package.json` file. You can do this manually, but it's easier to use the `npm init` command, which will prompt you with a few questions to create your `package.json` file.
 
 4. Add `@uswds/uswds` to your project’s `package.json`:
 
@@ -39,11 +41,11 @@ We're releasing these USWDS Web Components (USWDS Elements) incrementally so the
 
 The `@uswds/elements` module is now installed as a dependency.
 
-**Note:** We do _not_ recommend directly editing the design system files in `node_modules`. One of the benefits of using a package manager is its ease of upgrade and installation. If you make customizations to the files in the package, any upgrade or re-installation will wipe them out.
+**Note:** We do _not_ recommend directly editing the design system files in `node_modules`. If you do that, you'll lose one of the major benefits of using a package manager — its ease of upgrade and installation. If you customize files in the package, any upgrade or re-installation will wipe out those changes.
 
 ## Using USWDS Elements in your project
 
-How you add a USWDS Elements component to a page might vary depending on your tools. If you use Vite, you can add components by importing them into a script that's imported elsewhere into a page:
+How you add a USWDS Elements component to a page might vary, depending on your tools. If you use Vite, you can add components by importing them into a script that's imported elsewhere into a page:
 
 ```js
 // Importing into a javascript file, like index.js
@@ -60,11 +62,11 @@ import { UsaBanner } from "@uswds/elements";
 
 ## Style theming and tokens
 
-Each USWDS Element provides support for theming by exposing CSS custom properties (CSS variables) that can be used to control the appearance of the component.
+Each USWDS Element component provides support for theming by exposing CSS custom properties (CSS variables) that you can use to control the appearance of the component.
 
-Interactive form controls in our Storybook instance can demonstrate how to use the theming variables, provide custom text, and otherwise customize the components.
+Interactive form controls in our Storybook instance demonstrate how to use the theming variables, provide custom text, and otherwise customize the components.
 
-For example, the `usa-banner` component can be customized by setting the `--usa-banner-background-color` CSS variable to a color of your choosing:
+For example, the `usa-banner` component can be customized by setting the `--usa-banner-background-color` CSS variable to a different color:
 
 ```html
 <style>
@@ -78,11 +80,11 @@ For example, the `usa-banner` component can be customized by setting the `--usa-
 
 You can see this in the demo on the [USWDS Elements Storybook](<https://federalist-ab6c0bdb-eccd-4b26-bb5f-b0154661e999.sites.pages.cloud.gov/site/uswds/web-components/?path=/story/components-banner--default&args=--usa-banner-background-color:!hex(e4f7ff)>).
 
-**Note:** Please be mindful of the accessibility implications of customizing component appearance. It's **your** responsibility to ensure that all your customizations meet the [accessibility requirements](https://designsystem.digital.gov/accessibility/) of the design system and pass all [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and [Section 508](https://www.section508.gov/) accessibility tests. Accessibility is a **legal requirement**.
+**Note:** Don't forget the accessibility implications of customizing. It's **your** responsibility to make sure all your changes meet the [accessibility requirements](https://designsystem.digital.gov/accessibility/) of the design system and pass all [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and [Section 508](https://www.section508.gov/) accessibility tests. Accessibility is a **legal requirement**.
 
 ## Documentation
 
-For more detailed documentation, refer to the Storybook for USWDS Elements. You can visit the most up-to-date Storybook documentation on [Cloud.gov Pages](https://federalist-ab6c0bdb-eccd-4b26-bb5f-b0154661e999.sites.pages.cloud.gov/site/uswds/web-components/?path=/docs/readme--docs). These USWDS documentation sources do get out of sync sometimes: typically Storybook is more sandbox-y and experimental, so may not match other documentation.
+For more detailed documentation, refer to the Storybook for USWDS Elements. You can visit the most up-to-date Storybook documentation at [this preview on Cloud.gov Pages](https://federalist-ab6c0bdb-eccd-4b26-bb5f-b0154661e999.sites.pages.cloud.gov/site/uswds/web-components/?path=/docs/readme--docs). These USWDS documentation sources do get out of sync sometimes: typically Storybook is more sandbox-y and experimental, so often doesn't match other USWDS documentation.
 
 ## Browser support
 
@@ -98,7 +100,7 @@ We use the following tools to ensure USWDS is accessible:
 - [Axe core](https://www.deque.com/axe/)
 - [Axe dev tools](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US)
 
-If you find any issues with our accessibility conformance, please create an issue in our GitHub repo or send us an email at [uswds@gsa.gov](mailto:uswds@gsa.gov). We prioritize accessibility issues. See [the Accessibility page of our website](https://designsystem.digital.gov/documentation/accessibility/) for more information.
+If you find any issues with USWDS's accessibility conformance, please create an issue in our GitHub repo or send us an email at [uswds@gsa.gov](mailto:uswds@gsa.gov). We prioritize accessibility issues. See [the Accessibility page of our website](https://designsystem.digital.gov/documentation/accessibility/) for more information.
 
 ## Publishing
 
@@ -131,7 +133,7 @@ npx @changesets/cli pre exit
         npx @changesets/cli
         ```
 
-    - The command creates a file under the `.changeset/` directory that describes the packages and the release type (patch/minor/major). You can edit this file to add more details, such as a link to the issue or pull request that the change addresses. The file will automatically get a nonsensical name like `fire-penguin-annex.md`, which is normal. These files are only in the repository for a short time, to generate changelogs and version bumps. They aren't published to NPM and are cleaned up after the release is published.
+    - The command creates a file under the `.changeset/` directory that describes the packages and the release type (patch/minor/major). You can edit this file to add more details, such as a link to the issue or pull request that the change addresses. The file will automatically get a nonsensical name like `fire-penguin-annex.md`, which is normal. These files are only in the repository temporarily, to generate changelogs and version bumps. They aren't published to NPM and get cleaned up after the release is published.
 
 2. Bump versions locally (optional)
     - To update package.json versions and changelogs locally before publishing:
@@ -165,7 +167,7 @@ npx @changesets/cli pre exit
     - The action can either create a release PR or publish directly to NPM depending on repository and action settings
     - The workflow uses repository secrets:
         - `GITHUB_TOKEN` — standard workflow permission for the action to create PRs/commits
-    - The action is configured to run the project’s release script (for example `npm run release`) and is run in a controlled environment; it will also disable Husky hooks during automated runs (HUSKY=0) to avoid local commit hooks blocking automation
+    - The action is configured to run the project’s release script (for example `npm run release`) in a controlled environment; it will also disable Husky hooks during automated runs (HUSKY=0) to avoid local commit hooks blocking automation
 
 #### Notes, tips, and troubleshooting
 
@@ -175,7 +177,7 @@ npx @changesets/cli pre exit
     - When in pre mode, version bumps will produce pre-release identifiers (for example, `1.0.0-alpha.1`).
 - CI vs local publish:
     - For most contributors, pushing a properly authored changeset and opening a PR is the recommended route—automation, which will create the release or open the release PR for maintainers to review
-    - If you must publish locally, make sure `NPM_TOKEN` is configured in your environment or use a CI/protected account to run the publish steps
+    - If you have to publish locally, make sure `NPM_TOKEN` is configured in your environment or use a CI/protected account to run the publish steps
 - If releases aren't being published as expected:
     - Verify `NPM_TOKEN` exists in repository secrets and has publish scope
     - Ensure the commit/push to `main` contains a changeset (or the automation has been triggered by the Changesets action)
@@ -189,7 +191,7 @@ Example quick flow (pre-release -> publish via automation):
     - `npx @changesets/cli pre enter --tag alpha`
 3. Run `npx @changesets/cli` and follow the prompts (choose the appropriate release type)
 4. Commit the changeset file(s), push the branch, and open a PR
-5. Once the PR is merged to `main`, the repository release workflow will pick up the changeset and publish the pre-release to NPM (provided `NPM_TOKEN` and workflow permissions are set)
+5. Once the PR is merged to `main`, the repository release workflow will pick up the changeset and publish the pre-release to NPM (as long as `NPM_TOKEN` and workflow permissions are set)
 
 If you have questions about changing the pre-release tag or the release automation behavior, or if you want a walkthrough of creating a test release in a fork, please open an issue or ask in the PR review comments.
 
@@ -199,3 +201,4 @@ If you have questions about changing the pre-release tag or the release automati
 | ------------ | ---------------------------------------------------------------------------- |
 | `usa-banner` | Beta (Banner only, not entire package)                                       |
 | `usa-link`   | Pre-alpha (proof-of-concept: not intended as direction, or even for release) |
+| `usa-alert`  | Pre-alpha (proof-of-concept for architecture validation; not completely tested) |
