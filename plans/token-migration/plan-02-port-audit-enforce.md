@@ -15,6 +15,8 @@ This plan covers:
 2. Auditing token names in the custom-elements manifest against USWDS conventions
 3. Adding a lint/validation step to enforce naming going forward
 
+This plan comes after [plan-01](plan-01-style-dictionary-source-of-truth.md), which establishes the Style Dictionary in `tokens/` as the comprehensive source of truth for USWDS; the audit/enforcement workstream here is folded into that plan's Phase 6.
+
 The CSS consumption pattern (how components import and use tokens at runtime) is covered in a separate plan.
 
 ---

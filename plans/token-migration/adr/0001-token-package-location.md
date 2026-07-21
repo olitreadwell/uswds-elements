@@ -2,7 +2,7 @@
 
 **Status:** Proposed
 **Date:** 2026-07-02
-**Related:** [architecture-decisions.md](../architecture-decisions.md) (accepted: 3 tiers, `--usa-*` prefix), [plan-03](../plan-02-style-dictionary-source-of-truth.md) Phase 5
+**Related:** [architecture-decisions.md](../architecture-decisions.md) (accepted: 3 tiers, `--usa-*` prefix), [plan-01](../plan-01-style-dictionary-source-of-truth.md) Phase 5
 
 ## Context
 

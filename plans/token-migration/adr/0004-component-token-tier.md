@@ -2,7 +2,7 @@
 
 **Status:** Proposed
 **Date:** 2026-07-02
-**Related:** [architecture-decisions.md](../architecture-decisions.md) §1/§5, [plan-02](../plan-01-port-audit-enforce.md) Objective 1.2, ADR-0003
+**Related:** [architecture-decisions.md](../architecture-decisions.md) §1/§5, [plan-02](../plan-02-port-audit-enforce.md) Objective 1.2, ADR-0003
 
 ## Context
 

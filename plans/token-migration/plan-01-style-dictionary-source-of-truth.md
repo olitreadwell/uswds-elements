@@ -17,7 +17,7 @@ This plan makes the Style Dictionary in `tokens/` the comprehensive source of tr
 
 Decisions with alternatives are recorded in [`adr/`](adr/README.md). Prior accepted decisions live
 in [architecture-decisions.md](architecture-decisions.md). The audit/enforcement workstream is
-[plan-02](plan-01-port-audit-enforce.md) and is folded into Phase 6.
+[plan-02](plan-02-port-audit-enforce.md) and is folded into Phase 6.
 
 ### Current state (summary)
 
@@ -41,7 +41,7 @@ alongside it per ADR-0002 (both names supported, no rename).
 
 ## Phases
 
-Each phase is a set of independently reviewable PRs, plan-02 style. A phase's ADRs must be
+Each phase is a set of independently reviewable PRs. A phase's ADRs must be
 Accepted before its PRs merge.
 
 ### Phase 0 — Decide
@@ -84,7 +84,7 @@ Storybook visual check of usa-alert/usa-link in forced dark scheme.
 ### Phase 3 — Component tier (ADR-0004)
 
 - Generate the `$theme-{component}-*` → `--usa-{component}-*` migration table from the 152 component rows in `uswds-settings-tokens.csv` (component/element/variant/state columns are populated); record non-1:1 cases (`navigation`/`megamenu` → `usa-header` internals) explicitly
-- Create `tokens/components/{component}.json` for existing components first (alert, banner\*, link — extends plan-02 PR 8), then per new component as built; values alias the adaptive tier by default
+- Create `tokens/components/{component}.json` for existing components first (alert, banner\*, link — extends [plan-02](plan-02-port-audit-enforce.md) PR 8), then per new component as built; values alias the adaptive tier by default
 - Update component CSS to consume component tokens without fallbacks (plan-02's pattern; usa-banner stays self-contained)
 
 **Verification:** plan-02's `audit-token-names.js` cross-references `custom-elements.json`,

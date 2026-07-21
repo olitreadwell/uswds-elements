@@ -417,7 +417,7 @@ simplify?
 
 ### Migration Path
 
-**Phase 1: Expand Style Dictionary (builds on plan-02 PRs)**
+**Phase 1: Expand Style Dictionary (builds on plan-01 PRs)**
 
 1. Add light/dark values to semantic.json using `light-dark()` syntax
 2. Update style-dictionary config to output `light-dark()` format
@@ -480,7 +480,7 @@ fallbacks) but with USWDS-specific prefix and scale conventions.
 
 1. Review and approve/modify these recommendations
 2. Prototype the `light-dark()` implementation with a small token set
-3. Update plan-02 PRs to incorporate theming strategy
+3. Update plan-01 PRs to incorporate theming strategy
 4. Document migration guide for consumers
 
 **Questions for discussion:**
