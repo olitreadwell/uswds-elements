@@ -124,29 +124,36 @@ Fields under `$extensions.uswds`:
   "what was the old name for this token?"
 - **`formula`** (ADR-0007) and **`disabled`** (ADR-0008) continue under this same key.
 
-System primitive example:
+System primitive example (canonical key is `vivid-60`; the `60v` short form is
+recorded in `legacyName` as the USWDS-core legacy name per ADR-0002):
 
 ```json
-"60v": {
-  "$type": "color",
-  "$value": "#005ea2",
-  "$description": "Vivid blue for primary interactive elements; meets WCAG AA on white.",
-  "$extensions": {
-    "uswds": {
-      "tier": "system",
-      "legacyName": ["blue-warm-60v", "$color-blue-warm-60v", "$blue-warm-60v"]
+"vivid": {
+  "60": {
+    "$type": "color",
+    "$value": "#005ea2",
+    "$description": "Vivid blue-warm for primary interactive elements; meets WCAG AA on white.",
+    "$extensions": {
+      "uswds": {
+        "tier": "system",
+        "legacyName": ["blue-warm-60v", "$color-blue-warm-60v", "$blue-warm-60v"]
+      }
     }
   }
 }
 ```
 
+The emitted canonical CSS name is `--usa-color-blue-warm-vivid-60` (path segments joined
+after tier-drop); the legacy `--usa-color-blue-warm-60v` alias is emitted as a `var()`
+reference by the alias-emitting format (ADR-0002).
+
 **Why explicit `legacyName` rather than convention-derived.** The old names are reconstructible from
-the token path *only where naming is regular*. It is not regular: `vivid` → `v` (ADR-0002),
-`default` stripping, the omitted `-90v` vivid slots (ADR-0008), and the theme string-reference form.
-An explicit per-token list is the robust source that stops the old↔new mapping from being rebuilt by
-fragile string logic — the exact fallback-drift failure mode the enforcement workstream exists to
-eliminate. A list (not a scalar) is required because one canonical token maps back to several USWDS
-constructs at once.
+the token path *only where naming is regular*. It is not regular: the `vivid` → `60v` suffix
+compression (ADR-0002), `default` stripping, the omitted `-90v` vivid slots (ADR-0008), and the
+theme string-reference form. An explicit per-token list is the robust source that stops the old↔new
+mapping from being rebuilt by fragile string logic — the exact fallback-drift failure mode the
+enforcement workstream exists to eliminate. A list (not a scalar) is required because one canonical
+token maps back to several USWDS constructs at once.
 
 ## Decision 4: Theme/state alias model (single alias graph)
 
@@ -182,8 +189,10 @@ The build matrix:
   — separate custom Style Dictionary formats emitting legacy names *and* the legacy map/settings
   *structure* (nested `$system-color-*` maps, `$system-color-shortcodes`, `$theme-*: "…" !default`,
   `false` sentinels), gated by the round-trip diff. It is **not** a prefix-stripped flavor of the
-  canonical `$usa-` build. Stripping the prefix would yield flat `$blue-warm-60v` scalars that lack
-  the map shape `color()`/`set-theme-color()` require — SCSS that looks done but is inert.
+  canonical `$usa-` build. Stripping the prefix would yield flat `$blue-warm-vivid-60` scalars that
+  lack the map shape `color()`/`set-theme-color()` require — SCSS that looks done but is inert.
+  The uswds-core formats derive legacy `$blue-warm-60v` names from each token's `legacyName` list,
+  not from the canonical `vivid-60` path form (ADR-0002).
 - `prefix` becomes a **per-platform** config value (`usa` for the css/scss-canonical platforms,
   absent for the uswds-core platform), replacing the single hardcoded global constant. The
   uswds-core formats bypass `generateTokenName` entirely and name tokens from `legacyName`.

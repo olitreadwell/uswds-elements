@@ -48,8 +48,9 @@ are computed from an 8px grid (`spacing-multiple()`); `false` is a sentinel in t
 (`tokens/{colors,spacing,breakpoints}/*.json`), custom transforms in
 `internals/token-helpers/index.ts`, config in `config/style-dictionary.config.js`, and outputs
 `build/css/*.css` + `build/scss/_*.scss` published via `@uswds/elements`' `./styles/*` export.
-Current vivid naming is `--usa-color-red-vivid-60`; a canonical `--usa-color-red-60v` is added
-alongside it per ADR-0002 (both names supported, no rename).
+Current vivid naming is `--usa-color-red-vivid-60`; per ADR-0002 (amended 2026-07-21)
+`vivid-{grade}` is the **canonical** form and `{grade}v` (e.g. `--usa-color-red-60v`) is
+emitted as a legacy alias via a `var()` reference (both names supported, no rename).
 
 ---
 
@@ -69,7 +70,7 @@ the rest are Proposed with recommendations.
 
 Bring `tokens/` to full coverage of the system tier, sourced from `uswds-system-tokens.csv`:
 
-- **Colors:** all 27 families, including gray grades 1–4; nonexistent `-90v` vivid slots omitted (ADR-0008); canonical `60v` names emitted with `vivid-{grade}` aliases kept alongside (ADR-0002) via `internals/token-helpers/index.ts` + alias-emitting format
+- **Colors:** all 27 families, including gray grades 1–4; nonexistent `-90v` vivid slots omitted (ADR-0008); canonical `vivid-{grade}` names emitted with `{grade}v` legacy aliases kept alongside (ADR-0002 amended) via `internals/token-helpers/index.ts` + alias-emitting format
 - **Spacing:** full computed scale — multiples (`05`…`15`), named (`card`, `card-lg`, `mobile`, `mobile-lg`, `tablet`, `desktop`, `widescreen`, …), negatives (`neg-*`), pixel literals (`1px`, `2px`) — each with `$extensions.uswds.formula` provenance (ADR-0007)
 - **Typography:** `tokens/typography/` — type scale (1–20), line heights (1–6) plus the richer per-typeface combinations (`sans-1..6`, `serif-1..6`, `mono-1..6`, `cond-1..6`, `heading-1..6`, `ui-1..6`), letter-spacing including negatives (`ls-neg-1/2/3`), font stacks as `fontFamily` arrays, typeface metadata (display name, cap-height, stack) per ADR-0006; @font-face `src` maps stay out
 - **Utility scale** (new, sourced from `uswds-properties-tokens.csv`, ADR-0009): `tokens/utility/` — `z-index.json` (`auto, bottom:-100, 0, 100–500, top:99999`), `opacity.json` (`0–100` → `0`–`1`), `shadow.json` (box-shadow `none, 1–5`), `flex.json` (flex `1–12/fill/auto`, flex-direction, flex-wrap, order `first:-1, last:999, 0–11`), `gap.json` (column-gaps merged with `theme-column-gap-{sm,md,lg}`)
@@ -78,9 +79,25 @@ Bring `tokens/` to full coverage of the system tier, sourced from `uswds-system-
 
 **Negative values:** spacing negatives (`neg-*`), `z-index.bottom` (`-100`), `order.first` (`-1`), and `letter-spacing.ls-neg-{1,2,3}` all resolve to literal negative values, not a separate naming convention — see ADR-0009.
 
-**PRs:** (1) vivid `60v` transform + `vivid-*` alias emission (additive, no rename), (2) color
-family completion, (3) spacing scale + formulas, (4) typography sources, (5) breakpoint aliasing.
+**PRs:** Phase 1 is decomposed into individual per-PR plan files in
+[`prs/`](prs/). The 8 PRs are:
+
+- [PR 0](prs/pr-00-tier-first-restructure.md) — tier-first directory restructure (prerequisite for all others)
+- [PR 1](prs/pr-01-vivid-canonical-alias.md) — vivid `vivid-{grade}` canonical naming + `{grade}v` legacy alias emission
+- [PR 2](prs/pr-02-color-family-completion.md) — color family completion + `$extensions.uswds` metadata pass
+- [PR 3](prs/pr-03-spacing-scale-formulas.md) — full spacing scale + formula provenance
+- [PR 4](prs/pr-04-typography-sources.md) — typography sources (type scale, line heights, letter-spacing, font stacks)
+- [PR 5](prs/pr-05-breakpoint-aliasing.md) — breakpoints re-expressed as aliases of named spacing
+- [PR 6](prs/pr-06-utility-scale.md) — utility scale tokens (z-index, opacity, shadow, flex, gap)
+- [PR 7](prs/pr-07-grid-widths.md) — 12-column grid width fraction scale
+
+Each PR file contains scope, files touched, implementation steps, and a "Done when" checkbox gate.
 Each runs `build:tokens` and commits output.
+
+<!-- TODO: Phases 2–6 still need per-PR decomposition. Decompose each phase's PRs once
+     its prerequisite ADRs are Accepted (per the merge gate on line 58–59). Track one
+     decomposition task per phase; start with Phase 2 when ADR-0003 and ADR-0008 are
+     confirmed Accepted. -->
 
 **Verification:** script compares built flat output against `uswds-system-tokens.csv` values
 (name→value equality; count reconciliation for the ~60 intentionally omitted/disabled rows).
