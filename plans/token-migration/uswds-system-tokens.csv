@@ -1,0 +1,1119 @@
+token_name,default_value,source_file,tier,formula,namespace,category,concept,property,component,element,variant,state,scale,mode,collisions
+$system-color-blue-cool-10,#dae9ee,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,10,,color:category/property
+$system-color-blue-cool-20,#adcfdc,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,20,,color:category/property
+$system-color-blue-cool-30,#82b4c9,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,30,,color:category/property
+$system-color-blue-cool-40,#6499af,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,40,,color:category/property
+$system-color-blue-cool-50,#3a7d95,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,50,,color:category/property
+$system-color-blue-cool-60,#2e6276,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,60,,color:category/property
+$system-color-blue-cool-70,#224a58,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,70,,color:category/property
+$system-color-blue-cool-80,#14333d,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,80,,color:category/property
+$system-color-blue-cool-90,#0f191c,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,90,,color:category/property
+$system-color-blue-cool-10,#c3ebfa,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,10,,color:category/property
+$system-color-blue-cool-20,#97d4ea,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,20,,color:category/property
+$system-color-blue-cool-30,#59b9de,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,30,,color:category/property
+$system-color-blue-cool-40,#28a0cb,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,40,,color:category/property
+$system-color-blue-cool-50,#0d7ea2,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,50,,color:category/property
+$system-color-blue-cool-60,#07648d,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,60,,color:category/property
+$system-color-blue-cool-70,#074b69,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,70,,color:category/property
+$system-color-blue-cool-80,#002d3f,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,80,,color:category/property
+$system-color-blue-cool-90,false,_blue-cool.scss,system,namespace.category.concept.scale,system,color,blue-cool,,,,,,90,,color:category/property
+$system-color-blue-warm-10,#e1e7f1,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,10,,color:category/property
+$system-color-blue-warm-20,#bbcae4,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,20,,color:category/property
+$system-color-blue-warm-30,#98afd2,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,30,,color:category/property
+$system-color-blue-warm-40,#7292c7,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,40,,color:category/property
+$system-color-blue-warm-50,#4a77b4,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,50,,color:category/property
+$system-color-blue-warm-60,#345d96,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,60,,color:category/property
+$system-color-blue-warm-70,#2f4668,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,70,,color:category/property
+$system-color-blue-warm-80,#252f3e,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,80,,color:category/property
+$system-color-blue-warm-90,#13171f,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,90,,color:category/property
+$system-color-blue-warm-10,#d4e5ff,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,10,,color:category/property
+$system-color-blue-warm-20,#adcdff,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,20,,color:category/property
+$system-color-blue-warm-30,#81aefc,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,30,,color:category/property
+$system-color-blue-warm-40,#5994f6,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,40,,color:category/property
+$system-color-blue-warm-50,#2672de,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,50,,color:category/property
+$system-color-blue-warm-60,#0050d8,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,60,,color:category/property
+$system-color-blue-warm-70,#1a4480,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,70,,color:category/property
+$system-color-blue-warm-80,#162e51,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,80,,color:category/property
+$system-color-blue-warm-90,false,_blue-warm.scss,system,namespace.category.concept.scale,system,color,blue-warm,,,,,,90,,color:category/property
+$system-color-blue-10,#d9e8f6,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,10,,color:category/property
+$system-color-blue-20,#aacdec,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,20,,color:category/property
+$system-color-blue-30,#73b3e7,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,30,,color:category/property
+$system-color-blue-40,#4f97d1,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,40,,color:category/property
+$system-color-blue-50,#2378c3,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,50,,color:category/property
+$system-color-blue-60,#2c608a,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,60,,color:category/property
+$system-color-blue-70,#274863,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,70,,color:category/property
+$system-color-blue-80,#1f303e,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,80,,color:category/property
+$system-color-blue-90,#11181d,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,90,,color:category/property
+$system-color-blue-10,#cfe8ff,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,10,,color:category/property
+$system-color-blue-20,#a1d3ff,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,20,,color:category/property
+$system-color-blue-30,#58b4ff,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,30,,color:category/property
+$system-color-blue-40,#2491ff,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,40,,color:category/property
+$system-color-blue-50,#0076d6,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,50,,color:category/property
+$system-color-blue-60,#005ea2,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,60,,color:category/property
+$system-color-blue-70,#0b4778,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,70,,color:category/property
+$system-color-blue-80,#112f4e,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,80,,color:category/property
+$system-color-blue-90,false,_blue.scss,system,namespace.category.concept.scale,system,color,blue,,,,,,90,,color:category/property
+$system-color-cyan-10,#ccecf2,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,10,,color:category/property
+$system-color-cyan-20,#99deea,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,20,,color:category/property
+$system-color-cyan-30,#5dc0d1,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,30,,color:category/property
+$system-color-cyan-40,#449dac,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,40,,color:category/property
+$system-color-cyan-50,#168092,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,50,,color:category/property
+$system-color-cyan-60,#2a646d,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,60,,color:category/property
+$system-color-cyan-70,#2c4a4e,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,70,,color:category/property
+$system-color-cyan-80,#203133,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,80,,color:category/property
+$system-color-cyan-90,#111819,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,90,,color:category/property
+$system-color-cyan-10,#a8f2ff,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,10,,color:category/property
+$system-color-cyan-20,#52daf2,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,20,,color:category/property
+$system-color-cyan-30,#00bde3,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,30,,color:category/property
+$system-color-cyan-40,#009ec1,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,40,,color:category/property
+$system-color-cyan-50,#0081a1,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,50,,color:category/property
+$system-color-cyan-60,#00687d,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,60,,color:category/property
+$system-color-cyan-70,#0e4f5c,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,70,,color:category/property
+$system-color-cyan-80,#093b44,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,80,,color:category/property
+$system-color-cyan-90,false,_cyan.scss,system,namespace.category.concept.scale,system,color,cyan,,,,,,90,,color:category/property
+$system-color-gold-10,#f1e5cd,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,10,,color:category/property
+$system-color-gold-20,#dec69a,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,20,,color:category/property
+$system-color-gold-30,#c7a97b,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,30,,color:category/property
+$system-color-gold-40,#ad8b65,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,40,,color:category/property
+$system-color-gold-50,#8e704f,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,50,,color:category/property
+$system-color-gold-60,#6b5947,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,60,,color:category/property
+$system-color-gold-70,#4d4438,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,70,,color:category/property
+$system-color-gold-80,#322d26,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,80,,color:category/property
+$system-color-gold-90,#191714,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,90,,color:category/property
+$system-color-gold-10,#ffe396,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,10,,color:category/property
+$system-color-gold-20,#ffbe2e,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,20,,color:category/property
+$system-color-gold-30,#e5a000,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,30,,color:category/property
+$system-color-gold-40,#c2850c,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,40,,color:category/property
+$system-color-gold-50,#936f38,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,50,,color:category/property
+$system-color-gold-60,#7a591a,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,60,,color:category/property
+$system-color-gold-70,#5c410a,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,70,,color:category/property
+$system-color-gold-80,#3b2b15,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,80,,color:category/property
+$system-color-gold-90,false,_gold.scss,system,namespace.category.concept.scale,system,color,gold,,,,,,90,,color:category/property
+$system-color-gray-cool-2,#f7f9fa,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,2,,color:category/property
+$system-color-gray-cool-3,#f5f6f7,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,3,,color:category/property
+$system-color-gray-cool-4,#f1f3f6,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,4,,color:category/property
+$system-color-gray-cool-5,#edeff0,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,5,,color:category/property
+$system-color-gray-cool-10,#dfe1e2,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,10,,color:category/property
+$system-color-gray-cool-20,#c6cace,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,20,,color:category/property
+$system-color-gray-cool-30,#a9aeb1,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,30,,color:category/property
+$system-color-gray-cool-40,#8d9297,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,40,,color:category/property
+$system-color-gray-cool-50,#71767a,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,50,,color:category/property
+$system-color-gray-cool-60,#565c65,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,60,,color:category/property
+$system-color-gray-cool-70,#3d4551,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,70,,color:category/property
+$system-color-gray-cool-80,#2d2e2f,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,80,,color:category/property
+$system-color-gray-cool-90,#1c1d1f,_gray-cool.scss,system,namespace.category.concept.scale,system,color,gray-cool,,,,,,90,,color:category/property
+$system-color-gray-warm-2,#f9f9f7,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,2,,color:category/property
+$system-color-gray-warm-3,#f6f6f2,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,3,,color:category/property
+$system-color-gray-warm-4,#f5f5f0,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,4,,color:category/property
+$system-color-gray-warm-5,#f0f0ec,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,5,,color:category/property
+$system-color-gray-warm-10,#e6e6e2,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,10,,color:category/property
+$system-color-gray-warm-20,#cac9c0,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,20,,color:category/property
+$system-color-gray-warm-30,#afaea2,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,30,,color:category/property
+$system-color-gray-warm-40,#929285,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,40,,color:category/property
+$system-color-gray-warm-50,#76766a,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,50,,color:category/property
+$system-color-gray-warm-60,#5d5d52,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,60,,color:category/property
+$system-color-gray-warm-70,#454540,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,70,,color:category/property
+$system-color-gray-warm-80,#2e2e2a,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,80,,color:category/property
+$system-color-gray-warm-90,#171716,_gray-warm.scss,system,namespace.category.concept.scale,system,color,gray-warm,,,,,,90,,color:category/property
+$system-color-gray-2,#f9f9f9,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,2,,color:category/property
+$system-color-gray-3,#f6f6f6,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,3,,color:category/property
+$system-color-gray-4,#f3f3f3,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,4,,color:category/property
+$system-color-gray-5,#f0f0f0,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,5,,color:category/property
+$system-color-gray-10,#e6e6e6,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,10,,color:category/property
+$system-color-gray-20,#c9c9c9,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,20,,color:category/property
+$system-color-gray-30,#adadad,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,30,,color:category/property
+$system-color-gray-40,#919191,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,40,,color:category/property
+$system-color-gray-50,#757575,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,50,,color:category/property
+$system-color-gray-60,#5c5c5c,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,60,,color:category/property
+$system-color-gray-70,#454545,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,70,,color:category/property
+$system-color-gray-80,#2e2e2e,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,80,,color:category/property
+$system-color-gray-90,#1b1b1b,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,90,,color:category/property
+$system-color-gray-100,#000000,_gray.scss,system,namespace.category.concept.scale,system,color,gray,,,,,,100,,color:category/property
+$system-color-green-cool-10,#dbebde,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,10,,color:category/property
+$system-color-green-cool-20,#b4d0b9,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,20,,color:category/property
+$system-color-green-cool-30,#86b98e,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,30,,color:category/property
+$system-color-green-cool-40,#5e9f69,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,40,,color:category/property
+$system-color-green-cool-50,#4d8055,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,50,,color:category/property
+$system-color-green-cool-60,#446443,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,60,,color:category/property
+$system-color-green-cool-70,#37493b,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,70,,color:category/property
+$system-color-green-cool-80,#28312a,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,80,,color:category/property
+$system-color-green-cool-90,#1a1f1a,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,90,,color:category/property
+$system-color-green-cool-10,#b7f5bd,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,10,,color:category/property
+$system-color-green-cool-20,#70e17b,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,20,,color:category/property
+$system-color-green-cool-30,#21c834,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,30,,color:category/property
+$system-color-green-cool-40,#00a91c,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,40,,color:category/property
+$system-color-green-cool-50,#008817,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,50,,color:category/property
+$system-color-green-cool-60,#216e1f,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,60,,color:category/property
+$system-color-green-cool-70,#154c21,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,70,,color:category/property
+$system-color-green-cool-80,#19311e,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,80,,color:category/property
+$system-color-green-cool-90,false,_green-cool.scss,system,namespace.category.concept.scale,system,color,green-cool,,,,,,90,,color:category/property
+$system-color-green-warm-10,#e7eab7,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,10,,color:category/property
+$system-color-green-warm-20,#cbd17a,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,20,,color:category/property
+$system-color-green-warm-30,#a6b557,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,30,,color:category/property
+$system-color-green-warm-40,#8a984b,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,40,,color:category/property
+$system-color-green-warm-50,#6f7a41,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,50,,color:category/property
+$system-color-green-warm-60,#5a5f38,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,60,,color:category/property
+$system-color-green-warm-70,#45472f,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,70,,color:category/property
+$system-color-green-warm-80,#2d2f21,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,80,,color:category/property
+$system-color-green-warm-90,#171712,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,90,,color:category/property
+$system-color-green-warm-10,#e7f434,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,10,,color:category/property
+$system-color-green-warm-20,#c5d30a,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,20,,color:category/property
+$system-color-green-warm-30,#a3b72c,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,30,,color:category/property
+$system-color-green-warm-40,#7e9c1d,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,40,,color:category/property
+$system-color-green-warm-50,#6a7d00,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,50,,color:category/property
+$system-color-green-warm-60,#5a6613,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,60,,color:category/property
+$system-color-green-warm-70,#4b4e10,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,70,,color:category/property
+$system-color-green-warm-80,#38380b,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,80,,color:category/property
+$system-color-green-warm-90,false,_green-warm.scss,system,namespace.category.concept.scale,system,color,green-warm,,,,,,90,,color:category/property
+$system-color-green-10,#dfeacd,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,10,,color:category/property
+$system-color-green-20,#b8d293,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,20,,color:category/property
+$system-color-green-30,#9bb672,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,30,,color:category/property
+$system-color-green-40,#7d9b4e,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,40,,color:category/property
+$system-color-green-50,#607f35,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,50,,color:category/property
+$system-color-green-60,#4c6424,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,60,,color:category/property
+$system-color-green-70,#3c4a29,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,70,,color:category/property
+$system-color-green-80,#293021,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,80,,color:category/property
+$system-color-green-90,#161814,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,90,,color:category/property
+$system-color-green-10,#c5ee93,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,10,,color:category/property
+$system-color-green-20,#98d035,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,20,,color:category/property
+$system-color-green-30,#7fb135,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,30,,color:category/property
+$system-color-green-40,#719f2a,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,40,,color:category/property
+$system-color-green-50,#538200,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,50,,color:category/property
+$system-color-green-60,#466c04,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,60,,color:category/property
+$system-color-green-70,#2f4a0b,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,70,,color:category/property
+$system-color-green-80,#243413,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,80,,color:category/property
+$system-color-green-90,false,_green.scss,system,namespace.category.concept.scale,system,color,green,,,,,,90,,color:category/property
+$system-color-indigo-cool-10,#e1e6f9,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,10,,color:category/property
+$system-color-indigo-cool-20,#bbc8f5,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,20,,color:category/property
+$system-color-indigo-cool-30,#96abee,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,30,,color:category/property
+$system-color-indigo-cool-40,#6b8ee8,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,40,,color:category/property
+$system-color-indigo-cool-50,#496fd8,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,50,,color:category/property
+$system-color-indigo-cool-60,#3f57a6,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,60,,color:category/property
+$system-color-indigo-cool-70,#374274,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,70,,color:category/property
+$system-color-indigo-cool-80,#292d42,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,80,,color:category/property
+$system-color-indigo-cool-90,#151622,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,90,,color:category/property
+$system-color-indigo-cool-10,#dee5ff,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,10,,color:category/property
+$system-color-indigo-cool-20,#b8c8ff,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,20,,color:category/property
+$system-color-indigo-cool-30,#94adff,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,30,,color:category/property
+$system-color-indigo-cool-40,#628ef4,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,40,,color:category/property
+$system-color-indigo-cool-50,#4866ff,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,50,,color:category/property
+$system-color-indigo-cool-60,#3e4ded,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,60,,color:category/property
+$system-color-indigo-cool-70,#222fbf,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,70,,color:category/property
+$system-color-indigo-cool-80,#1b2b85,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,80,,color:category/property
+$system-color-indigo-cool-90,false,_indigo-cool.scss,system,namespace.category.concept.scale,system,color,indigo-cool,,,,,,90,,color:category/property
+$system-color-indigo-warm-10,#e7e3fa,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,10,,color:category/property
+$system-color-indigo-warm-20,#cbc4f2,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,20,,color:category/property
+$system-color-indigo-warm-30,#afa5e8,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,30,,color:category/property
+$system-color-indigo-warm-40,#9287d8,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,40,,color:category/property
+$system-color-indigo-warm-50,#7665d1,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,50,,color:category/property
+$system-color-indigo-warm-60,#5e519e,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,60,,color:category/property
+$system-color-indigo-warm-70,#453c7b,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,70,,color:category/property
+$system-color-indigo-warm-80,#2e2c40,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,80,,color:category/property
+$system-color-indigo-warm-90,#18161d,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,90,,color:category/property
+$system-color-indigo-warm-10,#e4deff,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,10,,color:category/property
+$system-color-indigo-warm-20,#cfc4fd,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,20,,color:category/property
+$system-color-indigo-warm-30,#b69fff,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,30,,color:category/property
+$system-color-indigo-warm-40,#967efb,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,40,,color:category/property
+$system-color-indigo-warm-50,#745fe9,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,50,,color:category/property
+$system-color-indigo-warm-60,#5942d2,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,60,,color:category/property
+$system-color-indigo-warm-70,#3d2c9d,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,70,,color:category/property
+$system-color-indigo-warm-80,#261f5b,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,80,,color:category/property
+$system-color-indigo-warm-90,false,_indigo-warm.scss,system,namespace.category.concept.scale,system,color,indigo-warm,,,,,,90,,color:category/property
+$system-color-indigo-10,#e5e4fa,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,10,,color:category/property
+$system-color-indigo-20,#c5c5f3,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,20,,color:category/property
+$system-color-indigo-30,#a5a8eb,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,30,,color:category/property
+$system-color-indigo-40,#8889db,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,40,,color:category/property
+$system-color-indigo-50,#676cc8,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,50,,color:category/property
+$system-color-indigo-60,#4d52af,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,60,,color:category/property
+$system-color-indigo-70,#3d4076,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,70,,color:category/property
+$system-color-indigo-80,#2b2c40,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,80,,color:category/property
+$system-color-indigo-90,#16171f,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,90,,color:category/property
+$system-color-indigo-10,#e0e0ff,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,10,,color:category/property
+$system-color-indigo-20,#ccceff,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,20,,color:category/property
+$system-color-indigo-30,#a3a7fa,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,30,,color:category/property
+$system-color-indigo-40,#8289ff,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,40,,color:category/property
+$system-color-indigo-50,#656bd7,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,50,,color:category/property
+$system-color-indigo-60,#4a50c4,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,60,,color:category/property
+$system-color-indigo-70,#3333a3,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,70,,color:category/property
+$system-color-indigo-80,#212463,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,80,,color:category/property
+$system-color-indigo-90,false,_indigo.scss,system,namespace.category.concept.scale,system,color,indigo,,,,,,90,,color:category/property
+$system-color-magenta-10,#f6e1e8,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,10,,color:category/property
+$system-color-magenta-20,#f0bbcc,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,20,,color:category/property
+$system-color-magenta-30,#e895b3,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,30,,color:category/property
+$system-color-magenta-40,#e0699f,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,40,,color:category/property
+$system-color-magenta-50,#c84281,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,50,,color:category/property
+$system-color-magenta-60,#8b4566,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,60,,color:category/property
+$system-color-magenta-70,#66364b,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,70,,color:category/property
+$system-color-magenta-80,#402731,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,80,,color:category/property
+$system-color-magenta-90,#1b1617,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,90,,color:category/property
+$system-color-magenta-10,#ffddea,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,10,,color:category/property
+$system-color-magenta-20,#ffb4cf,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,20,,color:category/property
+$system-color-magenta-30,#ff87b2,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,30,,color:category/property
+$system-color-magenta-40,#fd4496,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,40,,color:category/property
+$system-color-magenta-50,#d72d79,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,50,,color:category/property
+$system-color-magenta-60,#ab2165,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,60,,color:category/property
+$system-color-magenta-70,#731f44,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,70,,color:category/property
+$system-color-magenta-80,#4f172e,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,80,,color:category/property
+$system-color-magenta-90,false,_magenta.scss,system,namespace.category.concept.scale,system,color,magenta,,,,,,90,,color:category/property
+$system-color-mint-cool-10,#c4eeeb,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,10,,color:category/property
+$system-color-mint-cool-20,#9bd4cf,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,20,,color:category/property
+$system-color-mint-cool-30,#6fbab3,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,30,,color:category/property
+$system-color-mint-cool-40,#4f9e99,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,40,,color:category/property
+$system-color-mint-cool-50,#40807e,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,50,,color:category/property
+$system-color-mint-cool-60,#376462,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,60,,color:category/property
+$system-color-mint-cool-70,#2a4b45,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,70,,color:category/property
+$system-color-mint-cool-80,#203131,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,80,,color:category/property
+$system-color-mint-cool-90,#111818,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,90,,color:category/property
+$system-color-mint-cool-10,#7efbe1,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,10,,color:category/property
+$system-color-mint-cool-20,#29e1cb,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,20,,color:category/property
+$system-color-mint-cool-30,#1dc2ae,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,30,,color:category/property
+$system-color-mint-cool-40,#00a398,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,40,,color:category/property
+$system-color-mint-cool-50,#008480,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,50,,color:category/property
+$system-color-mint-cool-60,#0f6460,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,60,,color:category/property
+$system-color-mint-cool-70,#0b4b3f,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,70,,color:category/property
+$system-color-mint-cool-80,#123131,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,80,,color:category/property
+$system-color-mint-cool-90,false,_mint-cool.scss,system,namespace.category.concept.scale,system,color,mint-cool,,,,,,90,,color:category/property
+$system-color-mint-10,#c7efe2,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,10,,color:category/property
+$system-color-mint-20,#92d9bb,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,20,,color:category/property
+$system-color-mint-30,#5abf95,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,30,,color:category/property
+$system-color-mint-40,#34a37e,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,40,,color:category/property
+$system-color-mint-50,#2e8367,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,50,,color:category/property
+$system-color-mint-60,#286846,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,60,,color:category/property
+$system-color-mint-70,#204e34,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,70,,color:category/property
+$system-color-mint-80,#193324,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,80,,color:category/property
+$system-color-mint-90,#0d1a12,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,90,,color:category/property
+$system-color-mint-10,#83fcd4,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,10,,color:category/property
+$system-color-mint-20,#0ceda6,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,20,,color:category/property
+$system-color-mint-30,#04c585,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,30,,color:category/property
+$system-color-mint-40,#00a871,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,40,,color:category/property
+$system-color-mint-50,#008659,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,50,,color:category/property
+$system-color-mint-60,#146947,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,60,,color:category/property
+$system-color-mint-70,#0c4e29,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,70,,color:category/property
+$system-color-mint-80,#0d351e,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,80,,color:category/property
+$system-color-mint-90,false,_mint.scss,system,namespace.category.concept.scale,system,color,mint,,,,,,90,,color:category/property
+$system-color-orange-warm-10,#fbe0d0,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,10,,color:category/property
+$system-color-orange-warm-20,#f7bca2,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,20,,color:category/property
+$system-color-orange-warm-30,#f3966d,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,30,,color:category/property
+$system-color-orange-warm-40,#e17141,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,40,,color:category/property
+$system-color-orange-warm-50,#bd5727,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,50,,color:category/property
+$system-color-orange-warm-60,#914734,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,60,,color:category/property
+$system-color-orange-warm-70,#633a32,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,70,,color:category/property
+$system-color-orange-warm-80,#3d2925,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,80,,color:category/property
+$system-color-orange-warm-90,#1c1615,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,90,,color:category/property
+$system-color-orange-warm-10,#ffe2d1,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,10,,color:category/property
+$system-color-orange-warm-20,#fbbaa7,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,20,,color:category/property
+$system-color-orange-warm-30,#fc906d,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,30,,color:category/property
+$system-color-orange-warm-40,#ff580a,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,40,,color:category/property
+$system-color-orange-warm-50,#cf4900,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,50,,color:category/property
+$system-color-orange-warm-60,#a72f10,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,60,,color:category/property
+$system-color-orange-warm-70,#782312,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,70,,color:category/property
+$system-color-orange-warm-80,#3d231d,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,80,,color:category/property
+$system-color-orange-warm-90,false,_orange-warm.scss,system,namespace.category.concept.scale,system,color,orange-warm,,,,,,90,,color:category/property
+$system-color-orange-10,#f2e4d4,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,10,,color:category/property
+$system-color-orange-20,#f3bf90,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,20,,color:category/property
+$system-color-orange-30,#f09860,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,30,,color:category/property
+$system-color-orange-40,#dd7533,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,40,,color:category/property
+$system-color-orange-50,#a86437,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,50,,color:category/property
+$system-color-orange-60,#775540,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,60,,color:category/property
+$system-color-orange-70,#524236,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,70,,color:category/property
+$system-color-orange-80,#332d27,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,80,,color:category/property
+$system-color-orange-90,#1b1614,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,90,,color:category/property
+$system-color-orange-10,#fce2c5,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,10,,color:category/property
+$system-color-orange-20,#ffbc78,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,20,,color:category/property
+$system-color-orange-30,#fa9441,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,30,,color:category/property
+$system-color-orange-40,#e66f0e,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,40,,color:category/property
+$system-color-orange-50,#c05600,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,50,,color:category/property
+$system-color-orange-60,#8c471c,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,60,,color:category/property
+$system-color-orange-70,#5f3617,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,70,,color:category/property
+$system-color-orange-80,#352313,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,80,,color:category/property
+$system-color-orange-90,false,_orange.scss,system,namespace.category.concept.scale,system,color,orange,,,,,,90,,color:category/property
+$system-color-red-cool-10,#f3e1e4,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,10,,color:category/property
+$system-color-red-cool-20,#ecbec6,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,20,,color:category/property
+$system-color-red-cool-30,#e09aa6,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,30,,color:category/property
+$system-color-red-cool-40,#e16b80,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,40,,color:category/property
+$system-color-red-cool-50,#cd425b,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,50,,color:category/property
+$system-color-red-cool-60,#9e394b,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,60,,color:category/property
+$system-color-red-cool-70,#68363f,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,70,,color:category/property
+$system-color-red-cool-80,#40282c,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,80,,color:category/property
+$system-color-red-cool-90,#1e1517,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,90,,color:category/property
+$system-color-red-cool-10,#f8dfe2,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,10,,color:category/property
+$system-color-red-cool-20,#f8b9c5,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,20,,color:category/property
+$system-color-red-cool-30,#fd8ba0,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,30,,color:category/property
+$system-color-red-cool-40,#f45d79,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,40,,color:category/property
+$system-color-red-cool-50,#e41d3d,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,50,,color:category/property
+$system-color-red-cool-60,#b21d38,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,60,,color:category/property
+$system-color-red-cool-70,#822133,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,70,,color:category/property
+$system-color-red-cool-80,#4f1c24,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,80,,color:category/property
+$system-color-red-cool-90,false,_red-cool.scss,system,namespace.category.concept.scale,system,color,red-cool,,,,,,90,,color:category/property
+$system-color-red-warm-10,#f4e3db,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,10,,color:category/property
+$system-color-red-warm-20,#ecc0a7,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,20,,color:category/property
+$system-color-red-warm-30,#dca081,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,30,,color:category/property
+$system-color-red-warm-40,#d27a56,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,40,,color:category/property
+$system-color-red-warm-50,#c3512c,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,50,,color:category/property
+$system-color-red-warm-60,#805039,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,60,,color:category/property
+$system-color-red-warm-70,#524236,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,70,,color:category/property
+$system-color-red-warm-80,#332d29,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,80,,color:category/property
+$system-color-red-warm-90,#1f1c18,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,90,,color:category/property
+$system-color-red-warm-10,#fce1d4,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,10,,color:category/property
+$system-color-red-warm-20,#f6bd9c,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,20,,color:category/property
+$system-color-red-warm-30,#f39268,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,30,,color:category/property
+$system-color-red-warm-40,#ef5e25,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,40,,color:category/property
+$system-color-red-warm-50,#d54309,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,50,,color:category/property
+$system-color-red-warm-60,#9c3d10,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,60,,color:category/property
+$system-color-red-warm-70,#63340f,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,70,,color:category/property
+$system-color-red-warm-80,#3e2a1e,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,80,,color:category/property
+$system-color-red-warm-90,false,_red-warm.scss,system,namespace.category.concept.scale,system,color,red-warm,,,,,,90,,color:category/property
+$system-color-red-10,#f8e1de,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,10,,color:category/property
+$system-color-red-20,#f7bbb1,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,20,,color:category/property
+$system-color-red-30,#f2938c,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,30,,color:category/property
+$system-color-red-40,#e9695f,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,40,,color:category/property
+$system-color-red-50,#d83933,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,50,,color:category/property
+$system-color-red-60,#a23737,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,60,,color:category/property
+$system-color-red-70,#6f3331,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,70,,color:category/property
+$system-color-red-80,#3e2927,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,80,,color:category/property
+$system-color-red-90,#1b1616,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,90,,color:category/property
+$system-color-red-10,#fde0db,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,10,,color:category/property
+$system-color-red-20,#fdb8ae,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,20,,color:category/property
+$system-color-red-30,#ff8d7b,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,30,,color:category/property
+$system-color-red-40,#fb5a47,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,40,,color:category/property
+$system-color-red-50,#e52207,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,50,,color:category/property
+$system-color-red-60,#b50909,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,60,,color:category/property
+$system-color-red-70,#8b0a03,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,70,,color:category/property
+$system-color-red-80,#5c1111,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,80,,color:category/property
+$system-color-red-90,false,_red.scss,system,namespace.category.concept.scale,system,color,red,,,,,,90,,color:category/property
+$system-color-violet-warm-10,#f6dff8,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,10,,color:category/property
+$system-color-violet-warm-20,#e2bee4,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,20,,color:category/property
+$system-color-violet-warm-30,#d29ad8,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,30,,color:category/property
+$system-color-violet-warm-40,#bf77c8,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,40,,color:category/property
+$system-color-violet-warm-50,#b04abd,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,50,,color:category/property
+$system-color-violet-warm-60,#864381,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,60,,color:category/property
+$system-color-violet-warm-70,#5c395a,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,70,,color:category/property
+$system-color-violet-warm-80,#382936,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,80,,color:category/property
+$system-color-violet-warm-90,#1b151b,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,90,,color:category/property
+$system-color-violet-warm-10,#fbdcff,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,10,,color:category/property
+$system-color-violet-warm-20,#f4b2ff,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,20,,color:category/property
+$system-color-violet-warm-30,#ee83ff,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,30,,color:category/property
+$system-color-violet-warm-40,#d85bef,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,40,,color:category/property
+$system-color-violet-warm-50,#be32d0,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,50,,color:category/property
+$system-color-violet-warm-60,#93348c,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,60,,color:category/property
+$system-color-violet-warm-70,#711e6c,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,70,,color:category/property
+$system-color-violet-warm-80,#481441,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,80,,color:category/property
+$system-color-violet-warm-90,false,_violet-warm.scss,system,namespace.category.concept.scale,system,color,violet-warm,,,,,,90,,color:category/property
+$system-color-violet-10,#ebe3f9,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,10,,color:category/property
+$system-color-violet-20,#d0c3e9,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,20,,color:category/property
+$system-color-violet-30,#b8a2e3,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,30,,color:category/property
+$system-color-violet-40,#9d84d2,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,40,,color:category/property
+$system-color-violet-50,#8168b3,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,50,,color:category/property
+$system-color-violet-60,#665190,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,60,,color:category/property
+$system-color-violet-70,#4c3d69,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,70,,color:category/property
+$system-color-violet-80,#312b3f,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,80,,color:category/property
+$system-color-violet-90,#18161d,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,90,,color:category/property
+$system-color-violet-10,#ede3ff,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,10,,color:category/property
+$system-color-violet-20,#d5bfff,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,20,,color:category/property
+$system-color-violet-30,#c39deb,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,30,,color:category/property
+$system-color-violet-40,#ad79e9,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,40,,color:category/property
+$system-color-violet-50,#9355dc,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,50,,color:category/property
+$system-color-violet-60,#783cb9,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,60,,color:category/property
+$system-color-violet-70,#54278f,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,70,,color:category/property
+$system-color-violet-80,#39215e,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,80,,color:category/property
+$system-color-violet-90,false,_violet.scss,system,namespace.category.concept.scale,system,color,violet,,,,,,90,,color:category/property
+$system-color-yellow-10,#f5e6af,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,10,,color:category/property
+$system-color-yellow-20,#e6c74c,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,20,,color:category/property
+$system-color-yellow-30,#c9ab48,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,30,,color:category/property
+$system-color-yellow-40,#a88f48,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,40,,color:category/property
+$system-color-yellow-50,#8a7237,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,50,,color:category/property
+$system-color-yellow-60,#6b5a39,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,60,,color:category/property
+$system-color-yellow-70,#504332,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,70,,color:category/property
+$system-color-yellow-80,#332d27,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,80,,color:category/property
+$system-color-yellow-90,#1a1614,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,90,,color:category/property
+$system-color-yellow-10,#fee685,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,10,,color:category/property
+$system-color-yellow-20,#face00,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,20,,color:category/property
+$system-color-yellow-30,#ddaa01,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,30,,color:category/property
+$system-color-yellow-40,#b38c00,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,40,,color:category/property
+$system-color-yellow-50,#947100,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,50,,color:category/property
+$system-color-yellow-60,#776017,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,60,,color:category/property
+$system-color-yellow-70,#5c4809,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,70,,color:category/property
+$system-color-yellow-80,#422d19,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,80,,color:category/property
+$system-color-yellow-90,false,_yellow.scss,system,namespace.category.concept.scale,system,color,yellow,,,,,,90,,color:category/property
+$tokens-color-basic-50-vivid-red-warm,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,red-warm,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-vivid,false,shortcodes-color-basic.scss,system,category.scale.mode,,color,,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-green-warm,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-green-cool,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-30-vivid-mint-cool,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-30-vivid-40-vivid-blue-50-vivid-blue-warm,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-30-vivid-40-vivid-blue-50-vivid,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-30-vivid-40-vivid-blue-50-50-indigo-warm,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-30-vivid-40-vivid-blue-50-50-50-violet-warm,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-30-vivid-40-vivid-blue-50-50-50-50-vivid-gray-cool,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-30-vivid-40-vivid-blue-50-50-50-50-vivid,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-30-vivid-40-vivid-blue-50-50-50-50,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-30-vivid-40-vivid-blue-50-50-50,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$tokens-color-basic-50-40-vivid-gold-20-vivid-yellow-10-vivid-50-vivid-30-vivid-40-vivid-blue-50-50,false,shortcodes-color-basic.scss,system,category.concept.scale.mode,,color,gold,,,,,,50,vivid,color:category/property
+$color-red-cool-5,"get-system-color(""red-cool"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,5,,
+$color-red-cool-10,"get-system-color(""red-cool"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,10,,
+$color-red-cool-20,"get-system-color(""red-cool"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,20,,
+$color-red-cool-30,"get-system-color(""red-cool"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,30,,
+$color-red-cool-40,"get-system-color(""red-cool"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,40,,
+$color-red-cool-50,"get-system-color(""red-cool"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,50,,
+$color-red-cool-60,"get-system-color(""red-cool"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,60,,
+$color-red-cool-70,"get-system-color(""red-cool"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,70,,
+$color-red-cool-80,"get-system-color(""red-cool"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,80,,
+$color-red-cool-90,"get-system-color(""red-cool"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,90,,
+$color-red-cool-5v,"get-system-color(""red-cool"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,5v,,
+$color-red-cool-10v,"get-system-color(""red-cool"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,10v,,
+$color-red-cool-20v,"get-system-color(""red-cool"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,20v,,
+$color-red-cool-30v,"get-system-color(""red-cool"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,30v,,
+$color-red-cool-40v,"get-system-color(""red-cool"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,40v,,
+$color-red-cool-50v,"get-system-color(""red-cool"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,50v,,
+$color-red-cool-60v,"get-system-color(""red-cool"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,60v,,
+$color-red-cool-70v,"get-system-color(""red-cool"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,70v,,
+$color-red-cool-80v,"get-system-color(""red-cool"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,80v,,
+$color-red-cool-90v,"get-system-color(""red-cool"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-cool,,,,,,90v,,
+$color-red-5,"get-system-color(""red"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,5,,
+$color-red-10,"get-system-color(""red"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,10,,
+$color-red-20,"get-system-color(""red"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,20,,
+$color-red-30,"get-system-color(""red"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,30,,
+$color-red-40,"get-system-color(""red"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,40,,
+$color-red-50,"get-system-color(""red"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,50,,
+$color-red-60,"get-system-color(""red"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,60,,
+$color-red-70,"get-system-color(""red"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,70,,
+$color-red-80,"get-system-color(""red"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,80,,
+$color-red-90,"get-system-color(""red"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,90,,
+$color-red-5v,"get-system-color(""red"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,5v,,
+$color-red-10v,"get-system-color(""red"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,10v,,
+$color-red-20v,"get-system-color(""red"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,20v,,
+$color-red-30v,"get-system-color(""red"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,30v,,
+$color-red-40v,"get-system-color(""red"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,40v,,
+$color-red-50v,"get-system-color(""red"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,50v,,
+$color-red-60v,"get-system-color(""red"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,60v,,
+$color-red-70v,"get-system-color(""red"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,70v,,
+$color-red-80v,"get-system-color(""red"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,80v,,
+$color-red-90v,"get-system-color(""red"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red,,,,,,90v,,
+$color-red-warm-5,"get-system-color(""red-warm"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,5,,
+$color-red-warm-10,"get-system-color(""red-warm"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,10,,
+$color-red-warm-20,"get-system-color(""red-warm"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,20,,
+$color-red-warm-30,"get-system-color(""red-warm"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,30,,
+$color-red-warm-40,"get-system-color(""red-warm"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,40,,
+$color-red-warm-50,"get-system-color(""red-warm"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,50,,
+$color-red-warm-60,"get-system-color(""red-warm"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,60,,
+$color-red-warm-70,"get-system-color(""red-warm"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,70,,
+$color-red-warm-80,"get-system-color(""red-warm"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,80,,
+$color-red-warm-90,"get-system-color(""red-warm"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,90,,
+$color-red-warm-5v,"get-system-color(""red-warm"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,5v,,
+$color-red-warm-10v,"get-system-color(""red-warm"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,10v,,
+$color-red-warm-20v,"get-system-color(""red-warm"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,20v,,
+$color-red-warm-30v,"get-system-color(""red-warm"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,30v,,
+$color-red-warm-40v,"get-system-color(""red-warm"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,40v,,
+$color-red-warm-50v,"get-system-color(""red-warm"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,50v,,
+$color-red-warm-60v,"get-system-color(""red-warm"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,60v,,
+$color-red-warm-70v,"get-system-color(""red-warm"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,70v,,
+$color-red-warm-80v,"get-system-color(""red-warm"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,80v,,
+$color-red-warm-90v,"get-system-color(""red-warm"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,red-warm,,,,,,90v,,
+$color-orange-warm-5,"get-system-color(""orange-warm"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,5,,
+$color-orange-warm-10,"get-system-color(""orange-warm"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,10,,
+$color-orange-warm-20,"get-system-color(""orange-warm"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,20,,
+$color-orange-warm-30,"get-system-color(""orange-warm"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,30,,
+$color-orange-warm-40,"get-system-color(""orange-warm"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,40,,
+$color-orange-warm-50,"get-system-color(""orange-warm"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,50,,
+$color-orange-warm-60,"get-system-color(""orange-warm"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,60,,
+$color-orange-warm-70,"get-system-color(""orange-warm"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,70,,
+$color-orange-warm-80,"get-system-color(""orange-warm"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,80,,
+$color-orange-warm-90,"get-system-color(""orange-warm"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,90,,
+$color-orange-warm-5v,"get-system-color(""orange-warm"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,5v,,
+$color-orange-warm-10v,"get-system-color(""orange-warm"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,10v,,
+$color-orange-warm-20v,"get-system-color(""orange-warm"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,20v,,
+$color-orange-warm-30v,"get-system-color(""orange-warm"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,30v,,
+$color-orange-warm-40v,"get-system-color(""orange-warm"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,40v,,
+$color-orange-warm-50v,"get-system-color(""orange-warm"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,50v,,
+$color-orange-warm-60v,"get-system-color(""orange-warm"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,60v,,
+$color-orange-warm-70v,"get-system-color(""orange-warm"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,70v,,
+$color-orange-warm-80v,"get-system-color(""orange-warm"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,80v,,
+$color-orange-warm-90v,"get-system-color(""orange-warm"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange-warm,,,,,,90v,,
+$color-orange-5,"get-system-color(""orange"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,5,,
+$color-orange-10,"get-system-color(""orange"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,10,,
+$color-orange-20,"get-system-color(""orange"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,20,,
+$color-orange-30,"get-system-color(""orange"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,30,,
+$color-orange-40,"get-system-color(""orange"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,40,,
+$color-orange-50,"get-system-color(""orange"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,50,,
+$color-orange-60,"get-system-color(""orange"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,60,,
+$color-orange-70,"get-system-color(""orange"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,70,,
+$color-orange-80,"get-system-color(""orange"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,80,,
+$color-orange-90,"get-system-color(""orange"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,90,,
+$color-orange-5v,"get-system-color(""orange"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,5v,,
+$color-orange-10v,"get-system-color(""orange"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,10v,,
+$color-orange-20v,"get-system-color(""orange"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,20v,,
+$color-orange-30v,"get-system-color(""orange"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,30v,,
+$color-orange-40v,"get-system-color(""orange"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,40v,,
+$color-orange-50v,"get-system-color(""orange"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,50v,,
+$color-orange-60v,"get-system-color(""orange"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,60v,,
+$color-orange-70v,"get-system-color(""orange"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,70v,,
+$color-orange-80v,"get-system-color(""orange"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,80v,,
+$color-orange-90v,"get-system-color(""orange"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,orange,,,,,,90v,,
+$color-gold-5,"get-system-color(""gold"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,5,,
+$color-gold-10,"get-system-color(""gold"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,10,,
+$color-gold-20,"get-system-color(""gold"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,20,,
+$color-gold-30,"get-system-color(""gold"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,30,,
+$color-gold-40,"get-system-color(""gold"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,40,,
+$color-gold-50,"get-system-color(""gold"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,50,,
+$color-gold-60,"get-system-color(""gold"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,60,,
+$color-gold-70,"get-system-color(""gold"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,70,,
+$color-gold-80,"get-system-color(""gold"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,80,,
+$color-gold-90,"get-system-color(""gold"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,90,,
+$color-gold-5v,"get-system-color(""gold"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,5v,,
+$color-gold-10v,"get-system-color(""gold"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,10v,,
+$color-gold-20v,"get-system-color(""gold"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,20v,,
+$color-gold-30v,"get-system-color(""gold"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,30v,,
+$color-gold-40v,"get-system-color(""gold"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,40v,,
+$color-gold-50v,"get-system-color(""gold"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,50v,,
+$color-gold-60v,"get-system-color(""gold"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,60v,,
+$color-gold-70v,"get-system-color(""gold"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,70v,,
+$color-gold-80v,"get-system-color(""gold"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,80v,,
+$color-gold-90v,"get-system-color(""gold"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gold,,,,,,90v,,
+$color-yellow-5,"get-system-color(""yellow"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,5,,
+$color-yellow-10,"get-system-color(""yellow"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,10,,
+$color-yellow-20,"get-system-color(""yellow"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,20,,
+$color-yellow-30,"get-system-color(""yellow"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,30,,
+$color-yellow-40,"get-system-color(""yellow"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,40,,
+$color-yellow-50,"get-system-color(""yellow"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,50,,
+$color-yellow-60,"get-system-color(""yellow"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,60,,
+$color-yellow-70,"get-system-color(""yellow"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,70,,
+$color-yellow-80,"get-system-color(""yellow"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,80,,
+$color-yellow-90,"get-system-color(""yellow"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,90,,
+$color-yellow-5v,"get-system-color(""yellow"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,5v,,
+$color-yellow-10v,"get-system-color(""yellow"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,10v,,
+$color-yellow-20v,"get-system-color(""yellow"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,20v,,
+$color-yellow-30v,"get-system-color(""yellow"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,30v,,
+$color-yellow-40v,"get-system-color(""yellow"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,40v,,
+$color-yellow-50v,"get-system-color(""yellow"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,50v,,
+$color-yellow-60v,"get-system-color(""yellow"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,60v,,
+$color-yellow-70v,"get-system-color(""yellow"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,70v,,
+$color-yellow-80v,"get-system-color(""yellow"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,80v,,
+$color-yellow-90v,"get-system-color(""yellow"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,yellow,,,,,,90v,,
+$color-green-warm-5,"get-system-color(""green-warm"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,5,,
+$color-green-warm-10,"get-system-color(""green-warm"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,10,,
+$color-green-warm-20,"get-system-color(""green-warm"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,20,,
+$color-green-warm-30,"get-system-color(""green-warm"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,30,,
+$color-green-warm-40,"get-system-color(""green-warm"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,40,,
+$color-green-warm-50,"get-system-color(""green-warm"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,50,,
+$color-green-warm-60,"get-system-color(""green-warm"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,60,,
+$color-green-warm-70,"get-system-color(""green-warm"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,70,,
+$color-green-warm-80,"get-system-color(""green-warm"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,80,,
+$color-green-warm-90,"get-system-color(""green-warm"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,90,,
+$color-green-warm-5v,"get-system-color(""green-warm"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,5v,,
+$color-green-warm-10v,"get-system-color(""green-warm"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,10v,,
+$color-green-warm-20v,"get-system-color(""green-warm"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,20v,,
+$color-green-warm-30v,"get-system-color(""green-warm"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,30v,,
+$color-green-warm-40v,"get-system-color(""green-warm"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,40v,,
+$color-green-warm-50v,"get-system-color(""green-warm"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,50v,,
+$color-green-warm-60v,"get-system-color(""green-warm"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,60v,,
+$color-green-warm-70v,"get-system-color(""green-warm"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,70v,,
+$color-green-warm-80v,"get-system-color(""green-warm"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,80v,,
+$color-green-warm-90v,"get-system-color(""green-warm"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-warm,,,,,,90v,,
+$color-green-5,"get-system-color(""green"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,5,,
+$color-green-10,"get-system-color(""green"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,10,,
+$color-green-20,"get-system-color(""green"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,20,,
+$color-green-30,"get-system-color(""green"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,30,,
+$color-green-40,"get-system-color(""green"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,40,,
+$color-green-50,"get-system-color(""green"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,50,,
+$color-green-60,"get-system-color(""green"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,60,,
+$color-green-70,"get-system-color(""green"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,70,,
+$color-green-80,"get-system-color(""green"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,80,,
+$color-green-90,"get-system-color(""green"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,90,,
+$color-green-5v,"get-system-color(""green"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,5v,,
+$color-green-10v,"get-system-color(""green"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,10v,,
+$color-green-20v,"get-system-color(""green"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,20v,,
+$color-green-30v,"get-system-color(""green"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,30v,,
+$color-green-40v,"get-system-color(""green"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,40v,,
+$color-green-50v,"get-system-color(""green"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,50v,,
+$color-green-60v,"get-system-color(""green"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,60v,,
+$color-green-70v,"get-system-color(""green"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,70v,,
+$color-green-80v,"get-system-color(""green"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,80v,,
+$color-green-90v,"get-system-color(""green"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green,,,,,,90v,,
+$color-green-cool-5,"get-system-color(""green-cool"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,5,,
+$color-green-cool-10,"get-system-color(""green-cool"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,10,,
+$color-green-cool-20,"get-system-color(""green-cool"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,20,,
+$color-green-cool-30,"get-system-color(""green-cool"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,30,,
+$color-green-cool-40,"get-system-color(""green-cool"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,40,,
+$color-green-cool-50,"get-system-color(""green-cool"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,50,,
+$color-green-cool-60,"get-system-color(""green-cool"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,60,,
+$color-green-cool-70,"get-system-color(""green-cool"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,70,,
+$color-green-cool-80,"get-system-color(""green-cool"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,80,,
+$color-green-cool-90,"get-system-color(""green-cool"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,90,,
+$color-green-cool-5v,"get-system-color(""green-cool"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,5v,,
+$color-green-cool-10v,"get-system-color(""green-cool"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,10v,,
+$color-green-cool-20v,"get-system-color(""green-cool"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,20v,,
+$color-green-cool-30v,"get-system-color(""green-cool"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,30v,,
+$color-green-cool-40v,"get-system-color(""green-cool"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,40v,,
+$color-green-cool-50v,"get-system-color(""green-cool"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,50v,,
+$color-green-cool-60v,"get-system-color(""green-cool"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,60v,,
+$color-green-cool-70v,"get-system-color(""green-cool"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,70v,,
+$color-green-cool-80v,"get-system-color(""green-cool"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,80v,,
+$color-green-cool-90v,"get-system-color(""green-cool"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,green-cool,,,,,,90v,,
+$color-mint-5,"get-system-color(""mint"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,5,,
+$color-mint-10,"get-system-color(""mint"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,10,,
+$color-mint-20,"get-system-color(""mint"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,20,,
+$color-mint-30,"get-system-color(""mint"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,30,,
+$color-mint-40,"get-system-color(""mint"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,40,,
+$color-mint-50,"get-system-color(""mint"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,50,,
+$color-mint-60,"get-system-color(""mint"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,60,,
+$color-mint-70,"get-system-color(""mint"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,70,,
+$color-mint-80,"get-system-color(""mint"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,80,,
+$color-mint-90,"get-system-color(""mint"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,90,,
+$color-mint-5v,"get-system-color(""mint"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,5v,,
+$color-mint-5v,"get-system-color(""mint"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,5v,,
+$color-mint-10v,"get-system-color(""mint"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,10v,,
+$color-mint-20v,"get-system-color(""mint"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,20v,,
+$color-mint-30v,"get-system-color(""mint"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,30v,,
+$color-mint-40v,"get-system-color(""mint"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,40v,,
+$color-mint-50v,"get-system-color(""mint"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,50v,,
+$color-mint-60v,"get-system-color(""mint"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,60v,,
+$color-mint-70v,"get-system-color(""mint"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,70v,,
+$color-mint-80v,"get-system-color(""mint"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,80v,,
+$color-mint-90v,"get-system-color(""mint"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint,,,,,,90v,,
+$color-mint-cool-5,"get-system-color(""mint-cool"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,5,,
+$color-mint-cool-10,"get-system-color(""mint-cool"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,10,,
+$color-mint-cool-20,"get-system-color(""mint-cool"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,20,,
+$color-mint-cool-30,"get-system-color(""mint-cool"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,30,,
+$color-mint-cool-40,"get-system-color(""mint-cool"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,40,,
+$color-mint-cool-50,"get-system-color(""mint-cool"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,50,,
+$color-mint-cool-60,"get-system-color(""mint-cool"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,60,,
+$color-mint-cool-70,"get-system-color(""mint-cool"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,70,,
+$color-mint-cool-80,"get-system-color(""mint-cool"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,80,,
+$color-mint-cool-90,"get-system-color(""mint-cool"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,90,,
+$color-mint-cool-5v,"get-system-color(""mint-cool"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,5v,,
+$color-mint-cool-10v,"get-system-color(""mint-cool"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,10v,,
+$color-mint-cool-20v,"get-system-color(""mint-cool"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,20v,,
+$color-mint-cool-30v,"get-system-color(""mint-cool"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,30v,,
+$color-mint-cool-40v,"get-system-color(""mint-cool"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,40v,,
+$color-mint-cool-50v,"get-system-color(""mint-cool"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,50v,,
+$color-mint-cool-60v,"get-system-color(""mint-cool"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,60v,,
+$color-mint-cool-70v,"get-system-color(""mint-cool"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,70v,,
+$color-mint-cool-80v,"get-system-color(""mint-cool"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,80v,,
+$color-mint-cool-90v,"get-system-color(""mint-cool"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,mint-cool,,,,,,90v,,
+$color-cyan-5,"get-system-color(""cyan"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,5,,
+$color-cyan-10,"get-system-color(""cyan"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,10,,
+$color-cyan-20,"get-system-color(""cyan"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,20,,
+$color-cyan-30,"get-system-color(""cyan"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,30,,
+$color-cyan-40,"get-system-color(""cyan"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,40,,
+$color-cyan-50,"get-system-color(""cyan"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,50,,
+$color-cyan-60,"get-system-color(""cyan"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,60,,
+$color-cyan-70,"get-system-color(""cyan"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,70,,
+$color-cyan-80,"get-system-color(""cyan"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,80,,
+$color-cyan-90,"get-system-color(""cyan"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,90,,
+$color-cyan-5v,"get-system-color(""cyan"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,5v,,
+$color-cyan-10v,"get-system-color(""cyan"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,10v,,
+$color-cyan-20v,"get-system-color(""cyan"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,20v,,
+$color-cyan-30v,"get-system-color(""cyan"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,30v,,
+$color-cyan-40v,"get-system-color(""cyan"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,40v,,
+$color-cyan-50v,"get-system-color(""cyan"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,50v,,
+$color-cyan-60v,"get-system-color(""cyan"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,60v,,
+$color-cyan-70v,"get-system-color(""cyan"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,70v,,
+$color-cyan-80v,"get-system-color(""cyan"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,80v,,
+$color-cyan-90v,"get-system-color(""cyan"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,cyan,,,,,,90v,,
+$color-blue-cool-5,"get-system-color(""blue-cool"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,5,,
+$color-blue-cool-10,"get-system-color(""blue-cool"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,10,,
+$color-blue-cool-20,"get-system-color(""blue-cool"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,20,,
+$color-blue-cool-30,"get-system-color(""blue-cool"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,30,,
+$color-blue-cool-40,"get-system-color(""blue-cool"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,40,,
+$color-blue-cool-50,"get-system-color(""blue-cool"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,50,,
+$color-blue-cool-60,"get-system-color(""blue-cool"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,60,,
+$color-blue-cool-70,"get-system-color(""blue-cool"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,70,,
+$color-blue-cool-80,"get-system-color(""blue-cool"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,80,,
+$color-blue-cool-90,"get-system-color(""blue-cool"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,90,,
+$color-blue-cool-5v,"get-system-color(""blue-cool"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,5v,,
+$color-blue-cool-10v,"get-system-color(""blue-cool"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,10v,,
+$color-blue-cool-20v,"get-system-color(""blue-cool"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,20v,,
+$color-blue-cool-30v,"get-system-color(""blue-cool"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,30v,,
+$color-blue-cool-40v,"get-system-color(""blue-cool"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,40v,,
+$color-blue-cool-50v,"get-system-color(""blue-cool"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,50v,,
+$color-blue-cool-60v,"get-system-color(""blue-cool"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,60v,,
+$color-blue-cool-70v,"get-system-color(""blue-cool"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,70v,,
+$color-blue-cool-80v,"get-system-color(""blue-cool"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,80v,,
+$color-blue-cool-90v,"get-system-color(""blue-cool"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-cool,,,,,,90v,,
+$color-blue-5,"get-system-color(""blue"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,5,,
+$color-blue-10,"get-system-color(""blue"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,10,,
+$color-blue-20,"get-system-color(""blue"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,20,,
+$color-blue-30,"get-system-color(""blue"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,30,,
+$color-blue-40,"get-system-color(""blue"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,40,,
+$color-blue-50,"get-system-color(""blue"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,50,,
+$color-blue-60,"get-system-color(""blue"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,60,,
+$color-blue-70,"get-system-color(""blue"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,70,,
+$color-blue-80,"get-system-color(""blue"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,80,,
+$color-blue-90,"get-system-color(""blue"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,90,,
+$color-blue-5v,"get-system-color(""blue"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,5v,,
+$color-blue-10v,"get-system-color(""blue"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,10v,,
+$color-blue-20v,"get-system-color(""blue"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,20v,,
+$color-blue-30v,"get-system-color(""blue"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,30v,,
+$color-blue-40v,"get-system-color(""blue"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,40v,,
+$color-blue-50v,"get-system-color(""blue"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,50v,,
+$color-blue-60v,"get-system-color(""blue"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,60v,,
+$color-blue-70v,"get-system-color(""blue"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,70v,,
+$color-blue-80v,"get-system-color(""blue"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,80v,,
+$color-blue-90v,"get-system-color(""blue"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue,,,,,,90v,,
+$color-blue-warm-5,"get-system-color(""blue-warm"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,5,,
+$color-blue-warm-10,"get-system-color(""blue-warm"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,10,,
+$color-blue-warm-20,"get-system-color(""blue-warm"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,20,,
+$color-blue-warm-30,"get-system-color(""blue-warm"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,30,,
+$color-blue-warm-40,"get-system-color(""blue-warm"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,40,,
+$color-blue-warm-50,"get-system-color(""blue-warm"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,50,,
+$color-blue-warm-60,"get-system-color(""blue-warm"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,60,,
+$color-blue-warm-70,"get-system-color(""blue-warm"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,70,,
+$color-blue-warm-80,"get-system-color(""blue-warm"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,80,,
+$color-blue-warm-90,"get-system-color(""blue-warm"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,90,,
+$color-blue-warm-5v,"get-system-color(""blue-warm"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,5v,,
+$color-blue-warm-10v,"get-system-color(""blue-warm"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,10v,,
+$color-blue-warm-20v,"get-system-color(""blue-warm"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,20v,,
+$color-blue-warm-30v,"get-system-color(""blue-warm"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,30v,,
+$color-blue-warm-40v,"get-system-color(""blue-warm"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,40v,,
+$color-blue-warm-50v,"get-system-color(""blue-warm"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,50v,,
+$color-blue-warm-60v,"get-system-color(""blue-warm"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,60v,,
+$color-blue-warm-70v,"get-system-color(""blue-warm"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,70v,,
+$color-blue-warm-80v,"get-system-color(""blue-warm"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,80v,,
+$color-blue-warm-90v,"get-system-color(""blue-warm"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,blue-warm,,,,,,90v,,
+$color-indigo-cool-5,"get-system-color(""indigo-cool"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,5,,
+$color-indigo-cool-10,"get-system-color(""indigo-cool"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,10,,
+$color-indigo-cool-20,"get-system-color(""indigo-cool"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,20,,
+$color-indigo-cool-30,"get-system-color(""indigo-cool"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,30,,
+$color-indigo-cool-40,"get-system-color(""indigo-cool"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,40,,
+$color-indigo-cool-50,"get-system-color(""indigo-cool"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,50,,
+$color-indigo-cool-60,"get-system-color(""indigo-cool"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,60,,
+$color-indigo-cool-70,"get-system-color(""indigo-cool"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,70,,
+$color-indigo-cool-80,"get-system-color(""indigo-cool"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,80,,
+$color-indigo-cool-90,"get-system-color(""indigo-cool"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,90,,
+$color-indigo-cool-5v,"get-system-color(""indigo-cool"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,5v,,
+$color-indigo-cool-10v,"get-system-color(""indigo-cool"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,10v,,
+$color-indigo-cool-20v,"get-system-color(""indigo-cool"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,20v,,
+$color-indigo-cool-30v,"get-system-color(""indigo-cool"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,30v,,
+$color-indigo-cool-40v,"get-system-color(""indigo-cool"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,40v,,
+$color-indigo-cool-50v,"get-system-color(""indigo-cool"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,50v,,
+$color-indigo-cool-60v,"get-system-color(""indigo-cool"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,60v,,
+$color-indigo-cool-70v,"get-system-color(""indigo-cool"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,70v,,
+$color-indigo-cool-80v,"get-system-color(""indigo-cool"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,80v,,
+$color-indigo-cool-90v,"get-system-color(""indigo-cool"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-cool,,,,,,90v,,
+$color-indigo-5,"get-system-color(""indigo"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,5,,
+$color-indigo-10,"get-system-color(""indigo"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,10,,
+$color-indigo-20,"get-system-color(""indigo"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,20,,
+$color-indigo-30,"get-system-color(""indigo"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,30,,
+$color-indigo-40,"get-system-color(""indigo"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,40,,
+$color-indigo-50,"get-system-color(""indigo"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,50,,
+$color-indigo-60,"get-system-color(""indigo"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,60,,
+$color-indigo-70,"get-system-color(""indigo"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,70,,
+$color-indigo-80,"get-system-color(""indigo"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,80,,
+$color-indigo-90,"get-system-color(""indigo"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,90,,
+$color-indigo-5v,"get-system-color(""indigo"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,5v,,
+$color-indigo-10v,"get-system-color(""indigo"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,10v,,
+$color-indigo-20v,"get-system-color(""indigo"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,20v,,
+$color-indigo-30v,"get-system-color(""indigo"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,30v,,
+$color-indigo-40v,"get-system-color(""indigo"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,40v,,
+$color-indigo-50v,"get-system-color(""indigo"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,50v,,
+$color-indigo-60v,"get-system-color(""indigo"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,60v,,
+$color-indigo-70v,"get-system-color(""indigo"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,70v,,
+$color-indigo-80v,"get-system-color(""indigo"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,80v,,
+$color-indigo-90v,"get-system-color(""indigo"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo,,,,,,90v,,
+$color-indigo-warm-5,"get-system-color(""indigo-warm"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,5,,
+$color-indigo-warm-10,"get-system-color(""indigo-warm"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,10,,
+$color-indigo-warm-20,"get-system-color(""indigo-warm"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,20,,
+$color-indigo-warm-30,"get-system-color(""indigo-warm"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,30,,
+$color-indigo-warm-40,"get-system-color(""indigo-warm"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,40,,
+$color-indigo-warm-50,"get-system-color(""indigo-warm"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,50,,
+$color-indigo-warm-60,"get-system-color(""indigo-warm"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,60,,
+$color-indigo-warm-70,"get-system-color(""indigo-warm"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,70,,
+$color-indigo-warm-80,"get-system-color(""indigo-warm"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,80,,
+$color-indigo-warm-90,"get-system-color(""indigo-warm"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,90,,
+$color-indigo-warm-5v,"get-system-color(""indigo-warm"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,5v,,
+$color-indigo-warm-10v,"get-system-color(""indigo-warm"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,10v,,
+$color-indigo-warm-20v,"get-system-color(""indigo-warm"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,20v,,
+$color-indigo-warm-30v,"get-system-color(""indigo-warm"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,30v,,
+$color-indigo-warm-40v,"get-system-color(""indigo-warm"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,40v,,
+$color-indigo-warm-50v,"get-system-color(""indigo-warm"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,50v,,
+$color-indigo-warm-60v,"get-system-color(""indigo-warm"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,60v,,
+$color-indigo-warm-70v,"get-system-color(""indigo-warm"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,70v,,
+$color-indigo-warm-80v,"get-system-color(""indigo-warm"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,80v,,
+$color-indigo-warm-90v,"get-system-color(""indigo-warm"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,indigo-warm,,,,,,90v,,
+$color-violet-5,"get-system-color(""violet"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,5,,
+$color-violet-10,"get-system-color(""violet"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,10,,
+$color-violet-20,"get-system-color(""violet"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,20,,
+$color-violet-30,"get-system-color(""violet"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,30,,
+$color-violet-40,"get-system-color(""violet"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,40,,
+$color-violet-50,"get-system-color(""violet"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,50,,
+$color-violet-60,"get-system-color(""violet"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,60,,
+$color-violet-70,"get-system-color(""violet"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,70,,
+$color-violet-80,"get-system-color(""violet"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,80,,
+$color-violet-90,"get-system-color(""violet"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,90,,
+$color-violet-5v,"get-system-color(""violet"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,5v,,
+$color-violet-10v,"get-system-color(""violet"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,10v,,
+$color-violet-20v,"get-system-color(""violet"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,20v,,
+$color-violet-30v,"get-system-color(""violet"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,30v,,
+$color-violet-40v,"get-system-color(""violet"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,40v,,
+$color-violet-50v,"get-system-color(""violet"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,50v,,
+$color-violet-60v,"get-system-color(""violet"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,60v,,
+$color-violet-70v,"get-system-color(""violet"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,70v,,
+$color-violet-80v,"get-system-color(""violet"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,80v,,
+$color-violet-90v,"get-system-color(""violet"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet,,,,,,90v,,
+$color-violet-warm-5,"get-system-color(""violet-warm"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,5,,
+$color-violet-warm-10,"get-system-color(""violet-warm"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,10,,
+$color-violet-warm-20,"get-system-color(""violet-warm"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,20,,
+$color-violet-warm-30,"get-system-color(""violet-warm"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,30,,
+$color-violet-warm-40,"get-system-color(""violet-warm"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,40,,
+$color-violet-warm-50,"get-system-color(""violet-warm"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,50,,
+$color-violet-warm-60,"get-system-color(""violet-warm"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,60,,
+$color-violet-warm-70,"get-system-color(""violet-warm"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,70,,
+$color-violet-warm-80,"get-system-color(""violet-warm"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,80,,
+$color-violet-warm-90,"get-system-color(""violet-warm"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,90,,
+$color-violet-warm-5v,"get-system-color(""violet-warm"", 5, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,5v,,
+$color-violet-warm-10v,"get-system-color(""violet-warm"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,10v,,
+$color-violet-warm-20v,"get-system-color(""violet-warm"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,20v,,
+$color-violet-warm-30v,"get-system-color(""violet-warm"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,30v,,
+$color-violet-warm-40v,"get-system-color(""violet-warm"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,40v,,
+$color-violet-warm-50v,"get-system-color(""violet-warm"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,50v,,
+$color-violet-warm-60v,"get-system-color(""violet-warm"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,60v,,
+$color-violet-warm-70v,"get-system-color(""violet-warm"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,70v,,
+$color-violet-warm-80v,"get-system-color(""violet-warm"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,80v,,
+$color-violet-warm-90v,"get-system-color(""violet-warm"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,violet-warm,,,,,,90v,,
+$color-magenta-5,"get-system-color(""magenta"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,5,,
+$color-magenta-10,"get-system-color(""magenta"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,10,,
+$color-magenta-20,"get-system-color(""magenta"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,20,,
+$color-magenta-30,"get-system-color(""magenta"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,30,,
+$color-magenta-40,"get-system-color(""magenta"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,40,,
+$color-magenta-50,"get-system-color(""magenta"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,50,,
+$color-magenta-60,"get-system-color(""magenta"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,60,,
+$color-magenta-70,"get-system-color(""magenta"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,70,,
+$color-magenta-80,"get-system-color(""magenta"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,80,,
+$color-magenta-90,"get-system-color(""magenta"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,90,,
+$color-magenta-5v,"get-system-color(""magenta"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,5v,,
+$color-magenta-10v,"get-system-color(""magenta"", 10, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,10v,,
+$color-magenta-20v,"get-system-color(""magenta"", 20, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,20v,,
+$color-magenta-30v,"get-system-color(""magenta"", 30, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,30v,,
+$color-magenta-40v,"get-system-color(""magenta"", 40, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,40v,,
+$color-magenta-50v,"get-system-color(""magenta"", 50, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,50v,,
+$color-magenta-60v,"get-system-color(""magenta"", 60, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,60v,,
+$color-magenta-70v,"get-system-color(""magenta"", 70, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,70v,,
+$color-magenta-80v,"get-system-color(""magenta"", 80, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,80v,,
+$color-magenta-90v,"get-system-color(""magenta"", 90, ""vivid"")",shortcodes-color-system.scss,system,namespace.concept.scale,color,,magenta,,,,,,90v,,
+$color-gray-cool-1,"get-system-color(""gray-cool"", 1)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,1,,
+$color-gray-cool-2,"get-system-color(""gray-cool"", 2)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,2,,
+$color-gray-cool-3,"get-system-color(""gray-cool"", 3)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,3,,
+$color-gray-cool-4,"get-system-color(""gray-cool"", 4)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,4,,
+$color-gray-cool-5,"get-system-color(""gray-cool"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,5,,
+$color-gray-cool-10,"get-system-color(""gray-cool"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,10,,
+$color-gray-cool-20,"get-system-color(""gray-cool"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,20,,
+$color-gray-cool-30,"get-system-color(""gray-cool"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,30,,
+$color-gray-cool-40,"get-system-color(""gray-cool"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,40,,
+$color-gray-cool-50,"get-system-color(""gray-cool"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,50,,
+$color-gray-cool-60,"get-system-color(""gray-cool"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,60,,
+$color-gray-cool-70,"get-system-color(""gray-cool"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,70,,
+$color-gray-cool-80,"get-system-color(""gray-cool"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,80,,
+$color-gray-cool-90,"get-system-color(""gray-cool"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-cool,,,,,,90,,
+$color-gray-1,"get-system-color(""gray"", 1)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,1,,
+$color-gray-2,"get-system-color(""gray"", 2)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,2,,
+$color-gray-3,"get-system-color(""gray"", 3)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,3,,
+$color-gray-4,"get-system-color(""gray"", 4)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,4,,
+$color-gray-5,"get-system-color(""gray"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,5,,
+$color-gray-10,"get-system-color(""gray"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,10,,
+$color-gray-20,"get-system-color(""gray"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,20,,
+$color-gray-30,"get-system-color(""gray"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,30,,
+$color-gray-40,"get-system-color(""gray"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,40,,
+$color-gray-50,"get-system-color(""gray"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,50,,
+$color-gray-60,"get-system-color(""gray"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,60,,
+$color-gray-70,"get-system-color(""gray"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,70,,
+$color-gray-80,"get-system-color(""gray"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,80,,
+$color-gray-90,"get-system-color(""gray"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray,,,,,,90,,
+$color-gray-warm-1,"get-system-color(""gray-warm"", 1)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,1,,
+$color-gray-warm-2,"get-system-color(""gray-warm"", 2)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,2,,
+$color-gray-warm-3,"get-system-color(""gray-warm"", 3)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,3,,
+$color-gray-warm-4,"get-system-color(""gray-warm"", 4)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,4,,
+$color-gray-warm-5,"get-system-color(""gray-warm"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,5,,
+$color-gray-warm-10,"get-system-color(""gray-warm"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,10,,
+$color-gray-warm-20,"get-system-color(""gray-warm"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,20,,
+$color-gray-warm-30,"get-system-color(""gray-warm"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,30,,
+$color-gray-warm-40,"get-system-color(""gray-warm"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,40,,
+$color-gray-warm-50,"get-system-color(""gray-warm"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,50,,
+$color-gray-warm-60,"get-system-color(""gray-warm"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,60,,
+$color-gray-warm-70,"get-system-color(""gray-warm"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,70,,
+$color-gray-warm-80,"get-system-color(""gray-warm"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,80,,
+$color-gray-warm-90,"get-system-color(""gray-warm"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,gray-warm,,,,,,90,,
+$color-black-transparent-5,"get-system-color(""black-transparent"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,black-transparent,,,,,,5,,
+$color-black-transparent-10,"get-system-color(""black-transparent"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,black-transparent,,,,,,10,,
+$color-black-transparent-20,"get-system-color(""black-transparent"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,black-transparent,,,,,,20,,
+$color-black-transparent-30,"get-system-color(""black-transparent"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,black-transparent,,,,,,30,,
+$color-black-transparent-40,"get-system-color(""black-transparent"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,black-transparent,,,,,,40,,
+$color-black-transparent-50,"get-system-color(""black-transparent"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,black-transparent,,,,,,50,,
+$color-black-transparent-60,"get-system-color(""black-transparent"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,black-transparent,,,,,,60,,
+$color-black-transparent-70,"get-system-color(""black-transparent"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,black-transparent,,,,,,70,,
+$color-black-transparent-80,"get-system-color(""black-transparent"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,black-transparent,,,,,,80,,
+$color-black-transparent-90,"get-system-color(""black-transparent"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,black-transparent,,,,,,90,,
+$color-white-transparent-5,"get-system-color(""white-transparent"", 5)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,white-transparent,,,,,,5,,
+$color-white-transparent-10,"get-system-color(""white-transparent"", 10)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,white-transparent,,,,,,10,,
+$color-white-transparent-20,"get-system-color(""white-transparent"", 20)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,white-transparent,,,,,,20,,
+$color-white-transparent-30,"get-system-color(""white-transparent"", 30)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,white-transparent,,,,,,30,,
+$color-white-transparent-40,"get-system-color(""white-transparent"", 40)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,white-transparent,,,,,,40,,
+$color-white-transparent-50,"get-system-color(""white-transparent"", 50)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,white-transparent,,,,,,50,,
+$color-white-transparent-60,"get-system-color(""white-transparent"", 60)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,white-transparent,,,,,,60,,
+$color-white-transparent-70,"get-system-color(""white-transparent"", 70)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,white-transparent,,,,,,70,,
+$color-white-transparent-80,"get-system-color(""white-transparent"", 80)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,white-transparent,,,,,,80,,
+$color-white-transparent-90,"get-system-color(""white-transparent"", 90)",shortcodes-color-system.scss,system,namespace.concept.scale,color,,white-transparent,,,,,,90,,
+$system-base-cap-height,362px,base-cap-height.scss,system,namespace.concept.property,system,,base,height,,,,,,,
+$system-line-height-1,1,line-height.scss,system,namespace.property.scale,system,,,line-height,,,,,1,,
+$system-line-height-2,1.2,line-height.scss,system,namespace.property.scale,system,,,line-height,,,,,2,,
+$system-line-height-3,1.35,line-height.scss,system,namespace.property.scale,system,,,line-height,,,,,3,,
+$system-line-height-4,1.5,line-height.scss,system,namespace.property.scale,system,,,line-height,,,,,4,,
+$system-line-height-5,1.62,line-height.scss,system,namespace.property.scale,system,,,line-height,,,,,5,,
+$system-line-height-6,1.75,line-height.scss,system,namespace.property.scale,system,,,line-height,,,,,6,,
+$system-measure-smaller,44ex,measure.scss,system,namespace,system,,,,,,,,,,
+$system-measure-small,60ex,measure.scss,system,namespace.variant,system,,,,,,small,,,,
+$system-measure-base,64ex,measure.scss,system,namespace.concept,system,,base,,,,,,,,
+$system-measure-large,68ex,measure.scss,system,namespace,system,,,,,,,,,,
+$system-measure-larger,72ex,measure.scss,system,namespace,system,,,,,,,,,,
+$system-measure-largest,88ex,measure.scss,system,namespace,system,,,,,,,,,,
+$font-stack-georgia,"""Georgia"", ""Cambria"", ""Times New Roman"", ""Times"", serif",stacks.scss,system,category,,font,,,,,,,,,
+$system-type-scale-1,12px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,1,,
+$system-type-scale-2,13px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,2,,
+$system-type-scale-3,14px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,3,,
+$system-type-scale-4,15px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,4,,
+$system-type-scale-5,16px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,5,,
+$system-type-scale-6,17px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,6,,
+$system-type-scale-7,18px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,7,,
+$system-type-scale-8,20px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,8,,
+$system-type-scale-9,22px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,9,,
+$system-type-scale-10,24px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,10,,
+$system-type-scale-11,28px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,11,,
+$system-type-scale-12,32px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,12,,
+$system-type-scale-13,36px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,13,,
+$system-type-scale-14,40px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,14,,
+$system-type-scale-15,48px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,15,,
+$system-type-scale-16,56px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,16,,
+$system-type-scale-17,64px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,17,,
+$system-type-scale-18,80px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,18,,
+$system-type-scale-19,120px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,19,,
+$system-type-scale-20,140px,type-scale.scss,system,namespace.category.scale,system,type-scale,,,,,,,20,,
+$system-typeface-tokens-cap-height,362px,typefaces.scss,system,namespace.property,system,,,height,,,,,,,
+$system-typeface-tokens-stack,$font-stack-system,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-system-font,true,typefaces.scss,system,namespace.category,system,font,,,,,,,,,
+$system-typeface-tokens-cap-height,346px,typefaces.scss,system,namespace.property,system,,,height,,,,,,,
+$system-typeface-tokens-stack,$font-stack-georgia,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-system-font,true,typefaces.scss,system,namespace.category,system,font,,,,,,,,,
+$system-typeface-tokens-cap-height,357px,typefaces.scss,system,namespace.property,system,,,height,,,,,,,
+$system-typeface-tokens-stack,$font-stack-helvetica,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-system-font,true,typefaces.scss,system,namespace.category,system,font,,,,,,,,,
+$system-typeface-tokens-cap-height,363px,typefaces.scss,system,namespace.property,system,,,height,,,,,,,
+$system-typeface-tokens-stack,$font-stack-system,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-cap-height,364px,typefaces.scss,system,namespace.property,system,,,height,,,,,,,
+$system-typeface-tokens-stack,$font-stack-system,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-cap-height,357px,typefaces.scss,system,namespace.property,system,,,height,,,,,,,
+$system-typeface-tokens-stack,$font-stack-system,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-cap-height,371px,typefaces.scss,system,namespace.property,system,,,height,,,,,,,
+$system-typeface-tokens-stack,$font-stack-georgia,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-src-dir,merriweather,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-src-roman-100,false,typefaces.scss,system,namespace.scale,system,,,,,,,,100,,
+$system-typeface-tokens-src-roman-200,false,typefaces.scss,system,namespace.scale,system,,,,,,,,200,,
+$system-typeface-tokens-src-roman-300,Latin-Merriweather-Light,typefaces.scss,system,namespace.scale,system,,,,,,,,300,,
+$system-typeface-tokens-src-roman-400,Latin-Merriweather-Regular,typefaces.scss,system,namespace.scale,system,,,,,,,,400,,
+$system-typeface-tokens-src-roman-500,false,typefaces.scss,system,namespace.scale,system,,,,,,,,500,,
+$system-typeface-tokens-src-roman-600,false,typefaces.scss,system,namespace.scale,system,,,,,,,,600,,
+$system-typeface-tokens-src-roman-700,Latin-Merriweather-Bold,typefaces.scss,system,namespace.scale,system,,,,,,,,700,,
+$system-typeface-tokens-src-roman-800,false,typefaces.scss,system,namespace.scale,system,,,,,,,,800,,
+$system-typeface-tokens-src-roman-900,Latin-Merriweather-Black,typefaces.scss,system,namespace.scale,system,,,,,,,,900,,
+$system-typeface-tokens-src-roman-italic-100,false,typefaces.scss,system,namespace.scale,system,,,,,,,,100,,
+$system-typeface-tokens-src-roman-italic-200,false,typefaces.scss,system,namespace.scale,system,,,,,,,,200,,
+$system-typeface-tokens-src-roman-italic-300,Latin-Merriweather-LightItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,300,,
+$system-typeface-tokens-src-roman-italic-400,Latin-Merriweather-Italic,typefaces.scss,system,namespace.scale,system,,,,,,,,400,,
+$system-typeface-tokens-src-roman-italic-500,false,typefaces.scss,system,namespace.scale,system,,,,,,,,500,,
+$system-typeface-tokens-src-roman-italic-600,false,typefaces.scss,system,namespace.scale,system,,,,,,,,600,,
+$system-typeface-tokens-src-roman-italic-700,Latin-Merriweather-BoldItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,700,,
+$system-typeface-tokens-src-roman-italic-800,false,typefaces.scss,system,namespace.scale,system,,,,,,,,800,,
+$system-typeface-tokens-src-roman-italic-900,Latin-Merriweather-BlackItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,900,,
+$system-typeface-tokens-src-roman-italic-display-name,Roboto Mono Web,typefaces.scss,system,namespace.component,system,,,,display,,,,,,
+$system-typeface-tokens-src-roman-italic-cap-height,380px,typefaces.scss,system,namespace.property,system,,,height,,,,,,,
+$system-typeface-tokens-src-roman-italic-stack,$font-stack-monospace,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-src-roman-italic-src-dir,roboto-mono,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-src-roman-italic-src-roman-100,roboto-mono-v5-latin-100,typefaces.scss,system,namespace.scale,system,,,,,,,,100,,
+$system-typeface-tokens-src-roman-italic-src-roman-200,false,typefaces.scss,system,namespace.scale,system,,,,,,,,200,,
+$system-typeface-tokens-src-roman-italic-src-roman-300,roboto-mono-v5-latin-300,typefaces.scss,system,namespace.scale,system,,,,,,,,300,,
+$system-typeface-tokens-src-roman-italic-src-roman-400,roboto-mono-v5-latin-regular,typefaces.scss,system,namespace.scale,system,,,,,,,,400,,
+$system-typeface-tokens-src-roman-italic-src-roman-500,roboto-mono-v5-latin-500,typefaces.scss,system,namespace.scale,system,,,,,,,,500,,
+$system-typeface-tokens-src-roman-italic-src-roman-600,false,typefaces.scss,system,namespace.scale,system,,,,,,,,600,,
+$system-typeface-tokens-src-roman-italic-src-roman-700,roboto-mono-v5-latin-700,typefaces.scss,system,namespace.scale,system,,,,,,,,700,,
+$system-typeface-tokens-src-roman-italic-src-roman-800,false,typefaces.scss,system,namespace.scale,system,,,,,,,,800,,
+$system-typeface-tokens-src-roman-italic-src-roman-900,false,typefaces.scss,system,namespace.scale,system,,,,,,,,900,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-100,roboto-mono-v5-latin-100italic,typefaces.scss,system,namespace.scale,system,,,,,,,,100,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-200,false,typefaces.scss,system,namespace.scale,system,,,,,,,,200,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-300,roboto-mono-v5-latin-300italic,typefaces.scss,system,namespace.scale,system,,,,,,,,300,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-400,roboto-mono-v5-latin-italic,typefaces.scss,system,namespace.scale,system,,,,,,,,400,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-500,roboto-mono-v5-latin-500italic,typefaces.scss,system,namespace.scale,system,,,,,,,,500,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-600,false,typefaces.scss,system,namespace.scale,system,,,,,,,,600,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-700,roboto-mono-v5-latin-700italic,typefaces.scss,system,namespace.scale,system,,,,,,,,700,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-800,false,typefaces.scss,system,namespace.scale,system,,,,,,,,800,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-900,false,typefaces.scss,system,namespace.scale,system,,,,,,,,900,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-display-name,Source Sans Pro Web,typefaces.scss,system,namespace.component,system,,,,display,,,,,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-cap-height,340px,typefaces.scss,system,namespace.property,system,,,height,,,,,,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-stack,$font-stack-helvetica,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-dir,source-sans-pro,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-100,false,typefaces.scss,system,namespace.scale,system,,,,,,,,100,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-200,sourcesanspro-extralight-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,200,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-300,sourcesanspro-light-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,300,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-400,sourcesanspro-regular-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,400,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-500,false,typefaces.scss,system,namespace.scale,system,,,,,,,,500,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-600,sourcesanspro-semibold-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,600,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-700,sourcesanspro-bold-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,700,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-800,false,typefaces.scss,system,namespace.scale,system,,,,,,,,800,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-900,sourcesanspro-black-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,900,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-100,false,typefaces.scss,system,namespace.scale,system,,,,,,,,100,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-200,sourcesanspro-extralightitalic-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,200,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-300,sourcesanspro-lightitalic-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,300,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-400,sourcesanspro-italic-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,400,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-500,false,typefaces.scss,system,namespace.scale,system,,,,,,,,500,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-600,sourcesanspro-semibolditalic-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,600,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-700,sourcesanspro-bolditalic-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,700,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-800,false,typefaces.scss,system,namespace.scale,system,,,,,,,,800,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-900,sourcesanspro-blackitalic-webfont,typefaces.scss,system,namespace.scale,system,,,,,,,,900,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-display-name,Public Sans Web,typefaces.scss,system,namespace.component,system,,,,display,,,,,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-cap-height,362px,typefaces.scss,system,namespace.property,system,,,height,,,,,,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-stack,$font-stack-system,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-dir,public-sans,typefaces.scss,system,namespace,system,,,,,,,,,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-100,PublicSans-Thin,typefaces.scss,system,namespace.scale,system,,,,,,,,100,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-200,PublicSans-ExtraLight,typefaces.scss,system,namespace.scale,system,,,,,,,,200,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-300,PublicSans-Light,typefaces.scss,system,namespace.scale,system,,,,,,,,300,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-400,PublicSans-Regular,typefaces.scss,system,namespace.scale,system,,,,,,,,400,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-500,PublicSans-Medium,typefaces.scss,system,namespace.scale,system,,,,,,,,500,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-600,PublicSans-SemiBold,typefaces.scss,system,namespace.scale,system,,,,,,,,600,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-700,PublicSans-Bold,typefaces.scss,system,namespace.scale,system,,,,,,,,700,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-800,PublicSans-ExtraBold,typefaces.scss,system,namespace.scale,system,,,,,,,,800,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-900,PublicSans-Black,typefaces.scss,system,namespace.scale,system,,,,,,,,900,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-italic-100,PublicSans-ThinItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,100,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-italic-200,PublicSans-ExtraLightItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,200,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-italic-300,PublicSans-LightItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,300,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-italic-400,PublicSans-Italic,typefaces.scss,system,namespace.scale,system,,,,,,,,400,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-italic-500,PublicSans-MediumItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,500,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-italic-600,PublicSans-SemiBoldItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,600,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-italic-700,PublicSans-BoldItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,700,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-italic-800,PublicSans-ExtraBoldItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,800,,
+$system-typeface-tokens-src-roman-italic-src-roman-italic-src-roman-italic-src-roman-italic-900,PublicSans-BlackItalic,typefaces.scss,system,namespace.scale,system,,,,,,,,900,,
+$system-column-gaps-0,0,column-gaps.scss,system,namespace.category.scale,system,column,,,,,,,0,,
+$system-column-gaps-1,1,column-gaps.scss,system,namespace.category.scale,system,column,,,,,,,1,,
+$system-column-gaps-2,2,column-gaps.scss,system,namespace.category.scale,system,column,,,,,,,2,,
+$system-column-gaps-3,3,column-gaps.scss,system,namespace.category.scale,system,column,,,,,,,3,,
+$system-column-gaps-4,4,column-gaps.scss,system,namespace.category.scale,system,column,,,,,,,4,,
+$system-column-gaps-5,5,column-gaps.scss,system,namespace.category.scale,system,column,,,,,,,5,,
+$system-column-gaps-6,6,column-gaps.scss,system,namespace.category.scale,system,column,,,,,,,6,,
+$system-spacing-grid-base,8px,grid-base.scss,system,namespace.category.concept,system,spacing,base,,,,,,,,
+$neg-prefix,"""neg""",neg-prefix.scss,system,category,,prefix,,,,,,,,,
+$system-spacing-em-small,0.5em,spacing-em.scss,system,namespace.category.variant,system,spacing,,,,,small,,,,
+$system-spacing-em-1em,1em,spacing-em.scss,system,namespace.category,system,spacing,,,,,,,,,
+$system-spacing-em-105em,1.5em,spacing-em.scss,system,namespace.category,system,spacing,,,,,,,,,
+$system-spacing-em-2em,2em,spacing-em.scss,system,namespace.category,system,spacing,,,,,,,,,
+$system-spacing-smaller-negative-neg-1px,-1px,spacing.scss,system,namespace.category.scale,system,spacing,,,,,,,1px,,1px:scale/scale
+$system-spacing-smaller-negative-neg-2px,-2px,spacing.scss,system,namespace.category.scale,system,spacing,,,,,,,2px,,2px:scale/scale
+$system-spacing-small-negative-neg-05,-0.25rem,spacing.scss,system,namespace.category.variant.scale,system,spacing,,,,,small,,05,,
+$system-spacing-small-negative-neg-1,-0.5rem,spacing.scss,system,namespace.category.variant.scale,system,spacing,,,,,small,,1,,
+$system-spacing-small-negative-neg-105,-0.75rem,spacing.scss,system,namespace.category.variant.scale,system,spacing,,,,,small,,105,,
+$system-spacing-small-negative-neg-2,-1rem,spacing.scss,system,namespace.category.variant.scale,system,spacing,,,,,small,,2,,
+$system-spacing-small-negative-neg-205,-1.25rem,spacing.scss,system,namespace.category.variant.scale,system,spacing,,,,,small,,205,,
+$system-spacing-small-negative-neg-3,-1.5rem,spacing.scss,system,namespace.category.variant.scale,system,spacing,,,,,small,,3,,
+$system-spacing-medium-negative-neg-4,-2rem,spacing.scss,system,namespace.category.scale,system,spacing,,,,,,,4,,
+$system-spacing-medium-negative-neg-5,-2.5rem,spacing.scss,system,namespace.category.scale,system,spacing,,,,,,,5,,
+$system-spacing-medium-negative-neg-6,-3rem,spacing.scss,system,namespace.category.scale,system,spacing,,,,,,,6,,
+$system-spacing-medium-negative-neg-7,-3.5rem,spacing.scss,system,namespace.category.scale,system,spacing,,,,,,,7,,
+$system-spacing-medium-negative-neg-8,-4rem,spacing.scss,system,namespace.category.scale,system,spacing,,,,,,,8,,
+$system-spacing-medium-negative-neg-9,-4.5rem,spacing.scss,system,namespace.category.scale,system,spacing,,,,,,,9,,
+$system-spacing-medium-negative-neg-10,-5rem,spacing.scss,system,namespace.category.scale,system,spacing,,,,,,,10,,
+$system-spacing-medium-negative-neg-15,-7.5rem,spacing.scss,system,namespace.category.scale,system,spacing,,,,,,,15,,
