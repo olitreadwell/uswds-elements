@@ -32,8 +32,6 @@ shape, determines the emitted names.
   grade to any reader (human, design tool, or AI) without context; `60v` requires
   knowing USWDS's `v`-suffix convention. For a package positioning itself as a
   forkable design system foundation, the more explicit name is the better canonical.
-- Already-published `--usa-color-*-vivid-*` names must keep working — no breaking
-  rename (this driver is now satisfied by `vivid-60` _being_ canonical)
 - USWDS Sass parity: `--usa-color-red-60v` / `$usa-color-red-60v` must still _exist_
   as a supported legacy alias — parity preserved via the alias chain
 - The two names must never drift: one value definition, the other name derived
@@ -79,13 +77,10 @@ vivid, `default` stripping, spacing/breakpoint passthrough).
 
 ## Alternatives considered
 
-### (a) `60v` as canonical, `vivid-60` as legacy alias — rejected (original decision,
+### (a) `60v` as canonical, `vivid-60` as legacy alias — rejected
 
-now superseded)
-
-This was the original decision. Inverted because `vivid-60` is more self-describing
-for the forkable-foundation audience and was already the shipped alpha name. The parity
-argument for `60v` as canonical is met by retaining `60v` as a supported alias.
+`60v` was the original format in USWDS core. `vivid-60` was implemented at the start of the elements repo and was already the shipped alpha name.
+The parity argument for `60v` can remain supported by retaining `60v` as an alias. `-vivid` is favored as canonical because it's a clear, semantic label.
 
 ### (b) Flatten JSON keys to `"60v"` — rejected
 

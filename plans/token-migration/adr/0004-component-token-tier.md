@@ -27,7 +27,7 @@ is mostly mechanical.
 
 ### Naming formula
 
-**(a) Curtis order: `--usa-{component}[-{element}][-{variant}][-{property}][-{state}]` — recommended**
+**(a) Nathan Curtis' order: `--usa-{component}[-{element}][-{variant}][-{property}][-{state}]` — recommended**
 
 Examples (before → after):
 

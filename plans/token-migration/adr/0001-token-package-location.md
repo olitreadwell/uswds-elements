@@ -13,11 +13,12 @@
 
 ## Context
 
-The Style Dictionary source in `tokens/` is becoming the comprehensive source of truth for USWDS design tokens. Three consumers need its output:
+The Style Dictionary source in `tokens/` is becoming the comprehensive source of truth for USWDS design tokens. Several consumers need its output:
 
 1. **USWDS Elements** (this repo) — CSS custom properties for web components
 2. **USWDS core** (`uswds/uswds`) — generated SCSS replacing hand-authored token files (see ADR-0005)
-3. **Downstream agencies** — color tokens distributed as an npm package, consumable without either framework
+3. **Downstream agencies** — color tokens distributed as an npm package, consumable with or without either framework. Also available for people who want to use the tokens to build upon or extend their own design systems.
+4. **AI models and coding agents** — tokens output for agents is an emerging strategy to help agents build products with design systems. This is a component of a larger effort to support AI-enabled development with USWDS components.
 
 Today the tokens live inside `@uswds/elements` and ship via its `"./styles/*": "./build/*"` package export. That couples the token release cadence to the component-library release cadence, and gives USWDS core no clean way to depend on tokens without depending on a web-component library.
 
@@ -26,12 +27,13 @@ Today the tokens live inside `@uswds/elements` and ship via its `"./styles/*": "
 - USWDS core and USWDS Elements must consume the _same_ built artifacts, versioned independently of either consumer
 - Color tokens ship first, but spacing, typography, and component tokens follow — the packaging choice should not require a rename later
 - Agencies should be able to `npm install` tokens alone (CSS-only or design-tooling use cases)
+- The token definitions should be available for use in a larger AI-enablement strategy.
 
 ## Alternatives considered
 
 ### (a) Standalone `@uswds/tokens` package — **recommended**
 
-A dedicated package (own workspace, eventually its own repo or a workspace in the USWDS monorepo) holding the DTCG JSON source plus built artifacts, with per-category exports:
+A dedicated package (own workspace, possibly its own repo) holding the DTCG JSON source plus built artifacts, with per-category exports:
 
 ```
 @uswds/tokens
@@ -42,6 +44,8 @@ A dedicated package (own workspace, eventually its own repo or a workspace in th
 ├── dist/json/colors.json      # flat name → value map
 └── package.json               # exports: "./css/*", "./scss/*", "./json/*"
 ```
+
+Note, there is a distinction from publishing this as its own scoped package `@uswds/tokens` and moving it outside this repo. We can do the scoped package publishing without moving the work outside of this repo.
 
 - ✅ USWDS core, USWDS Elements, and agencies all depend on one versioned artifact
 - ✅ Token changes release on their own cadence (Changesets already in use here)
@@ -69,7 +73,7 @@ A package scoped strictly to color.
 
 ## Recommendation
 
-**(a) Standalone `@uswds/tokens`.** Start as a workspace in this repo (source moves from `tokens/` into `packages/tokens/` or equivalent) so the existing Style Dictionary config, Changesets, and CI carry over; extract to the USWDS org's preferred home once USWDS core adopts it. Colors are the first published category; spacing, typography, and component tokens ship from the same package as they land.
+**(a) Standalone `@uswds/tokens`.** Start as a workspace in this repo (source moves from `tokens/` into `packages/tokens/` or equivalent) so the existing Style Dictionary config, Changesets, and CI carry over. We keep the door open to relocate it to the USWDS org's preferred home once USWDS core adopts it. Colors are the first published category; spacing, typography, and component tokens ship from the same package as they land.
 
 ## Consequences
 

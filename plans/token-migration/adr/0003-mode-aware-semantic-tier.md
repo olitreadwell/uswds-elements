@@ -7,10 +7,10 @@ Summary (recommended: `light-dark()` theming — pending team review), ADR-0008
 
 ## Context
 
-USWDS is light-mode only today. Its semantic color ramps encode **physical lightness in their
+USWDS' default theme ships light-mode only today. Its semantic color ramps encode **physical lightness in their
 names**: `$theme-color-primary-lightest/-lighter/-light/(base)/-vivid/-dark/-darker/-darkest`
 (`uswds-core/src/styles/settings/_settings-color.scss`), surfaced in Elements as
-`--usa-color-primary-lighter` etc. These names cannot support dark mode: "primary-darker" as a
+`--usa-color-primary-lighter` etc. These names are semantically unintuitive in dark mode: "primary-darker" as a
 hover shade must get _lighter_ in dark mode, so a token literally named `darker` would resolve to
 a light value — a semantic contradiction.
 
@@ -87,7 +87,7 @@ stays light-only until it opts in).
 ### (c) Elevation/intensity mirror — rejected
 
 Mechanical rename of the existing 7-step ramp to intensity words:
-`--usa-color-primary-weakest/-weaker/-weak/(base)/-strong/-stronger/-strongest`.
+`--usa-color-primary-subtlest/-subtler/-subtle/(base)/-strong/-stronger/-strongest`.
 
 - ✅ 1:1 mapping from existing ramp names makes migration a mechanical find/replace
 - ✅ Names are mode-agnostic ("strong" can invert honestly)
