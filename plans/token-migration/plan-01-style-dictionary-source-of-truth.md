@@ -116,7 +116,7 @@ Storybook visual check of usa-alert/usa-link in forced dark scheme.
 ### Phase 3 — Component tier (ADR-0004)
 
 - Generate the `$theme-{component}-*` → `--usa-{component}-*` migration table from the 152 component rows in `uswds-settings-tokens.csv` (component/element/variant/state columns are populated); record non-1:1 cases (`navigation`/`megamenu` → `usa-header` internals) explicitly
-- Create `tokens/components/{component}.json` for existing components first (alert, banner\*, link — extends [plan-02](plan-02-port-audit-enforce.md) PR 8), then per new component as built; values alias the adaptive tier by default
+- Create `tokens/components/{component}.json` for existing components first (alert, banner\*, link — extends [plan-02](plan-02-port-audit-enforce.md) PR 8), then per new component as built; values alias the adaptive tier where the mode-sensitivity driver applies, otherwise the theme/state tier token matching the CSV default's existing role reference (ADR-0004 Alias target)
 - Update component CSS to consume component tokens without fallbacks (plan-02's pattern; usa-banner stays self-contained)
 
 **Verification:** plan-02's `audit-token-names.js` cross-references `custom-elements.json`,
@@ -156,7 +156,7 @@ Everything from plan-02 (stylelint `custom-property-pattern`, `audit-token-names
 `validate-tokens.js`), plus:
 
 - Formula recompute check for `$extensions.uswds.formula` spacing values (ADR-0007)
-- Rule: component CSS consumes adaptive-tier semantic tokens, not legacy ramp names (allowlist for intentional exceptions)
+- Rule: component CSS consumes adaptive-tier or theme/state-tier tokens, not legacy ramp names (allowlist for intentional exceptions)
 - CSV↔dictionary reconciliation script from Phase 1 kept in CI so inventory and source can't drift silently
 
 ---
