@@ -2,7 +2,7 @@
 
 **Status:** Proposed
 **Date:** 2026-07-15
-**Related:** ADR-0006, ADR-0007
+**Related:** ADR-0006, ADR-0007, ADR-0010
 
 ## Context
 
@@ -32,7 +32,9 @@ become DTCG tokens, and how negative values in the in-scope set are represented.
 
 ## Decision 1: Scope boundary
 
-**In scope (become `tokens/utility/*.json` / `tokens/typography/*` entries):**
+**In scope (become sibling categories under `tokens/system/` — `z-index`, `opacity`,
+`shadow`, `flex`, `gap` — or extend `tokens/system/typography/*` for letter-spacing and
+line-height; see ADR-0010):**
 
 `z-index`, `opacity`, `box-shadow`, `order`, `flex`, `flex-direction`, `flex-wrap`, `gap`,
 `letter-spacing`, `line-height`.
@@ -81,7 +83,9 @@ invented for this tier.
 
 ## Consequences
 
-- `tokens/utility/` becomes a new top-level primitive category (z-index, opacity, shadow, flex, gap)
+- `z-index`, `opacity`, `shadow`, `flex`, `gap` become sibling categories under
+  `tokens/system/` (ADR-0010) — no separate `utility` tier or category; every entry's
+  `$extensions.uswds.tier` is `"system"`
 - `tokens/typography/` gains letter-spacing and the per-typeface line-height combinations
   (`sans-1..6`, `serif-1..6`, `mono-1..6`, `cond-1..6`, `heading-1..6`, `ui-1..6`) alongside the
   already-planned type-scale/line-height(1–6)/typefaces

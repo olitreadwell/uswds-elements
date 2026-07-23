@@ -74,7 +74,7 @@ Bring `tokens/` to full coverage of the system tier, sourced from `uswds-system-
 - **Colors:** all 27 families, including gray grades 1–4; nonexistent `-90v` vivid slots omitted (ADR-0008); canonical `vivid-{grade}` names emitted with `{grade}v` legacy aliases kept alongside (ADR-0002 amended) via `internals/token-helpers/index.ts` + alias-emitting format
 - **Spacing:** full computed scale — multiples (`05`…`15`), named (`card`, `card-lg`, `mobile`, `mobile-lg`, `tablet`, `desktop`, `widescreen`, …), negatives (`neg-*`), pixel literals (`1px`, `2px`) — each with `$extensions.uswds.formula` provenance (ADR-0007)
 - **Typography:** `tokens/typography/` — type scale (1–20), line heights (1–6) plus the richer per-typeface combinations (`sans-1..6`, `serif-1..6`, `mono-1..6`, `cond-1..6`, `heading-1..6`, `ui-1..6`), letter-spacing including negatives (`ls-neg-1/2/3`), font stacks as `fontFamily` arrays, typeface metadata (display name, cap-height, stack) per ADR-0006; @font-face `src` maps stay out
-- **Utility scale** (new, sourced from `uswds-properties-tokens.csv`, ADR-0009): `tokens/utility/` — `z-index.json` (`auto, bottom:-100, 0, 100–500, top:99999`), `opacity.json` (`0–100` → `0`–`1`), `shadow.json` (box-shadow `none, 1–5`), `flex.json` (flex `1–12/fill/auto`, flex-direction, flex-wrap, order `first:-1, last:999, 0–11`), `gap.json` (column-gaps merged with `theme-column-gap-{sm,md,lg}`)
+- **Utility scale** (new, sourced from `uswds-properties-tokens.csv`, ADR-0009): sibling categories under `tokens/system/` (ADR-0010) — `z-index.json` (`auto, bottom:-100, 0, 100–500, top:99999`), `opacity.json` (`0–100` → `0`–`1`), `shadow.json` (box-shadow `none, 1–5`), `flex.json` (flex `1–12/fill/auto`, flex-direction, flex-wrap, order `first:-1, last:999, 0–11`), `gap.json` (column-gaps merged with `theme-column-gap-{sm,md,lg}`)
 - **Grid** (new): `tokens/grid/layout-grid-widths.json` — 12-column fraction scale (`1/12 … 12/12`, from `tokens/units/layout-grid-widths.scss`)
 - **Breakpoints:** re-expressed as aliases of named spacing tokens (matching `$system-breakpoints` being a slice of spacing)
 
@@ -165,7 +165,7 @@ Everything from plan-02 (stylelint `custom-property-pattern`, `audit-token-names
 
 - `config/style-dictionary.config.js` — platforms, new formats/filters
 - `internals/token-helpers/index.ts` — `generateTokenName` (`vivid`→`v`, `default` stripping), disabled-token filter, `light-dark()` transform
-- `tokens/colors/*.json`, `tokens/colors/semantic.json`, `tokens/spacing/spacing.json`, `tokens/typography/*` (new), `tokens/utility/*.json` (new), `tokens/grid/layout-grid-widths.json` (new), `tokens/components/*.json` (new)
+- `tokens/colors/*.json`, `tokens/colors/semantic.json`, `tokens/spacing/spacing.json`, `tokens/typography/*` (new), `tokens/system/{z-index,opacity,shadow,flex,gap}/*.json` (new), `tokens/grid/layout-grid-widths.json` (new), `tokens/components/*.json` (new)
 - `internals/formats/` (new) — uswds-core SCSS map/settings/shortcode formats
 - `plans/token-migration/uswds-{settings,system,properties}-tokens.csv` — migration source data
 - `internals/scripts/extract-properties.js` — Sass-based extractor for `_properties.scss`/`layout-grid-widths.scss`/spacing negatives (Batch 3)
