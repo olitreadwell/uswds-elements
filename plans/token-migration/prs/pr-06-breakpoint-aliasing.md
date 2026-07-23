@@ -1,15 +1,15 @@
-# PR 5: Breakpoint aliasing
+# PR 6: Breakpoint aliasing
 
 **Phase:** 1 — Complete the primitive tier
 **Related ADRs:** ADR-0010
-**Prerequisite PRs:** PR 0 (tier-first restructure), PR 3 (spacing scale — breakpoints alias into named spacing)
+**Prerequisite PRs:** PR 0 (tier-first restructure), PR 4 (spacing scale — breakpoints alias into named spacing)
 
 ---
 
 ## Concern
 
 Re-express `tokens/system/breakpoints/breakpoints.json` (post-PR-0 move) as **aliases
-of the named spacing tokens** defined in PR 3, rather than hardcoded dimension values.
+of the named spacing tokens** defined in PR 4, rather than hardcoded dimension values.
 
 USWDS core's `$system-breakpoints` is itself a slice of the spacing scale — `mobile`,
 `mobile-lg`, `tablet`, `tablet-lg`, `desktop`, `desktop-lg`, `widescreen` are

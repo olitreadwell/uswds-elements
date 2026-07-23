@@ -65,15 +65,24 @@ Split by role:
 - Docs generation can render disabled slots as "available for theming, off by default"
 - One deviation from current uswds-core internals: the generated vivid submaps omit `90: false` keys instead of carrying them. `map-deep-get` returns `null` rather than `false` for missing keys, and `get-system-color()` passes that through, so `color()`'s not-a-token error still fires; the round-trip compile-and-diff in ADR-0005 verifies no behavioral difference. If a difference surfaces, the map format adds the literal `false` entries back for vivid-90 slots only.
 
-## Deferred: DTCG structured color objects
+## DTCG structured color objects — baseline in PR 3, `$colorSpace` optional
 
-Color tokens throughout Phase 1/2 (this ADR, PR 1, PR 2) use plain hex strings
-(`"$value": "#eff6fb"`). The DTCG Color Module's stable spec instead wants a
-structured object (`{colorSpace, components, hex}`) to support color-space-aware
-tooling and relative-color math. Converting ~300+ existing color values now would
-add real scope on top of the false-sentinel and family-completion work this ADR and
-PR 2 are already carrying, for a benefit (deeper tooling interop) that isn't a Phase
-1/2 requirement. This is an explicit, tracked deferral, not an oversight: a later
-phase adds a build-time script mapping each hex value to its `srgb` structured form
-(`components` derived from the hex, `hex` retained as the fallback), so DTCG-strict
-consumers can be satisfied without changing the authored source format now.
+Color tokens in PR 1 and PR 2 (this ADR) are authored with plain hex strings
+(`"$value": "#eff6fb"`). The DTCG 2025.10 Color module instead requires a color
+token's `$value` to be an **object** whose only required member is `$hex`
+(`{ "$hex": "#eff6fb" }`); `$colorSpace` is **optional**.
+
+This is **no longer a deferred compliance requirement**: the structured
+`$hex`-object baseline is done in Phase 1
+[PR 3](../prs/pr-03-dtcg-color-format.md), which converts every
+`tokens/system/color/*.json` `$value` from a string to the required `{ "$hex": … }`
+object form. With `$hex` present, the tokens are **fully DTCG-compliant**. The two
+transparent families (`black-transparent`, `white-transparent`) use an 8-digit hex
+(`#RRGGBBAA`) source rendered back to their exact original `rgba(...)` strings in
+output (the exact decimal alpha is stored in `$extensions.uswds`, not recovered
+lossily from the hex8) — see PR 3 for the transform detail.
+
+What remains is only the **optional** `$colorSpace` / `$components` (srgb)
+enrichment for color-space-aware tooling and relative-color math. That is a
+possible future add, not a compliance gap — the tokens satisfy the spec's
+required-support baseline with `$hex` alone once PR 3 lands.

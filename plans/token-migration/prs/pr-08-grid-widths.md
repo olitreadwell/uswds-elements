@@ -1,4 +1,4 @@
-# PR 7: Grid widths
+# PR 8: Grid widths
 
 **Phase:** 1 — Complete the primitive tier
 **Related ADRs:** ADR-0009, ADR-0010
@@ -207,7 +207,7 @@ used by USWDS's grid utility classes.
 
 ## Phase 1 completion gate (run after this PR merges)
 
-With PR 7 merged, run the full Phase 1 verification:
+With PR 8 merged, run the full Phase 1 verification:
 
 ```bash
 npm run build:tokens       # full build green

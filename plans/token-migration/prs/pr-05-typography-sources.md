@@ -1,4 +1,4 @@
-# PR 4: Typography sources
+# PR 5: Typography sources
 
 **Phase:** 1 — Complete the primitive tier
 **Related ADRs:** ADR-0006, ADR-0007, ADR-0010

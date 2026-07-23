@@ -1,4 +1,4 @@
-# PR 3: Spacing scale + formula provenance
+# PR 4: Spacing scale + formula provenance
 
 **Phase:** 1 — Complete the primitive tier
 **Related ADRs:** ADR-0007, ADR-0010

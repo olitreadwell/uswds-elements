@@ -83,16 +83,17 @@ Bring `tokens/` to full coverage of the system tier, sourced from `uswds-system-
 **Negative values:** spacing negatives (`neg-*`), `z-index.bottom` (`-100`), `order.first` (`-1`), and `letter-spacing.ls-neg-{1,2,3}` all resolve to literal negative values, not a separate naming convention — see ADR-0009.
 
 **PRs:** Phase 1 is decomposed into individual per-PR plan files in
-[`prs/`](prs/). The 8 PRs are:
+[`prs/`](prs/). The 9 PRs are:
 
 - [PR 0](prs/pr-00-tier-first-restructure.md) — tier-first directory restructure (prerequisite for all others)
 - [PR 1](prs/pr-01-vivid-canonical-alias.md) — vivid `vivid-{grade}` canonical naming + `{grade}v` legacy alias emission
 - [PR 2](prs/pr-02-color-family-completion.md) — color family completion + `$extensions.uswds` metadata pass
-- [PR 3](prs/pr-03-spacing-scale-formulas.md) — full spacing scale + formula provenance
-- [PR 4](prs/pr-04-typography-sources.md) — typography sources (type scale, line heights, letter-spacing, font stacks)
-- [PR 5](prs/pr-05-breakpoint-aliasing.md) — breakpoints re-expressed as aliases of named spacing
-- [PR 6](prs/pr-06-utility-scale.md) — utility scale tokens (z-index, opacity, shadow, flex, gap)
-- [PR 7](prs/pr-07-grid-widths.md) — 12-column grid width fraction scale
+- [PR 3](prs/pr-03-dtcg-color-format.md) — DTCG 2025.10 color-format compliance (string `$value` → `{ "$hex": … }` object; transparent families keep `rgba()` output)
+- [PR 4](prs/pr-04-spacing-scale-formulas.md) — full spacing scale + formula provenance
+- [PR 5](prs/pr-05-typography-sources.md) — typography sources (type scale, line heights, letter-spacing, font stacks)
+- [PR 6](prs/pr-06-breakpoint-aliasing.md) — breakpoints re-expressed as aliases of named spacing
+- [PR 7](prs/pr-07-utility-scale.md) — utility scale tokens (z-index, opacity, shadow, flex, gap)
+- [PR 8](prs/pr-08-grid-widths.md) — 12-column grid width fraction scale
 
 Each PR file contains scope, files touched, implementation steps, and a "Done when" checkbox gate.
 Each runs `build:tokens` and commits output.

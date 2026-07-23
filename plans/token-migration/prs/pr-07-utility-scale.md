@@ -1,4 +1,4 @@
-# PR 6: Utility scale tokens
+# PR 7: Utility scale tokens
 
 **Phase:** 1 — Complete the primitive tier
 **Related ADRs:** ADR-0009, ADR-0010
@@ -23,7 +23,7 @@ Scope per plan-01 §Phase 1 and ADR-0009:
 - **gap**: column-gaps `0`, `1–6`, `2px`, `05`; named aliases `sm` (→ 2px), `md` (→ 2), `lg` (→ 3)
 
 Note: **letter-spacing** and per-typeface **line-height** from `$system-properties` are
-covered by PR 4 (typography sources), not this PR.
+covered by PR 5 (typography sources), not this PR.
 
 ---
 
