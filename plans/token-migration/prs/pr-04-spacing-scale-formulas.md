@@ -15,7 +15,10 @@ entry with `$extensions.uswds.formula` for CI drift-guard recomputation (ADR-000
 The full scale covers:
 
 - **Multiples**: `05`, `1`, `105`, `2`, `205`, `3`, `4`, `5`, `6`, `7`, `8`, `9`,
-  `10`, `15` (computed as `grid-base × n`, where grid-base = `8px` = `0.5rem`)
+  `10`, `15` (computed as `grid-base × m`, where grid-base = `8px` = `0.5rem` and
+  `m` is the token's **fractional multiple**, not its key digits — the keys are
+  shorthand: `05` → `0.5`, `105` → `1.5`, `205` → `2.5`, `1` → `1`, `2` → `2`, etc.,
+  matching USWDS core `spacing-multiple(m)`)
 - **Named aliases**: `card` (10rem), `card-lg` (15rem), `mobile` (20rem), `mobile-lg`
   (30rem), `tablet` (40rem), `tablet-lg` (55rem), `desktop` (64rem),
   `desktop-lg` (75rem), `widescreen` (87.5rem)
@@ -82,6 +85,19 @@ A new CI validation script recomputes and verifies formula-tagged values against
                         "legacyName": {
                             "publicVar": "$system-spacing-small-1",
                             "mapKey": "1"
+                        }
+                    }
+                }
+            },
+            "105": {
+                "$value": { "value": 0.75, "unit": "rem" },
+                "$extensions": {
+                    "uswds": {
+                        "tier": "system",
+                        "formula": "grid-base * 1.5",
+                        "legacyName": {
+                            "publicVar": "$system-spacing-small-105",
+                            "mapKey": "105"
                         }
                     }
                 }
@@ -230,11 +246,14 @@ A new CI validation script recomputes and verifies formula-tagged values against
     }
     ```
 
-    Named spacing tokens (`card` through `widescreen`) are **literal `spacing-multiple(N)`
+    Named spacing tokens (`card` through `widescreen`) are **literal `spacing-multiple(m)`
     formula entries**, not aliases of the small-scale numeric multiples. Each value equals
-    `grid-base × N` = `N × 0.5rem`, matching USWDS core's `spacing.scss` exactly:
+    `grid-base × m` = `m × 0.5rem`, matching USWDS core's `spacing.scss` exactly. Note the
+    multiplier `m` is the value passed to `spacing-multiple()` in core, which for the
+    fractional keys is **not** the key digits — e.g. `105` → `spacing-multiple(1.5)`,
+    `205` → `spacing-multiple(2.5)`:
 
-    | token        | `spacing-multiple(N)`   | value   |
+    | token        | `spacing-multiple(m)`   | value   |
     | ------------ | ----------------------- | ------- |
     | `card`       | `spacing-multiple(20)`  | 10rem   |
     | `card-lg`    | `spacing-multiple(30)`  | 15rem   |
@@ -255,7 +274,10 @@ A new CI validation script recomputes and verifies formula-tagged values against
     ```js
     // Reads tokens/system/spacing/spacing.json
     // For each entry with $extensions.uswds.formula:
-    //   - evaluates "grid-base * N" using a fixed GRID_BASE = 0.5rem
+    //   - parses the multiplier from the formula STRING ("grid-base * m"),
+    //     NOT from the token key — keys like "105"/"205" are shorthand whose
+    //     real multiplier is 1.5/2.5, and the correct value lives in the formula
+    //   - evaluates "grid-base * m" using a fixed GRID_BASE = 0.5rem
     //   - compares to the token's $value using an epsilon tolerance, NOT strict equality:
     //       const EPSILON = 1e-5;
     //       const isMatch = Math.abs(computed - tokenValue) < EPSILON;
