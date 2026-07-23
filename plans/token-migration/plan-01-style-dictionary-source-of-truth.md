@@ -5,13 +5,14 @@
 > `tokens/{colors,spacing,breakpoints}/*.json` this plan originally described. Exports are
 > **per-tier-per-category** (`@uswds/tokens/system/color`, `theme/color`, `state/color`, …);
 > theme/state emit **references** (`var()`/`$var`) chained `system ← theme ← state`; every token
-> carries `$extensions.uswds` meta (`tier`, `legacyName` list, plus `formula`/`disabled`); the
-> tier does **not** appear in token names. The semantic tier (ADR-0003) lands in `theme/`/`state/`
+> carries `$extensions.uswds` meta (`tier`, `legacyName` keyed object, plus `formula`/`disabled`);
+> the tier does **not** appear in token names. The semantic tier (ADR-0003) lands in `theme/`/`state/`
 > rather than a `semantic/` directory: branding-role tokens (base, primary, secondary, accent,
 > emergency) live in `tokens/theme/color/*.json` and feedback-role tokens (error, warning, success,
 > info, disabled) live in `tokens/state/color/*.json`, one file per role. Where this plan says
 > `tokens/colors/*.json`, `tokens/utility/*`, `tokens/typography/*`, `tokens/grid/*`, read the
-> equivalent `tokens/system/<category>/…`.
+> equivalent `tokens/system/<category>/…` (note: color family files currently live at
+> `tokens/colors/*.json` until P1-PR0 restructure).
 > ADR-0010 is authoritative on structure, exports, and metadata.
 
 ## Context
@@ -85,15 +86,15 @@ Bring `tokens/` to full coverage of the system tier, sourced from `uswds-system-
 **PRs:** Phase 1 is decomposed into individual per-PR plan files in
 [`prs/`](prs/). The 9 PRs are:
 
-- [PR 0](prs/pr-00-tier-first-restructure.md) — tier-first directory restructure (prerequisite for all others)
-- [PR 1](prs/pr-01-vivid-canonical-alias.md) — vivid `vivid-{grade}` canonical naming + `{grade}v` legacy alias emission
-- [PR 2](prs/pr-02-color-family-completion.md) — color family completion + `$extensions.uswds` metadata pass
-- [PR 3](prs/pr-03-dtcg-color-format.md) — DTCG 2025.10 color-format compliance (string `$value` → `{ "$hex": … }` object; transparent families keep `rgba()` output)
-- [PR 4](prs/pr-04-spacing-scale-formulas.md) — full spacing scale + formula provenance
-- [PR 5](prs/pr-05-typography-sources.md) — typography sources (type scale, line heights, letter-spacing, font stacks)
-- [PR 6](prs/pr-06-breakpoint-aliasing.md) — breakpoints re-expressed as aliases of named spacing
-- [PR 7](prs/pr-07-utility-scale.md) — utility scale tokens (z-index, opacity, shadow, flex, gap)
-- [PR 8](prs/pr-08-grid-widths.md) — 12-column grid width fraction scale
+- [P1-PR 0](prs/pr-00-tier-first-restructure.md) — tier-first directory restructure (prerequisite for all others)
+- [P1-PR 1](prs/pr-01-vivid-canonical-alias.md) — vivid `vivid-{grade}` canonical naming + `{grade}v` legacy alias emission
+- [P1-PR 2](prs/pr-02-color-family-completion.md) — color family completion + `$extensions.uswds` metadata pass
+- [P1-PR 3](prs/pr-03-dtcg-color-format.md) — DTCG 2025.10 color-format compliance (`$value` string → `{ colorSpace, components, hex }` object; transparent families emit exact `rgba()` via `alpha` member)
+- [P1-PR 4](prs/pr-04-spacing-scale-formulas.md) — full spacing scale + formula provenance
+- [P1-PR 5](prs/pr-05-typography-sources.md) — typography sources (type scale, line heights, letter-spacing, font stacks)
+- [P1-PR 6](prs/pr-06-breakpoint-aliasing.md) — breakpoints re-expressed as aliases of named spacing
+- [P1-PR 7](prs/pr-07-utility-scale.md) — utility scale tokens (z-index, opacity, shadow, flex, gap)
+- [P1-PR 8](prs/pr-08-grid-widths.md) — 12-column grid width fraction scale
 
 Each PR file contains scope, files touched, implementation steps, and a "Done when" checkbox gate.
 Each runs `build:tokens` and commits output.
@@ -168,11 +169,16 @@ Everything from plan-02 (stylelint `custom-property-pattern`, `audit-token-names
 
 - `config/style-dictionary.config.js` — platforms, new formats/filters
 - `internals/token-helpers/index.ts` — `generateTokenName` (`vivid`→`v`, `default` stripping), disabled-token filter, `light-dark()` transform
-- `tokens/colors/*.json`, `tokens/theme/color/*.json` (new), `tokens/state/color/*.json` (new), `tokens/spacing/spacing.json`, `tokens/typography/*` (new), `tokens/system/{z-index,opacity,shadow,flex,gap}/*.json` (new), `tokens/grid/layout-grid-widths.json` (new), `tokens/components/*.json` (new)
+- `tokens/colors/*.json` (current; becomes `tokens/system/color/*.json` after P1-PR0), `tokens/theme/color/*.json` (new), `tokens/state/color/*.json` (new), `tokens/system/spacing/spacing.json` (current: `tokens/spacing/spacing.json`), `tokens/system/typography/*` (new; current: `tokens/typography/*`), `tokens/system/{z-index,opacity,shadow,flex,gap}/*.json` (new), `tokens/system/grid/layout-grid-widths.json` (new; current: `tokens/grid/layout-grid-widths.json`), `tokens/components/*.json` (new)
 - `internals/formats/` (new) — uswds-core SCSS map/settings/shortcode formats
+- `internals/scripts/expand-color-format.js` (new, P1-PR3) — deterministic hex→sRGB components transformer; run once and commit
 - `plans/token-migration/uswds-{settings,system,properties}-tokens.csv` — migration source data
 - `internals/scripts/extract-properties.js` — Sass-based extractor for `_properties.scss`/`layout-grid-widths.scss`/spacing negatives (Batch 3)
 - USWDS core targets (Phase 4 swap): `packages/uswds-core/src/styles/tokens/color/*`, `tokens/units/spacing.scss`, `tokens/font/*`, `settings/_settings-color.scss` et al.
+
+> **Note on `spacing.205`:** this token (`1.25rem`, grid-base × 2.5) is owned by P1-PR 4
+> (the full spacing scale). plan-02 P2-PR 2 references it as a dependency — it must not
+> independently add `spacing.205` at the old `tokens/spacing/spacing.json` path.
 
 ## Overall verification
 

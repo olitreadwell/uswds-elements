@@ -2,6 +2,11 @@
 
 **Status:** Proposed
 **Date:** 2026-07-02
+**Amended:** 2026-07-23 — ADR-0004 (component token tier) supersedes the "exclusively"
+language in Decision Drivers and Consequences. Components may alias either the adaptive
+prominence/usage tier (this ADR) **or** the plain theme/state tier, depending on whether
+the component setting already references a direct role token. See ADR-0004 Decision (b)
+for the dual alias target policy and migration path.
 **Related:** [design-system-token-research.md](design-system-token-research.md) Decision
 Summary (recommended: `light-dark()` theming — pending team review), ADR-0008
 
@@ -22,7 +27,10 @@ the proposed `light-dark()` strategy (design-system-token-research.md).
 
 - Existing ramp names must keep working, unchanged, with their current light-mode values
 - New tier names must be mode-agnostic — they describe role/usage, not lightness
-- Components (usa-alert, usa-button, …) should consume the new tier exclusively, so dark mode is a token-layer concern, not a component concern
+- Components (usa-alert, usa-button, …) should consume the new tier where it applies;
+  dark mode is a token-layer concern, not a component concern. (See ADR-0004 amendment:
+  components may also alias the plain theme/state tier where a direct role reference
+  already exists — "exclusively adaptive" is superseded by the dual alias target.)
 - The same pattern must extend to every role with a lightness ramp: `base`, `primary`, `secondary`, `accent-warm`, `accent-cool`, `error`, `warning`, `success`, `info`, `disabled`, `emergency`
 
 ## Decision
@@ -96,7 +104,11 @@ Mechanical rename of the existing 7-step ramp to intensity words:
 
 ## Consequences
 
-- Components migrate to the adaptive tier only; legacy ramps stay for app-level/back-compat use
+- Components migrate to the adaptive tier where a mode-sensitive design decision exists;
+  plain theme/state tier tokens remain valid alias targets where the CSV default is
+  already a direct role reference (see ADR-0004 Decision (b) for the dual alias target
+  policy and `$extensions.uswds.needsAdaptive` migration marker)
+- Legacy ramps stay for app-level/back-compat use
 - A light/dark value pair must be chosen for every adaptive token per role (design work; the dark values are new decisions, not derivable mechanically)
 - `color-scheme: light dark` ships in the token stylesheet; consumers can force a scheme via `color-scheme` on `:root` or a subtree
 - USWDS core is unaffected until it opts into the adaptive tier — the ADR-0005 SCSS output exposes only light values initially

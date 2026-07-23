@@ -121,5 +121,22 @@ USWDS core's settings do the same.
 - The plan-02 enforcement scripts gain a rule: `:host` custom properties must be declared in the component's token file
 - A handful of USWDS settings don't map to a single tag (e.g. `$theme-navigation-*`, `$theme-megamenu-*` belong to `usa-header`'s internals) — the migration table records these explicitly rather than assuming tag = settings prefix
 - Component tokens aliasing theme/state tier tokens inherit that token's role/shortcode reference for free via the ADR-0010 Decision 4 alias-walk — the ADR-0005 SCSS settings format already follows the alias chain to derive the quoted-string reference, so no new translation logic is needed. The component token's own `$extensions.uswds.legacyName` still records the `$theme-{component}-*` settings var it replaces
-- Component tokens aliasing the ADR-0003 adaptive tier have no legacy quoted-string equivalent (adaptive tokens are net-new and mode-aware; there's no single role or shortcode to point back to) — the ADR-0005 SCSS settings output must fall back to emitting the token's resolved light-mode value for these, a documented gap versus the always-alias behavior of the theme/state case
+- Component tokens aliasing the ADR-0003 adaptive tier have no legacy quoted-string equivalent (adaptive tokens are net-new and mode-aware; there's no single role or shortcode to point back to) — the ADR-0005 SCSS settings output must fall back to emitting the token's resolved light-mode value for these, a documented gap versus the always-alias behavior of the theme/state case.
+
+    **Round-trip gate tolerance:** ADR-0005 §Decision (a) requires that the generated
+    `_settings-*.scss` files produce a whitespace-only diff when used to compile USWDS
+    core. Adaptive-tier component tokens have no quoted-string reference to emit, so the
+    fallback to a resolved light-mode value (e.g. `#b50909` instead of `"red-60v"`) is a
+    literal-value-vs-reference difference that would cause the round-trip diff to fail on
+    those entries. The ADR-0005 round-trip check is therefore **scoped to theme/state-tier
+    and system-tier tokens only** for this first phase; adaptive-tier component tokens are
+    excluded from the diff gate and carry a prose note in the generated file marking them
+    as "light-mode fallback — round-trip diff excluded, dark values pending design."
+    When an adaptive token's dark-mode value pair is designed and the token is fully
+    specified, it graduates to a proper SCSS expression (e.g. `light-dark(…)`) and the
+    round-trip exclusion is lifted. This is the one intentional leak from the dark-mode
+    "how" layer into the "prepare" layer; it is bounded to component settings that have
+    no existing theme/state alias, and it is resolved token-by-token as dark-mode design
+    work progresses.
+
 - Component tokens on the plain theme/state tier need a discoverable migration path to the adaptive tier once their dark-mode values are designed — tracked via an `$extensions.uswds.needsAdaptive` marker (or equivalent) rather than left to be rediscovered ad hoc

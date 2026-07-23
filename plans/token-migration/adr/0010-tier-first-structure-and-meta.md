@@ -186,7 +186,7 @@ string reference_ to a shortcode, and that string-reference **is** USWDS's publi
 
 - `theme/color/primary.$value` = a DTCG alias `"{color.system.blue-warm.60v}"` — drives the
   canonical `var(--usa-color-blue-warm-60v)` / `$usa-color-blue-warm-60v` output (Decision 2).
-- `theme/color/primary.$extensions.uswds.legacyName` = `["$theme-color-primary"]` — the settings var
+- `theme/color/primary.$extensions.uswds.legacyName` = `{ "publicVar": "$theme-color-primary" }` — the settings var
   it replaces.
 - The quoted-string USWDS form (`"blue-warm-60v"`) is **derived** by the ADR-0005 settings format:
   it follows the alias to the target system token and reads that token's `legacyName` shortcode. The

@@ -2,7 +2,7 @@
 
 **Phase:** 1 — Complete the primitive tier
 **Related ADRs:** ADR-0009, ADR-0010
-**Prerequisite PRs:** PR 0 (tier-first restructure)
+**Prerequisite PRs:** P1-PR 0 (tier-first restructure)
 
 ---
 
@@ -389,7 +389,7 @@ covered by PR 5 (typography sources), not this PR.
 - [ ] z-index: 9 entries (including `bottom: -100` and `top: 99999`) in built output
 - [ ] opacity: 11 entries (`0` through `100`, values `0.0`–`1.0`) in built output
 - [ ] shadow: 6 entries (`none` + `1–5`) in built output; `rgba()` values intact
-- [ ] flex: 15 flex values + 2 flex-direction + 2 flex-wrap + 14 order entries in built output
-- [ ] gap: 13 entries (including named `sm`/`md`/`lg` aliases) in built output; aliased values resolve correctly
+- [ ] flex: **14** flex values (`1–12`, `fill`, `auto`) + 2 flex-direction + 2 flex-wrap + **15** order entries (`first`, `0–11`, `last`, `initial`) in built output
+- [ ] gap: **12** entries (`0`, `2px`, `05`, `1–6`, `sm`, `md`, `lg`) in built output; aliased values resolve correctly
 - [ ] `order.first` resolves to `-1` and `order.last` to `999` in built output (literal negatives, not a naming convention)
 - [ ] `build/` output committed alongside source changes

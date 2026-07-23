@@ -2,7 +2,7 @@
 
 **Phase:** 1 — Complete the primitive tier
 **Related ADRs:** ADR-0007, ADR-0010
-**Prerequisite PRs:** PR 0 (tier-first restructure)
+**Prerequisite PRs:** P1-PR 0 (tier-first restructure)
 
 ---
 
@@ -16,9 +16,9 @@ The full scale covers:
 
 - **Multiples**: `05`, `1`, `105`, `2`, `205`, `3`, `4`, `5`, `6`, `7`, `8`, `9`,
   `10`, `15` (computed as `grid-base × n`, where grid-base = `8px` = `0.5rem`)
-- **Named aliases**: `card` (2rem), `card-lg` (3rem), `mobile` (20rem), `mobile-lg`
+- **Named aliases**: `card` (10rem), `card-lg` (15rem), `mobile` (20rem), `mobile-lg`
   (30rem), `tablet` (40rem), `tablet-lg` (55rem), `desktop` (64rem),
-  `desktop-lg` (75rem), `widescreen` (160rem)
+  `desktop-lg` (75rem), `widescreen` (87.5rem)
 - **Negatives** (`neg-*`): negative forms of multiples 05–15 and `1px`/`2px`
 - **Pixel literals**: `1px`, `2px` (not formula-derived; `0` and `auto` are not tokens
   — they are CSS keywords)
@@ -110,12 +110,118 @@ A new CI validation script recomputes and verifies formula-tagged values against
                 }
             },
             "card": {
-                "$value": "{spacing.2}",
+                "$value": { "value": 10, "unit": "rem" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
+                        "formula": "grid-base * 20",
                         "legacyName": {
-                            "publicVar": "$system-spacing-large-card"
+                            "publicVar": "$system-spacing-large-card",
+                            "mapKey": "card"
+                        }
+                    }
+                }
+            },
+            "card-lg": {
+                "$value": { "value": 15, "unit": "rem" },
+                "$extensions": {
+                    "uswds": {
+                        "tier": "system",
+                        "formula": "grid-base * 30",
+                        "legacyName": {
+                            "publicVar": "$system-spacing-large-card-lg",
+                            "mapKey": "card-lg"
+                        }
+                    }
+                }
+            },
+            "mobile": {
+                "$value": { "value": 20, "unit": "rem" },
+                "$extensions": {
+                    "uswds": {
+                        "tier": "system",
+                        "formula": "grid-base * 40",
+                        "legacyName": {
+                            "publicVar": "$system-spacing-large-mobile",
+                            "mapKey": "mobile"
+                        }
+                    }
+                }
+            },
+            "mobile-lg": {
+                "$value": { "value": 30, "unit": "rem" },
+                "$extensions": {
+                    "uswds": {
+                        "tier": "system",
+                        "formula": "grid-base * 60",
+                        "legacyName": {
+                            "publicVar": "$system-spacing-larger-mobile-lg",
+                            "mapKey": "mobile-lg"
+                        }
+                    }
+                }
+            },
+            "tablet": {
+                "$value": { "value": 40, "unit": "rem" },
+                "$extensions": {
+                    "uswds": {
+                        "tier": "system",
+                        "formula": "grid-base * 80",
+                        "legacyName": {
+                            "publicVar": "$system-spacing-larger-tablet",
+                            "mapKey": "tablet"
+                        }
+                    }
+                }
+            },
+            "tablet-lg": {
+                "$value": { "value": 55, "unit": "rem" },
+                "$extensions": {
+                    "uswds": {
+                        "tier": "system",
+                        "formula": "grid-base * 110",
+                        "legacyName": {
+                            "publicVar": "$system-spacing-larger-tablet-lg",
+                            "mapKey": "tablet-lg"
+                        }
+                    }
+                }
+            },
+            "desktop": {
+                "$value": { "value": 64, "unit": "rem" },
+                "$extensions": {
+                    "uswds": {
+                        "tier": "system",
+                        "formula": "grid-base * 128",
+                        "legacyName": {
+                            "publicVar": "$system-spacing-largest-desktop",
+                            "mapKey": "desktop"
+                        }
+                    }
+                }
+            },
+            "desktop-lg": {
+                "$value": { "value": 75, "unit": "rem" },
+                "$extensions": {
+                    "uswds": {
+                        "tier": "system",
+                        "formula": "grid-base * 150",
+                        "legacyName": {
+                            "publicVar": "$system-spacing-largest-desktop-lg",
+                            "mapKey": "desktop-lg"
+                        }
+                    }
+                }
+            },
+            "widescreen": {
+                "$value": { "value": 87.5, "unit": "rem" },
+                "$extensions": {
+                    "uswds": {
+                        "tier": "system",
+                        "formula": "grid-base * 175",
+                        "legacyName": {
+                            "publicVar": "$system-spacing-largest-widescreen",
+                            "mapKey": "widescreen"
                         }
                     }
                 }
@@ -124,9 +230,25 @@ A new CI validation script recomputes and verifies formula-tagged values against
     }
     ```
 
-    Named spacing tokens (`card`, `card-lg`, `mobile`, etc.) are **aliases** of their
-    corresponding multiples (`card` = `{spacing.2}` = 1rem, `card-lg` = `{spacing.3}`,
-    etc.) — consistent with plan-01's note that breakpoints are a slice of named spacing.
+    Named spacing tokens (`card` through `widescreen`) are **literal `spacing-multiple(N)`
+    formula entries**, not aliases of the small-scale numeric multiples. Each value equals
+    `grid-base × N` = `N × 0.5rem`, matching USWDS core's `spacing.scss` exactly:
+
+    | token        | `spacing-multiple(N)`   | value   |
+    | ------------ | ----------------------- | ------- |
+    | `card`       | `spacing-multiple(20)`  | 10rem   |
+    | `card-lg`    | `spacing-multiple(30)`  | 15rem   |
+    | `mobile`     | `spacing-multiple(40)`  | 20rem   |
+    | `mobile-lg`  | `spacing-multiple(60)`  | 30rem   |
+    | `tablet`     | `spacing-multiple(80)`  | 40rem   |
+    | `tablet-lg`  | `spacing-multiple(110)` | 55rem   |
+    | `desktop`    | `spacing-multiple(128)` | 64rem   |
+    | `desktop-lg` | `spacing-multiple(150)` | 75rem   |
+    | `widescreen` | `spacing-multiple(175)` | 87.5rem |
+
+    These values match the committed `tokens/breakpoints/breakpoints.json` exactly — the
+    PR 6 alias gate ("same resolved values as before") will pass. The CI validate-spacing
+    script recomputes all `formula`-tagged values from `grid-base = 0.5rem`.
 
 2. **`validate-spacing-formulas.js`**
 

@@ -69,8 +69,11 @@ the path and suffixing `v` to the adjacent grade:
 `["color","red","vivid","60"]` → `usa-color-red-60v`.
 
 `$extensions.uswds.legacyName` on each vivid token records the USWDS-core back-map
-forms (e.g. `["red-60v", "$color-red-60v", "$red-60v"]`) — these are the _legacy_
-USWDS names, derived from the `60v` convention, not from the canonical `vivid-60` name.
+forms as a **keyed object** (e.g.
+`{ "shortcode": "red-60v", "privateVar": "$color-red-60v", "publicVar": "$red-60v" }`)
+— these are the _legacy_ USWDS names, derived from the `60v` convention, not from the
+canonical `vivid-60` name. The translation layer reads these by key name, never by
+array position (per ADR-0010 Decision 3).
 
 Unit coverage for both the transform and the alias emission (grades with and without
 vivid, `default` stripping, spacing/breakpoint passthrough).
@@ -115,6 +118,8 @@ Author `color.red.60v` directly in the source files.
 - The ADR-0005 compat layer emits the unprefixed legacy `$red-60v` from the same
   canonical token (`$usa-color-red-vivid-60`), so all three spellings resolve to one
   definition
-- `$extensions.uswds.legacyName` records `["red-60v", "$color-red-60v", "$red-60v"]`
-  as the USWDS legacy back-map forms; the canonical `vivid-60` form is not in
-  `legacyName` (it is the current name, not a legacy one)
+- `$extensions.uswds.legacyName` records
+  `{ "shortcode": "red-60v", "privateVar": "$color-red-60v", "publicVar": "$red-60v" }`
+  as the USWDS legacy back-map forms (keyed object per ADR-0010 Decision 3); the
+  canonical `vivid-60` form is not in `legacyName` (it is the current name, not a
+  legacy one)

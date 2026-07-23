@@ -67,6 +67,6 @@ Store `"$value": "{spacing.grid-base} * 2.5"` and evaluate in Style Dictionary t
 ## Consequences
 
 - The spacing JSON grows to cover the full computed scale (multiples, named, negative) with formulas attached
-- `tokens/spacing/spacing.json`'s existing entries gain `$extensions.uswds.formula` retroactively
+- `tokens/system/spacing/spacing.json`'s existing entries gain `$extensions.uswds.formula` retroactively (pre-P1-PR0 path: `tokens/spacing/spacing.json`)
 - Anyone adding a spacing token must supply grid-consistent values (enforced by the recompute check rather than by running Sass)
 - If USWDS ever changes the 8px grid or root-size policy, the token package regenerates values in one scripted pass — an accepted, explicit event rather than an implicit cascade

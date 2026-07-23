@@ -91,7 +91,13 @@ Example (`tokens/components/alert.json`):
 
 ### 1.3 Add `spacing.205` Token
 
-The alert currently uses `1.25rem` padding which corresponds to USWDS spacing `205` (2.5 × 8px = 20px). This token is missing from `tokens/spacing/spacing.json` and should be added.
+The alert currently uses `1.25rem` padding which corresponds to USWDS spacing `205`
+(2.5 × 8px = 20px). This token is **owned by plan-01 P1-PR 4** (the full spacing scale)
+and will be added to `tokens/system/spacing/spacing.json` as part of that PR. P2-PR 2
+(this plan) must gate on P1-PR 4 and not independently add `spacing.205` — doing so
+would create duplicate entries at conflicting paths.
+
+See plan-01's Critical Files note on `spacing.205` for the dependency record.
 
 ### 1.4 Update Style Dictionary Config
 
@@ -198,7 +204,10 @@ Integrated into the existing lint pipeline so PRs that introduce naming violatio
 
 ## PRs (each independently reviewable and mergeable)
 
-### PR 1: Add semantic color tokens to style-dictionary
+> **PR numbering note:** PRs in this plan are prefixed `P2-PR` to distinguish them from
+> plan-01's `P1-PR 0–8`. All cross-references below use that prefix.
+
+### P2-PR 1: Add semantic color tokens to style-dictionary
 
 **Scope:** New files only — no component changes.
 
@@ -207,15 +216,17 @@ Integrated into the existing lint pipeline so PRs that introduce naming violatio
 - Run `build:tokens`, commit updated `build/` output
 - **Review surface:** several new files, ~80 lines total
 
-### PR 2: Add missing spacing token
+### P2-PR 2: Add missing spacing token
 
 **Scope:** One-line addition.
 
-- Add `"205": { "$value": { "value": "1.25", "unit": "rem" } }` to `tokens/spacing/spacing.json`
-- Run `build:tokens`, commit updated output
-- **Review surface:** 1 file changed, ~3 lines
+**Prerequisite:** P1-PR 4 (plan-01's full spacing scale) owns `spacing.205` in
+`tokens/system/spacing/spacing.json` (post-P1-PR0 path). This PR must **not** independently
+add `spacing.205` to the old `tokens/spacing/spacing.json` path — doing so creates a
+duplicate at two paths. Instead, gate this PR on P1-PR 4 having merged and verify the token
+already exists before writing any new lines.
 
-### PR 3: Add `json/flat-map` format to style-dictionary
+### P2-PR 3: Add `json/flat-map` format to style-dictionary
 
 **Scope:** Config change, new build artifact.
 
@@ -223,7 +234,7 @@ Integrated into the existing lint pipeline so PRs that introduce naming violatio
 - Generates `build/token-map.json` (used by future CSS pattern work)
 - **Review surface:** 1 file changed, ~15 lines + generated JSON
 
-### PR 4: Add token audit script
+### P2-PR 4: Add token audit script
 
 **Scope:** New script, no production code changes.
 
@@ -232,7 +243,7 @@ Integrated into the existing lint pipeline so PRs that introduce naming violatio
 - Document findings in PR description
 - **Review surface:** 1 new file, ~100 lines
 
-### PR 5: Fix usa-link `--theme-*` → `--usa-*` naming
+### P2-PR 5: Fix usa-link `--theme-*` → `--usa-*` naming
 
 **Scope:** Rename tokens in one component.
 
@@ -243,15 +254,15 @@ Integrated into the existing lint pipeline so PRs that introduce naming violatio
 - **Review surface:** 3 files, ~20 lines changed
 - **Breaking change:** document migration in PR (consumers using `--theme-*` must update)
 
-### PR 6: Add stylelint `custom-property-pattern` rule
+### P2-PR 6: Add stylelint `custom-property-pattern` rule
 
 **Scope:** Config change only.
 
 - Add rule to `config/stylelint.config.mjs`
-- Verify `npm run stylelint` passes (after PR 5 is merged)
+- Verify `npm run stylelint` passes (after P2-PR 5 is merged)
 - **Review surface:** 1 file, ~5 lines
 
-### PR 7: Add token validation script for CI
+### P2-PR 7: Add token validation script for CI
 
 **Scope:** New script, package.json hook.
 
@@ -259,9 +270,9 @@ Integrated into the existing lint pipeline so PRs that introduce naming violatio
 - Add `"lint:tokens"` script to `package.json`
 - **Review surface:** 1 new file, ~80 lines
 
-### PR 8: Add component token files to style-dictionary
+### P2-PR 8: Add component token files to style-dictionary
 
-**Scope:** New token source files (depends on PRs 1-2 being merged).
+**Scope:** New token source files (depends on P2-PRs 1-2 being merged).
 
 - Create `tokens/components/alert.json`
 - Create `tokens/components/link.json`
@@ -273,14 +284,17 @@ Integrated into the existing lint pipeline so PRs that introduce naming violatio
 ### Merge Order
 
 ```
-PR 1 (semantic tokens) ─┐
-PR 2 (spacing 205) ─────┼─→ PR 8 (component token files)
-PR 3 (flat-map format) ─┘
-PR 4 (audit script) ────→ PR 5 (fix usa-link) ─→ PR 6 (stylelint rule)
-PR 7 (validate script) — independent, merge anytime after PR 1
+P2-PR 1 (semantic tokens) ─┐
+P2-PR 2 (spacing 205) ─────┼─→ P2-PR 8 (component token files)
+P2-PR 3 (flat-map format) ─┘
+P2-PR 4 (audit script) ────→ P2-PR 5 (fix usa-link) ─→ P2-PR 6 (stylelint rule)
+P2-PR 7 (validate script) — independent, merge anytime after P2-PR 1
 ```
 
-PRs 1-4 and 7 can be worked in parallel. PR 5 depends on PR 4 (audit confirms the violations). PR 6 depends on PR 5 (rule would fail if `--theme-*` tokens still exist). PR 8 depends on PRs 1-2 (needs semantic token aliases to reference).
+P2-PRs 1, 3, 4, and 7 can be worked in parallel. P2-PR 2 must gate on P1-PR 4 (plan-01)
+having merged first. P2-PR 5 depends on P2-PR 4 (audit confirms the violations). P2-PR 6
+depends on P2-PR 5 (rule would fail if `--theme-*` tokens still exist). P2-PR 8 depends on
+P2-PRs 1-2 (needs semantic token aliases to reference).
 
 ---
 
@@ -288,11 +302,12 @@ PRs 1-4 and 7 can be worked in parallel. PR 5 depends on PR 4 (audit confirms th
 
 Each PR has its own pass/fail check:
 
-- PR 1-3, 8: `npm run build:tokens` succeeds, output matches expectations
-- PR 4: `node internals/scripts/audit-token-names.js` runs and reports known violations
-- PR 5: `npm run stylelint` passes, `custom-elements.json` has no `--theme-*` entries
-- PR 6: `npm run stylelint` catches `--theme-*` if re-introduced
-- PR 7: `npm run lint:tokens` validates all var() references resolve
+- P2-PR 1, 3, 8: `npm run build:tokens` succeeds, output matches expectations
+- P2-PR 2: verify `spacing.205` already present (from P1-PR 4); no new file write if token exists
+- P2-PR 4: `node internals/scripts/audit-token-names.js` runs and reports known violations
+- P2-PR 5: `npm run stylelint` passes, `custom-elements.json` has no `--theme-*` entries
+- P2-PR 6: `npm run stylelint` catches `--theme-*` if re-introduced
+- P2-PR 7: `npm run lint:tokens` validates all var() references resolve
 
 Across all PRs: usa-banner CSS is unchanged (it stays self-contained).
 

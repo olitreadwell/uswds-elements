@@ -2,7 +2,23 @@
 
 **Phase:** 1 — Complete the primitive tier
 **Related ADRs:** ADR-0002 (Amended), ADR-0008
-**Prerequisite PRs:** PR 0 (tier-first restructure), PR 1 (vivid naming + alias)
+**Prerequisite PRs:** P1-PR 0 (tier-first restructure), P1-PR 1 (vivid naming + alias)
+
+> **Prerequisite — CSV de-duplication (tracked issue required before this PR merges):**
+> `uswds-system-tokens.csv` contains **202 duplicate flat token names** caused by two
+> palette snapshots being merged into one file. For example, `$system-color-blue-90`
+> appears twice — once with value `#11181d` and once with value `false`. The
+> `reconcile-colors.js` script specified below cannot disambiguate two rows sharing a
+> flat name with opposite values; it would either false-fail or silently pick one.
+>
+> Before this PR merges, a tracked issue must be filed and resolved that either:
+> (a) de-duplicates the CSV by keying on `(name, source-file, scale)` — keeping the
+> real value row and discarding the sentinel row where they conflict — or
+> (b) updates `reconcile-colors.js` to key on `(name, source-file, scale)` rather than
+> flat name, so the script tolerates the duplicate-name CSV without incorrect results.
+>
+> The "Done when" gate includes a check that the reconciliation script exits 0 with a
+> de-duplicated input or a keyed implementation.
 
 ---
 
@@ -71,30 +87,37 @@ No new token values are added. No names change.
     `uswds-system-tokens.csv`'s `$system-color-*` rows), note in `$description` that
     these are USWDS global palette entries without a `$system-color-*` shortcode.
 
-2. **Omit `-90v` slots entirely; give the reconciliation script an explicit skip-list**
+2. **Omit standard `-90` grade slots and absent vivid-90 slots; give the reconciliation script an explicit skip-list**
 
-    For each family that has a `-90v` entry in the CSV resolving to `false` (red,
-    red-cool, red-warm, orange-warm, orange, gold, yellow, green-warm, green,
-    green-cool, and others per CSV), add **no JSON entry at all** — per ADR-0008
-    Role 1, these are not tokens, so e.g. `tokens/system/color/red.json`'s `vivid`
-    group simply has no `"90"` key, exactly matching uswds-core's own map.
+    The 22 `false`-valued rows in `uswds-system-tokens.csv` are the **standard `-90` grade
+    slots** (`$system-color-*-90`, scale=90) — not `-90v` vivid. The vivid submap within each
+    family simply has no `90` key at all (vivid-90 is not a slot; it does not appear in the CSV).
+    Both classes are Role 1 (ADR-0008): nonexistent in USWDS core.
 
-    `internals/scripts/reconcile-colors.js` (step 3) carries the exception list
-    directly by reading the CSV's own `false` value per row, so it knows which CSV
-    rows are expected to have **no** corresponding built token — no placeholder JSON
-    entry is needed to make the script's job possible.
+    For each family that has a standard `-90` row resolving to `false` in the CSV (22 families:
+    blue, blue-cool, blue-warm, cyan, gold, green, green-cool, green-warm, indigo, indigo-cool,
+    indigo-warm, magenta, mint, mint-cool, orange, orange-warm, red, red-cool, red-warm, violet,
+    violet-warm, yellow), add **no JSON entry** for grade `90` — per ADR-0008 Role 1, the
+    standard color map simply lacks this grade, and map lookup returns `false`/`null`, which
+    `color()` rejects. The vivid group for each family also has no `"90"` key, matching
+    uswds-core's own map.
+
+    `internals/scripts/reconcile-colors.js` (step 3) carries a skip-list of exactly **22 entries**
+    (the standard `-90` sentinel rows) — not 25. It reads the CSV's own `false` value per row
+    (keyed on name + source-file + scale after CSV de-dup, per the prerequisite above), so it
+    knows which CSV rows are expected to have **no** corresponding built token.
 
 3. **Write `internals/scripts/reconcile-colors.js`**
 
     This script:
-    - Parses `plans/token-migration/uswds-system-tokens.csv`
+    - Parses `plans/token-migration/uswds-system-tokens.csv`, keying on `(name, source-file, scale)` to handle the 202 duplicate flat names (see CSV de-dup prerequisite above)
     - Walks `tokens/system/color/**/*.json` (post-build Style Dictionary flat output)
     - For every CSV row whose value is **not** `false`: asserts a matching token
       exists in the built output and the value matches.
-    - For every CSV row whose value **is** `false` (the `-90v` family, ADR-0008
-      Role 1): asserts **no** corresponding token exists in the built output — a
-      present token here is itself a reconciliation failure, since these were never
-      meant to be tokens.
+    - For every CSV row whose value **is** `false` (the 22 standard `-90` grade slots,
+      ADR-0008 Role 1): asserts **no** corresponding token exists in the built output —
+      a present token here is itself a reconciliation failure, since these grades were
+      never meant to be tokens.
     - Exits non-zero and prints a diff table on mismatch.
 
     Add to `package.json`:
@@ -116,8 +139,9 @@ No new token values are added. No names change.
 - [ ] `npm run build:tokens` exits 0
 - [ ] `npm test` exits 0
 - [ ] `node internals/scripts/reconcile-colors.js` exits 0 (all non-disabled CSV rows matched, all disabled rows accounted for)
+- [ ] CSV de-dup prerequisite resolved (tracked issue closed or `reconcile-colors.js` uses keyed lookup on name+source-file+scale)
 - [ ] Every token in `tokens/system/color/*.json` has `$extensions.uswds.tier` set to `"system"`
 - [ ] Every non-vivid token has `legacyName` populated (spot-check: `blue.10`, `gray.5`, `gray-cool.1`)
-- [ ] No `-90v` keys appear anywhere in `tokens/system/color/*.json` or `build/css/system/color.css` — omitted entirely, not filtered
-- [ ] Reconciliation count: CSV rows whose value is not `false` = built output token count; `false`-valued CSV rows have no corresponding built token
+- [ ] No grade-`90` keys appear in the standard color group or vivid group of any family in `tokens/system/color/*.json` or `build/css/system/color.css` — omitted entirely, not filtered
+- [ ] Reconciliation skip-list count = **22** (the standard `-90` sentinel rows); not 25
 - [ ] `build/` output committed alongside source changes

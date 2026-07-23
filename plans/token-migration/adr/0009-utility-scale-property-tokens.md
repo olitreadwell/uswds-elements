@@ -86,9 +86,9 @@ invented for this tier.
 - `z-index`, `opacity`, `shadow`, `flex`, `gap` become sibling categories under
   `tokens/system/` (ADR-0010) — no separate `utility` tier or category; every entry's
   `$extensions.uswds.tier` is `"system"`
-- `tokens/typography/` gains letter-spacing and the per-typeface line-height combinations
+- `tokens/system/typography/` gains letter-spacing and the per-typeface line-height combinations
   (`sans-1..6`, `serif-1..6`, `mono-1..6`, `cond-1..6`, `heading-1..6`, `ui-1..6`) alongside the
-  already-planned type-scale/line-height(1–6)/typefaces
+  already-planned type-scale/line-height(1–6)/typefaces (pre-P1-PR0 path: `tokens/typography/`)
 - The out-of-scope keyword-enum properties remain hand-authored in uswds-core's `_properties.scss`
   consumption layer — the token migration does not touch them
 - `uswds-properties-tokens.csv`'s `category` column is the enforcement mechanism: any future

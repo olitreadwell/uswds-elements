@@ -2,7 +2,7 @@
 
 **Phase:** 1 — Complete the primitive tier
 **Related ADRs:** ADR-0010
-**Prerequisite PRs:** PR 0 (tier-first restructure), PR 4 (spacing scale — breakpoints alias into named spacing)
+**Prerequisite PRs:** P1-PR 0 (tier-first restructure), P1-PR 4 (spacing scale — breakpoints alias into named spacing)
 
 ---
 
@@ -84,9 +84,21 @@ with `{spacing.<name>}` alias references.
     Note: Style Dictionary resolves DTCG aliases at build time, so the emitted CSS
     values are identical to today's hardcoded values — no output change for consumers.
 
-2. **Verify alias resolution** — after `npm run build:tokens`, spot-check that
-   `--usa-breakpoint-tablet` in the built CSS output resolves to the same value as
-   `--usa-spacing-tablet` (`40rem`). Both must be present and equal.
+2. **Verify alias resolution — `{value,unit}` object shape gate**
+
+    P1-PR 4 adds named spacing tokens with `$value: { "value": N, "unit": "rem" }` (the
+    DTCG dimension object shape). Before assuming the alias chain works end-to-end, verify
+    that Style Dictionary correctly resolves a `{spacing.card}` alias whose target is a
+    dimension object — not just a scalar — and that `getTokenValueWithUnit` concatenates
+    the resolved `value`+`unit` correctly for the aliased result.
+
+    Steps:
+    a. After `npm run build:tokens`, check that `--usa-breakpoint-card` in
+    `build/css/system/breakpoints.css` emits `10rem` (not `[object Object]` or a raw
+    dimension-object string).
+    b. If Style Dictionary does not auto-flatten the aliased dimension object, add a
+    transform that does — analogous to the color object handling in P1-PR 3. Record
+    the observed SD behavior in the PR description (same discipline as P1-PR 3 Step 0).
 
 3. **Run build**
     ```bash
@@ -99,7 +111,8 @@ with `{spacing.<name>}` alias references.
 
 - [ ] `npm run build:tokens` exits 0 (Style Dictionary resolves all `{spacing.*}` aliases without errors)
 - [ ] `npm test` exits 0
-- [ ] All 9 breakpoint tokens present in `build/css/system/breakpoints.css` with the same resolved values as before this PR
+- [ ] All 9 breakpoint tokens present in `build/css/system/breakpoints.css` with the same resolved values as before this PR (`card: 10rem`, `card-lg: 15rem`, `mobile: 20rem`, `mobile-lg: 30rem`, `tablet: 40rem`, `tablet-lg: 55rem`, `desktop: 64rem`, `desktop-lg: 75rem`, `widescreen: 87.5rem`)
 - [ ] `--usa-breakpoint-tablet` value equals `--usa-spacing-tablet` value in built output (`40rem`)
+- [ ] `{value,unit}` alias-resolution check completed — observed SD behavior recorded in PR description; no `[object Object]` in any breakpoint output
 - [ ] No hardcoded dimension literals remain in `tokens/system/breakpoints/breakpoints.json`
 - [ ] `build/` output committed alongside source changes
