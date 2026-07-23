@@ -2,7 +2,7 @@
 
 **Status:** Proposed
 **Date:** 2026-07-02
-**Related:** [architecture-decisions.md](../architecture-decisions.md) (accepted: 3 tiers, `--usa-*` prefix), [plan-01](../plan-01-style-dictionary-source-of-truth.md) Phase 5, ADR-0010 (tier-first structure + exports)
+**Related:** [design-system-token-research.md](design-system-token-research.md) (recommended: 3 tiers, `--usa-*` prefix — pending team review), [plan-01](../plan-01-style-dictionary-source-of-truth.md) Phase 5, ADR-0010 (tier-first structure + exports)
 
 > **Amendment (2026-07-21, ADR-0010):** The per-category export shape shown below
 > (`./css/colors.css`, `./scss/colors`, `./json/colors.json`) is superseded by

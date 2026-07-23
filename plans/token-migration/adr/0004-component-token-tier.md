@@ -2,7 +2,7 @@
 
 **Status:** Proposed
 **Date:** 2026-07-02
-**Related:** [architecture-decisions.md](../architecture-decisions.md) §1/§5, [plan-02](../plan-02-port-audit-enforce.md) Objective 1.2, ADR-0003
+**Related:** [design-system-token-research.md](design-system-token-research.md) (recommendations, pending team review), [plan-02](../plan-02-port-audit-enforce.md) Objective 1.2, ADR-0003
 
 ## Context
 

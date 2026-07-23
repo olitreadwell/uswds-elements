@@ -1,8 +1,9 @@
 # ADR-0003: Mode-aware semantic tier — prominence/usage naming
 
-**Status:** Accepted
+**Status:** Proposed
 **Date:** 2026-07-02
-**Related:** [architecture-decisions.md](../architecture-decisions.md) §4 (accepted: `light-dark()` theming), ADR-0008
+**Related:** [design-system-token-research.md](design-system-token-research.md) Decision
+Summary (recommended: `light-dark()` theming — pending team review), ADR-0008
 
 ## Context
 
@@ -15,7 +16,7 @@ a light value — a semantic contradiction.
 
 The requirement: **preserve the existing semantic ramp tokens** (agencies and USWDS core depend on
 them) while **adding a new semantic variant whose names stay truthful in both modes**, built on
-the already-accepted `light-dark()` strategy.
+the proposed `light-dark()` strategy (design-system-token-research.md).
 
 ## Decision drivers
 

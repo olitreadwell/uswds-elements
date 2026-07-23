@@ -1,12 +1,13 @@
 # ADR-0002: Primitive color naming — emit both `vivid-60` and `60v`
 
-**Status:** Accepted
+**Status:** Proposed
 **Date:** 2026-07-02
 **Amended:** 2026-07-21 — Canonical and legacy roles inverted. `vivid-60` is now the
 canonical name (holds the literal value); `60v` is the legacy alias (a `var()`
 reference). Rationale: prefer the verbose, self-describing, forkable-friendly name as
 canonical. All implementation and consequence notes below reflect this inversion.
-**Related:** [architecture-decisions.md](../architecture-decisions.md) §3 (accepted: keep USWDS 10-scale + vivid), ADR-0005
+**Related:** [design-system-token-research.md](design-system-token-research.md) Decision
+Summary (recommended: keep USWDS 10-scale + vivid — pending team review), ADR-0005
 
 ## Context
 
@@ -32,8 +33,8 @@ shape, determines the emitted names.
   knowing USWDS's `v`-suffix convention. For a package positioning itself as a
   forkable design system foundation, the more explicit name is the better canonical.
 - Already-published `--usa-color-*-vivid-*` names must keep working — no breaking
-  rename (this driver is now satisfied by `vivid-60` *being* canonical)
-- USWDS Sass parity: `--usa-color-red-60v` / `$usa-color-red-60v` must still *exist*
+  rename (this driver is now satisfied by `vivid-60` _being_ canonical)
+- USWDS Sass parity: `--usa-color-red-60v` / `$usa-color-red-60v` must still _exist_
   as a supported legacy alias — parity preserved via the alias chain
 - The two names must never drift: one value definition, the other name derived
 - The JSON source should stay useful to tooling (design-tool sync, docs generation)
@@ -70,7 +71,7 @@ the path and suffixing `v` to the adjacent grade:
 `["color","red","vivid","60"]` → `usa-color-red-60v`.
 
 `$extensions.uswds.legacyName` on each vivid token records the USWDS-core back-map
-forms (e.g. `["red-60v", "$color-red-60v", "$red-60v"]`) — these are the *legacy*
+forms (e.g. `["red-60v", "$color-red-60v", "$red-60v"]`) — these are the _legacy_
 USWDS names, derived from the `60v` convention, not from the canonical `vivid-60` name.
 
 Unit coverage for both the transform and the alias emission (grades with and without
@@ -79,6 +80,7 @@ vivid, `default` stripping, spacing/breakpoint passthrough).
 ## Alternatives considered
 
 ### (a) `60v` as canonical, `vivid-60` as legacy alias — rejected (original decision,
+
 now superseded)
 
 This was the original decision. Inverted because `vivid-60` is more self-describing

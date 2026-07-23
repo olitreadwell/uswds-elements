@@ -65,13 +65,13 @@ tokens/
   land (Phase 1 of plan-01).
 
 This mirrors USWDS core's own source layout (`settings/` ≈ theme, the `$system-*` maps ≈ system,
-with color/spacing/type as concerns *inside* each) and matches the `tier`/`category` columns already
+with color/spacing/type as concerns _inside_ each) and matches the `tier`/`category` columns already
 present in the migration CSVs.
 
-**Alternatives considered.** *Category-first* (`color/{system,theme,state}`) — rejected: a forker
+**Alternatives considered.** _Category-first_ (`color/{system,theme,state}`) — rejected: a forker
 must cherry-pick `color/system` + `spacing/system` + `type/system` separately instead of taking
 `system/` as one coherent foundation, and it diverges from USWDS's own tier-first source layout.
-*Two tiers (`system` + combined `semantic`)* — rejected: re-collapses the `theme`/`state` buckets
+_Two tiers (`system` + combined `semantic`)_ — rejected: re-collapses the `theme`/`state` buckets
 USWDS publishes as distinct, losing doc parity.
 
 ## Decision 2: Per-tier-per-category exports, emitting references
@@ -90,6 +90,7 @@ Theme and state outputs **emit references, not resolved values**, chained `syste
 /* theme/color */
 --usa-color-primary: var(--usa-color-blue-warm-60v);
 ```
+
 ```scss
 /* theme/color */
 $usa-color-primary: $usa-color-blue-warm-60v;
@@ -99,13 +100,13 @@ $usa-color-primary: $usa-color-blue-warm-60v;
   flow through `theme` and `state` for free — the core "USWDS as a foundation" use case. Resolved
   values would freeze the palette and defeat it.
 - Consumers load the tiers they reference (`theme`/`state` depend on `system` being present). This is
-  consistent with the already-accepted "no inline fallbacks, require the global stylesheet" decision
-  (research doc §5).
+  consistent with the "no inline fallbacks, require the global stylesheet" recommendation (research
+  doc §5, pending team review).
 - It matches USWDS core's own model, where theme settings are references, not resolved values.
 
-**Alternatives considered.** *Whole-tier exports* (`system` = all categories in one file) — rejected:
-a consumer wanting only the palette would pull system spacing/type too. *Resolved values baked into
-each export* — rejected: breaks override-flow-through and the forking story.
+**Alternatives considered.** _Whole-tier exports_ (`system` = all categories in one file) — rejected:
+a consumer wanting only the palette would pull system spacing/type too. _Resolved values baked into
+each export_ — rejected: breaks override-flow-through and the forking story.
 
 ## Decision 3: `$extensions.uswds` metadata convention
 
@@ -148,7 +149,7 @@ after tier-drop); the legacy `--usa-color-blue-warm-60v` alias is emitted as a `
 reference by the alias-emitting format (ADR-0002).
 
 **Why explicit `legacyName` rather than convention-derived.** The old names are reconstructible from
-the token path *only where naming is regular*. It is not regular: the `vivid` → `60v` suffix
+the token path _only where naming is regular_. It is not regular: the `vivid` → `60v` suffix
 compression (ADR-0002), `default` stripping, the omitted `-90v` vivid slots (ADR-0008), and the
 theme string-reference form. An explicit per-token list is the robust source that stops the old↔new
 mapping from being rebuilt by fragile string logic — the exact fallback-drift failure mode the
@@ -157,8 +158,8 @@ token maps back to several USWDS constructs at once.
 
 ## Decision 4: Theme/state alias model (single alias graph)
 
-USWDS theme settings are peculiar: `$theme-color-primary: "blue-warm-60v"` — the *value is a quoted
-string reference* to a shortcode, and that string-reference **is** USWDS's public theming contract
+USWDS theme settings are peculiar: `$theme-color-primary: "blue-warm-60v"` — the _value is a quoted
+string reference_ to a shortcode, and that string-reference **is** USWDS's public theming contract
 (ADR-0005). The source serves both the canonical `var()` build and the USWDS-core-shaped build from
 **one** alias graph, without duplicating string references:
 
@@ -178,16 +179,16 @@ follow.
 
 The build matrix:
 
-| Output           | Prefix   | Names                                              | Purpose                                  |
-| ---------------- | -------- | -------------------------------------------------- | ---------------------------------------- |
-| CSS              | `--usa-` | canonical                                          | web components + agencies                |
-| SCSS canonical   | `$usa-`  | canonical                                          | agencies wanting namespaced Sass         |
-| SCSS uswds-core  | *none*   | legacy names **+ legacy map/settings structure**   | drop-in dependency for USWDS core (0005) |
-| JSON             | —        | canonical + `legacyName`                           | tooling / AI / runtime                   |
+| Output          | Prefix   | Names                                            | Purpose                                  |
+| --------------- | -------- | ------------------------------------------------ | ---------------------------------------- |
+| CSS             | `--usa-` | canonical                                        | web components + agencies                |
+| SCSS canonical  | `$usa-`  | canonical                                        | agencies wanting namespaced Sass         |
+| SCSS uswds-core | _none_   | legacy names **+ legacy map/settings structure** | drop-in dependency for USWDS core (0005) |
+| JSON            | —        | canonical + `legacyName`                         | tooling / AI / runtime                   |
 
 - The **"SCSS without prefix"** deliverable is the full ADR-0005 uswds-core-shaped translation layer
-  — separate custom Style Dictionary formats emitting legacy names *and* the legacy map/settings
-  *structure* (nested `$system-color-*` maps, `$system-color-shortcodes`, `$theme-*: "…" !default`,
+  — separate custom Style Dictionary formats emitting legacy names _and_ the legacy map/settings
+  _structure_ (nested `$system-color-*` maps, `$system-color-shortcodes`, `$theme-*: "…" !default`,
   `false` sentinels), gated by the round-trip diff. It is **not** a prefix-stripped flavor of the
   canonical `$usa-` build. Stripping the prefix would yield flat `$blue-warm-vivid-60` scalars that
   lack the map shape `color()`/`set-theme-color()` require — SCSS that looks done but is inert.
@@ -199,10 +200,10 @@ The build matrix:
 - **Tier is NOT in the canonical token name.** `generateTokenName` drops the tier path segment, so
   names stay `--usa-color-blue-cool-10`, `--usa-color-primary`, `--usa-color-error` — non-breaking,
   matching the research doc examples and USWDS's convention that system/theme/state is
-  *organizational*, not part of the CSS var name. The tier remains machine-available via
+  _organizational_, not part of the CSS var name. The tier remains machine-available via
   `$extensions.uswds.tier` and the export path.
 
-**Alternative considered.** *Tier in the name* (`--usa-color-system-blue-cool-10`,
+**Alternative considered.** _Tier in the name_ (`--usa-color-system-blue-cool-10`,
 `--usa-color-theme-primary`) — rejected: it renames every existing `--usa-color-*` token (breaking),
 is verbose, and contradicts the research doc's own naming. The directory organizes, the meta
 records, the name stays clean.

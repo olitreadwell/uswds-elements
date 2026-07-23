@@ -1,7 +1,7 @@
 # PR 2: Color family completion
 
 **Phase:** 1 — Complete the primitive tier
-**Related ADRs:** ADR-0002 (Amended), ADR-0008 (Accepted)
+**Related ADRs:** ADR-0002 (Amended), ADR-0008
 **Prerequisite PRs:** PR 0 (tier-first restructure), PR 1 (vivid naming + alias)
 
 ---
@@ -32,12 +32,12 @@ No new token values are added. No names change.
 
 ## Files touched
 
-| Action | Path |
-|--------|------|
-| Modify | `tokens/system/color/*.json` — add `$extensions.uswds` block (`tier: "system"`, `legacyName: [...]`) to every non-vivid token entry |
-| New | `internals/scripts/reconcile-colors.js` — CSV reconciliation script (name→value equality check) |
-| Modify | `package.json` — add `"reconcile:colors"` script |
-| Rebuild | `build/css/system/color.css`, `build/scss/system/_color.scss` |
+| Action  | Path                                                                                                                                |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Modify  | `tokens/system/color/*.json` — add `$extensions.uswds` block (`tier: "system"`, `legacyName: [...]`) to every non-vivid token entry |
+| New     | `internals/scripts/reconcile-colors.js` — CSV reconciliation script (name→value equality check)                                     |
+| Modify  | `package.json` — add `"reconcile:colors"` script                                                                                    |
+| Rebuild | `build/css/system/color.css`, `build/scss/system/_color.scss`                                                                       |
 
 ---
 
@@ -45,79 +45,80 @@ No new token values are added. No names change.
 
 1. **Add `$extensions.uswds` to every token**
 
-   For each family file, add metadata under `$extensions.uswds`. Example for a
-   standard (non-vivid) grade in `tokens/system/color/blue.json`:
+    For each family file, add metadata under `$extensions.uswds`. Example for a
+    standard (non-vivid) grade in `tokens/system/color/blue.json`:
 
-   ```json
-   "10": {
-     "$value": "#d9e8f6",
-     "$extensions": {
-       "uswds": {
-         "tier": "system",
-         "legacyName": ["blue-10", "$color-blue-10", "$blue-10"]
-       }
-     }
-   }
-   ```
+    ```json
+    "10": {
+      "$value": "#d9e8f6",
+      "$extensions": {
+        "uswds": {
+          "tier": "system",
+          "legacyName": ["blue-10", "$color-blue-10", "$blue-10"]
+        }
+      }
+    }
+    ```
 
-   For `black-transparent` and `white-transparent` (present in tokens, absent from
-   `uswds-system-tokens.csv`'s `$system-color-*` rows), note in `$description` that
-   these are USWDS global palette entries without a `$system-color-*` shortcode.
+    For `black-transparent` and `white-transparent` (present in tokens, absent from
+    `uswds-system-tokens.csv`'s `$system-color-*` rows), note in `$description` that
+    these are USWDS global palette entries without a `$system-color-*` shortcode.
 
 2. **Record `-90v` disabled dispositions**
 
-   For each family that has a `-90v` entry in the CSV resolving to `false` (red,
-   red-cool, red-warm, orange-warm, orange, gold, yellow, green-warm, green,
-   green-cool, and others per CSV), add a disabled placeholder in the family JSON:
+    For each family that has a `-90v` entry in the CSV resolving to `false` (red,
+    red-cool, red-warm, orange-warm, orange, gold, yellow, green-warm, green,
+    green-cool, and others per CSV), add a disabled placeholder in the family JSON:
 
-   ```json
-   "vivid": {
-     "90": {
-       "$value": "none",
-       "$extensions": {
-         "uswds": {
-           "tier": "system",
-           "disabled": true,
-           "legacyName": ["red-90v", "$color-red-90v", "$red-90v"]
-         }
-       }
-     }
-   }
-   ```
+    ```json
+    "vivid": {
+      "90": {
+        "$value": "none",
+        "$extensions": {
+          "uswds": {
+            "tier": "system",
+            "disabled": true,
+            "legacyName": ["red-90v", "$color-red-90v", "$red-90v"]
+          }
+        }
+      }
+    }
+    ```
 
-   Style Dictionary's filter in `config/style-dictionary.config.js` must exclude
-   tokens where `$extensions.uswds.disabled === true` from all build outputs.
+    Style Dictionary's filter in `config/style-dictionary.config.js` must exclude
+    tokens where `$extensions.uswds.disabled === true` from all build outputs.
 
 3. **Write `internals/scripts/reconcile-colors.js`**
 
-   This script:
-   - Parses `plans/token-migration/uswds-system-tokens.csv`
-   - Walks `tokens/system/color/**/*.json` (post-build Style Dictionary flat output)
-   - For every non-disabled CSV row: asserts a matching token exists in the built
-     output and the value matches.
-   - For every `disabled: true` JSON entry: asserts the CSV row is present and the
-     default value is `false`.
-   - Exits non-zero and prints a diff table on mismatch.
+    This script:
+    - Parses `plans/token-migration/uswds-system-tokens.csv`
+    - Walks `tokens/system/color/**/*.json` (post-build Style Dictionary flat output)
+    - For every non-disabled CSV row: asserts a matching token exists in the built
+      output and the value matches.
+    - For every `disabled: true` JSON entry: asserts the CSV row is present and the
+      default value is `false`.
+    - Exits non-zero and prints a diff table on mismatch.
 
-   Add to `package.json`:
-   ```json
-   "reconcile:colors": "node internals/scripts/reconcile-colors.js"
-   ```
+    Add to `package.json`:
+
+    ```json
+    "reconcile:colors": "node internals/scripts/reconcile-colors.js"
+    ```
 
 4. **Update `config/style-dictionary.config.js`** — add a filter to exclude disabled
    tokens from all output platforms:
 
-   ```js
-   filter: (token) =>
-     !token.$extensions?.uswds?.disabled &&
-     token.filePath?.includes(`tokens/system/color/`),
-   ```
+    ```js
+    filter: (token) =>
+      !token.$extensions?.uswds?.disabled &&
+      token.filePath?.includes(`tokens/system/color/`),
+    ```
 
 5. **Run build and reconciliation**
-   ```bash
-   npm run build:tokens
-   node internals/scripts/reconcile-colors.js
-   ```
+    ```bash
+    npm run build:tokens
+    node internals/scripts/reconcile-colors.js
+    ```
 
 ---
 

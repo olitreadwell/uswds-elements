@@ -1,7 +1,7 @@
 # PR 5: Breakpoint aliasing
 
 **Phase:** 1 — Complete the primitive tier
-**Related ADRs:** ADR-0010 (Accepted)
+**Related ADRs:** ADR-0010
 **Prerequisite PRs:** PR 0 (tier-first restructure), PR 3 (spacing scale — breakpoints alias into named spacing)
 
 ---
@@ -25,10 +25,10 @@ with `{spacing.<name>}` alias references.
 
 ## Files touched
 
-| Action | Path |
-|--------|------|
-| Modify | `tokens/system/breakpoints/breakpoints.json` — replace literal `$value` objects with DTCG alias references into `spacing.*` |
-| Rebuild | `build/css/system/breakpoints.css`, `build/scss/system/_breakpoints.scss` |
+| Action  | Path                                                                                                                        |
+| ------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Modify  | `tokens/system/breakpoints/breakpoints.json` — replace literal `$value` objects with DTCG alias references into `spacing.*` |
+| Rebuild | `build/css/system/breakpoints.css`, `build/scss/system/_breakpoints.scss`                                                   |
 
 ---
 
@@ -37,34 +37,61 @@ with `{spacing.<name>}` alias references.
 1. **Replace literal values with aliases** in
    `tokens/system/breakpoints/breakpoints.json`:
 
-   ```json
-   {
-     "breakpoint": {
-       "$type": "dimension",
-       "card":       { "$value": "{spacing.card}",       "$extensions": { "uswds": { "tier": "system" } } },
-       "card-lg":    { "$value": "{spacing.card-lg}",    "$extensions": { "uswds": { "tier": "system" } } },
-       "mobile":     { "$value": "{spacing.mobile}",     "$extensions": { "uswds": { "tier": "system" } } },
-       "mobile-lg":  { "$value": "{spacing.mobile-lg}",  "$extensions": { "uswds": { "tier": "system" } } },
-       "tablet":     { "$value": "{spacing.tablet}",     "$extensions": { "uswds": { "tier": "system" } } },
-       "tablet-lg":  { "$value": "{spacing.tablet-lg}",  "$extensions": { "uswds": { "tier": "system" } } },
-       "desktop":    { "$value": "{spacing.desktop}",    "$extensions": { "uswds": { "tier": "system" } } },
-       "desktop-lg": { "$value": "{spacing.desktop-lg}", "$extensions": { "uswds": { "tier": "system" } } },
-       "widescreen": { "$value": "{spacing.widescreen}", "$extensions": { "uswds": { "tier": "system" } } }
-     }
-   }
-   ```
+    ```json
+    {
+        "breakpoint": {
+            "$type": "dimension",
+            "card": {
+                "$value": "{spacing.card}",
+                "$extensions": { "uswds": { "tier": "system" } }
+            },
+            "card-lg": {
+                "$value": "{spacing.card-lg}",
+                "$extensions": { "uswds": { "tier": "system" } }
+            },
+            "mobile": {
+                "$value": "{spacing.mobile}",
+                "$extensions": { "uswds": { "tier": "system" } }
+            },
+            "mobile-lg": {
+                "$value": "{spacing.mobile-lg}",
+                "$extensions": { "uswds": { "tier": "system" } }
+            },
+            "tablet": {
+                "$value": "{spacing.tablet}",
+                "$extensions": { "uswds": { "tier": "system" } }
+            },
+            "tablet-lg": {
+                "$value": "{spacing.tablet-lg}",
+                "$extensions": { "uswds": { "tier": "system" } }
+            },
+            "desktop": {
+                "$value": "{spacing.desktop}",
+                "$extensions": { "uswds": { "tier": "system" } }
+            },
+            "desktop-lg": {
+                "$value": "{spacing.desktop-lg}",
+                "$extensions": { "uswds": { "tier": "system" } }
+            },
+            "widescreen": {
+                "$value": "{spacing.widescreen}",
+                "$extensions": { "uswds": { "tier": "system" } }
+            }
+        }
+    }
+    ```
 
-   Note: Style Dictionary resolves DTCG aliases at build time, so the emitted CSS
-   values are identical to today's hardcoded values — no output change for consumers.
+    Note: Style Dictionary resolves DTCG aliases at build time, so the emitted CSS
+    values are identical to today's hardcoded values — no output change for consumers.
 
 2. **Verify alias resolution** — after `npm run build:tokens`, spot-check that
    `--usa-breakpoint-tablet` in the built CSS output resolves to the same value as
    `--usa-spacing-tablet` (`40rem`). Both must be present and equal.
 
 3. **Run build**
-   ```bash
-   npm run build:tokens
-   ```
+    ```bash
+    npm run build:tokens
+    ```
 
 ---
 

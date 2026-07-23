@@ -1,7 +1,7 @@
 # PR 1: Vivid canonical naming + `60v` legacy alias
 
 **Phase:** 1 — Complete the primitive tier
-**Related ADRs:** ADR-0002 (Amended), ADR-0010 (Accepted)
+**Related ADRs:** ADR-0002 (Amended), ADR-0010
 **Prerequisite PRs:** PR 0 (tier-first restructure must be merged first)
 
 ---
@@ -27,13 +27,13 @@ No token values change. No existing names are removed.
 
 ## Files touched
 
-| Action | Path |
-|--------|------|
-| Modify | `internals/token-helpers/index.ts` — add vivid alias format helper |
-| Modify | `config/style-dictionary.config.js` — register new `css/vivid-with-alias` and `scss/vivid-with-alias` formats; wire them to the color platform |
-| Modify | `tokens/system/color/*.json` — add `$extensions.uswds.legacyName` to each vivid token entry |
-| Modify | `internals/token-helpers/index.test.ts` — unit tests for alias emission |
-| Rebuild | `build/css/system/color.css`, `build/scss/system/_color.scss` |
+| Action  | Path                                                                                                                                           |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modify  | `internals/token-helpers/index.ts` — add vivid alias format helper                                                                             |
+| Modify  | `config/style-dictionary.config.js` — register new `css/vivid-with-alias` and `scss/vivid-with-alias` formats; wire them to the color platform |
+| Modify  | `tokens/system/color/*.json` — add `$extensions.uswds.legacyName` to each vivid token entry                                                    |
+| Modify  | `internals/token-helpers/index.test.ts` — unit tests for alias emission                                                                        |
+| Rebuild | `build/css/system/color.css`, `build/scss/system/_color.scss`                                                                                  |
 
 ---
 
@@ -41,95 +41,100 @@ No token values change. No existing names are removed.
 
 1. **Verify current `generateTokenName` output**
 
-   With path `["color","red","vivid","60"]` (tier already stripped by PR 0), the
-   current join produces `usa-color-red-vivid-60`. This is correct — it is now the
-   canonical name. No change to `generateTokenName` needed.
+    With path `["color","red","vivid","60"]` (tier already stripped by PR 0), the
+    current join produces `usa-color-red-vivid-60`. This is correct — it is now the
+    canonical name. No change to `generateTokenName` needed.
 
 2. **Add `$extensions.uswds.legacyName` to vivid tokens**
 
-   For every vivid entry in `tokens/system/color/*.json`, add the `legacyName` list
-   recording the USWDS-core forms that map back to this canonical token. Example in
-   `tokens/system/color/red.json`:
+    For every vivid entry in `tokens/system/color/*.json`, add the `legacyName` list
+    recording the USWDS-core forms that map back to this canonical token. Example in
+    `tokens/system/color/red.json`:
 
-   ```json
-   "vivid": {
-     "60": {
-       "$value": "#b50909",
-       "$extensions": {
-         "uswds": {
-           "tier": "system",
-           "legacyName": ["red-60v", "$color-red-60v", "$red-60v"]
-         }
-       }
-     }
-   }
-   ```
+    ```json
+    "vivid": {
+      "60": {
+        "$value": "#b50909",
+        "$extensions": {
+          "uswds": {
+            "tier": "system",
+            "legacyName": ["red-60v", "$color-red-60v", "$red-60v"]
+          }
+        }
+      }
+    }
+    ```
 
 3. **Implement the alias-emitting format**
 
-   In `internals/token-helpers/index.ts`, export a helper that, given a token whose
-   path contains `vivid`, derives the `60v`-style legacy name:
+    In `internals/token-helpers/index.ts`, export a helper that, given a token whose
+    path contains `vivid`, derives the `60v`-style legacy name:
 
-   ```ts
-   export const getVividLegacyName = (
-     token: TransformedToken,
-     prefix: string,
-   ): string | null => {
-     const vividIdx = token.path.indexOf("vivid");
-     if (vividIdx === -1) return null;
-     // segments with tier already stripped; path is e.g. ["color","red","vivid","60"]
-     const before = token.path.slice(0, vividIdx);   // ["color","red"]
-     const grade = token.path[vividIdx + 1];          // "60"
-     return `${prefix}-${before.join("-")}-${grade}v`; // "usa-color-red-60v"
-   };
-   ```
+    ```ts
+    export const getVividLegacyName = (
+        token: TransformedToken,
+        prefix: string,
+    ): string | null => {
+        const vividIdx = token.path.indexOf("vivid");
+        if (vividIdx === -1) return null;
+        // segments with tier already stripped; path is e.g. ["color","red","vivid","60"]
+        const before = token.path.slice(0, vividIdx); // ["color","red"]
+        const grade = token.path[vividIdx + 1]; // "60"
+        return `${prefix}-${before.join("-")}-${grade}v`; // "usa-color-red-60v"
+    };
+    ```
 
 4. **Register a custom Style Dictionary format** in `config/style-dictionary.config.js`:
 
-   ```js
-   StyleDictionary.registerFormat({
-     name: "css/variables-with-vivid-alias",
-     format: ({ dictionary, options }) => {
-       const lines = [":root {"];
-       for (const token of dictionary.allTokens) {
-         const canonical = `--${token.name}`;
-         lines.push(`  ${canonical}: ${token.$value};`);
-         const legacy = getVividLegacyName(token, options.prefix ?? "usa");
-         if (legacy) {
-           lines.push(`  --${legacy}: var(${canonical});`);
-         }
-       }
-       lines.push("}");
-       return lines.join("\n");
-     },
-   });
-   ```
+    ```js
+    StyleDictionary.registerFormat({
+        name: "css/variables-with-vivid-alias",
+        format: ({ dictionary, options }) => {
+            const lines = [":root {"];
+            for (const token of dictionary.allTokens) {
+                const canonical = `--${token.name}`;
+                lines.push(`  ${canonical}: ${token.$value};`);
+                const legacy = getVividLegacyName(
+                    token,
+                    options.prefix ?? "usa",
+                );
+                if (legacy) {
+                    lines.push(`  --${legacy}: var(${canonical});`);
+                }
+            }
+            lines.push("}");
+            return lines.join("\n");
+        },
+    });
+    ```
 
-   Add an equivalent `scss/variables-with-vivid-alias` format that emits `$`-prefixed
-   variables.
+    Add an equivalent `scss/variables-with-vivid-alias` format that emits `$`-prefixed
+    variables.
 
 5. **Wire the format to color platforms** in `config/style-dictionary.config.js` —
    replace `format: "css/variables"` with `format: "css/variables-with-vivid-alias"`
    for the system/color output files only.
 
 6. **Update unit tests** (`internals/token-helpers/index.test.ts`)
-   - `getVividLegacyName` with `["color","red","vivid","60"]`, prefix `"usa"` →
-     `"usa-color-red-60v"`.
-   - `getVividLegacyName` with `["color","blue","vivid","50"]` → `"usa-color-blue-50v"`.
-   - `getVividLegacyName` with a non-vivid path (e.g. `["color","blue","5"]`) → `null`.
-   - `getVividLegacyName` with a multi-segment family (`["color","blue-warm","vivid","60"]`)
-     → `"usa-color-blue-warm-60v"`.
+    - `getVividLegacyName` with `["color","red","vivid","60"]`, prefix `"usa"` →
+      `"usa-color-red-60v"`.
+    - `getVividLegacyName` with `["color","blue","vivid","50"]` → `"usa-color-blue-50v"`.
+    - `getVividLegacyName` with a non-vivid path (e.g. `["color","blue","5"]`) → `null`.
+    - `getVividLegacyName` with a multi-segment family (`["color","blue-warm","vivid","60"]`)
+      → `"usa-color-blue-warm-60v"`.
 
 7. **Run build and commit output**
-   ```bash
-   npm run build:tokens
-   ```
 
-   Spot-check `build/css/system/color.css` contains both:
-   ```css
-   --usa-color-red-vivid-60: #b50909;
-   --usa-color-red-60v: var(--usa-color-red-vivid-60);
-   ```
+    ```bash
+    npm run build:tokens
+    ```
+
+    Spot-check `build/css/system/color.css` contains both:
+
+    ```css
+    --usa-color-red-vivid-60: #b50909;
+    --usa-color-red-60v: var(--usa-color-red-vivid-60);
+    ```
 
 ---
 

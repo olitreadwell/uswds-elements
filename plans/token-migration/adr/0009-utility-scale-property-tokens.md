@@ -57,7 +57,7 @@ already resolves through the color tier).
 
 ## Decision 2: Negative-value representation
 
-Follow the ADR-0007 pattern already accepted for spacing: resolve to the literal negative value,
+Follow the ADR-0007 pattern proposed for spacing: resolve to the literal negative value,
 carry provenance in `$extensions.uswds.formula`, no separate `neg-*`-style naming convention
 invented for this tier.
 
@@ -73,11 +73,11 @@ invented for this tier.
 }
 ```
 
-- ✅ Consistent with the accepted spacing precedent — one pattern for negative values across the
+- ✅ Consistent with the ADR-0007 spacing precedent — one pattern for negative values across the
   whole token package, not one per category
 - ✅ `"formula": "literal"` distinguishes these from computed negatives (spacing's `spacing-multiple(-n)`,
   which keeps its arithmetic formula) without a separate schema field
-- ❌ None identified — this is a narrow extension of an already-accepted pattern
+- ❌ None identified — this is a narrow extension of the ADR-0007 pattern
 
 ## Consequences
 

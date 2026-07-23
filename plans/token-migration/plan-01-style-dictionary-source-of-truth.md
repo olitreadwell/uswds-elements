@@ -27,8 +27,10 @@ This plan makes the Style Dictionary in `tokens/` the comprehensive source of tr
 3. **npm-distributed tokens**, colors first
 4. A **mode-aware semantic tier** so future dark-mode support doesn't fight the existing `-light*`/`-dark*` ramp names
 
-Decisions with alternatives are recorded in [`adr/`](adr/README.md). Prior accepted decisions live
-in [architecture-decisions.md](architecture-decisions.md). The audit/enforcement workstream is
+Decisions with alternatives are recorded in [`adr/`](adr/README.md). Baseline recommendations
+these ADRs build on are recorded in [design-system-token-research.md](adr/design-system-token-research.md),
+which is itself pending team review — nothing here should be read as already accepted. The
+audit/enforcement workstream is
 [plan-02](plan-02-port-audit-enforce.md) and is folded into Phase 6. The tier-first structure,
 per-tier-per-category exports, and `$extensions.uswds` metadata convention are recorded in
 [ADR-0010](adr/0010-tier-first-structure-and-meta.md).
@@ -61,8 +63,7 @@ Accepted before its PRs merge.
 
 ### Phase 0 — Decide
 
-Team review of ADRs 0001–0009. ADR-0003 (prominence-scale adaptive tier) is already Accepted;
-the rest are Proposed with recommendations.
+Team review of ADRs 0001–0009, all currently Proposed.
 
 **Exit criteria:** all nine ADRs Accepted (or amended and Accepted).
 
