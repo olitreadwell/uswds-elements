@@ -66,7 +66,10 @@ A new CI validation script recomputes and verifies formula-tagged values against
                     "uswds": {
                         "tier": "system",
                         "formula": "grid-base * 0.5",
-                        "legacyName": ["$system-spacing-small-05", "05"]
+                        "legacyName": {
+                            "publicVar": "$system-spacing-small-05",
+                            "mapKey": "05"
+                        }
                     }
                 }
             },
@@ -76,7 +79,10 @@ A new CI validation script recomputes and verifies formula-tagged values against
                     "uswds": {
                         "tier": "system",
                         "formula": "grid-base * 1",
-                        "legacyName": ["$system-spacing-small-1", "1"]
+                        "legacyName": {
+                            "publicVar": "$system-spacing-small-1",
+                            "mapKey": "1"
+                        }
                     }
                 }
             },
@@ -86,7 +92,9 @@ A new CI validation script recomputes and verifies formula-tagged values against
                     "uswds": {
                         "tier": "system",
                         "formula": "grid-base * -0.5",
-                        "legacyName": ["$system-spacing-small-negative-neg-05"]
+                        "legacyName": {
+                            "publicVar": "$system-spacing-small-negative-neg-05"
+                        }
                     }
                 }
             },
@@ -95,16 +103,20 @@ A new CI validation script recomputes and verifies formula-tagged values against
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-spacing-smaller-1px"]
+                        "legacyName": {
+                            "publicVar": "$system-spacing-smaller-1px"
+                        }
                     }
                 }
             },
             "card": {
-                "$value": { "$value": "{spacing.2}" },
+                "$value": "{spacing.2}",
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-spacing-large-card"]
+                        "legacyName": {
+                            "publicVar": "$system-spacing-large-card"
+                        }
                     }
                 }
             }
@@ -122,7 +134,10 @@ A new CI validation script recomputes and verifies formula-tagged values against
     // Reads tokens/system/spacing/spacing.json
     // For each entry with $extensions.uswds.formula:
     //   - evaluates "grid-base * N" using a fixed GRID_BASE = 0.5rem
-    //   - compares to the token's $value (numeric)
+    //   - compares to the token's $value using an epsilon tolerance, NOT strict equality:
+    //       const EPSILON = 1e-5;
+    //       const isMatch = Math.abs(computed - tokenValue) < EPSILON;
+    //     (plain `===` false-fails on IEEE-754 rounding, e.g. 0.5 * 0.5 vs 0.25)
     //   - exits non-zero and prints a diff table on any mismatch
     ```
 
@@ -147,7 +162,7 @@ A new CI validation script recomputes and verifies formula-tagged values against
 
 - [ ] `npm run build:tokens` exits 0
 - [ ] `npm test` exits 0
-- [ ] `node internals/scripts/validate-spacing-formulas.js` exits 0 (all formula-tagged values match computed values)
+- [ ] `node internals/scripts/validate-spacing-formulas.js` exits 0 (all formula-tagged values match computed values within 1e-5 epsilon tolerance)
 - [ ] All 14 positive multiples (`05` through `15`) present in `build/css/system/spacing.css`
 - [ ] All negative forms (`neg-05` through `neg-15`, `neg-1px`, `neg-2px`) present in built output
 - [ ] All 9 named aliases (`card` through `widescreen`) present in built output

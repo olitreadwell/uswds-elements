@@ -39,112 +39,136 @@ used by USWDS's grid utility classes.
     ```json
     {
         "layout-grid-widths": {
-            "$type": "percentage",
+            "$type": "dimension",
             "1": {
-                "$value": 8.333333333333332,
+                "$value": { "value": 8.333333333333332, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-1"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-1"
+                        }
                     }
                 }
             },
             "2": {
-                "$value": 16.666666666666664,
+                "$value": { "value": 16.666666666666664, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-2"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-2"
+                        }
                     }
                 }
             },
             "3": {
-                "$value": 25,
+                "$value": { "value": 25, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-3"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-3"
+                        }
                     }
                 }
             },
             "4": {
-                "$value": 33.33333333333333,
+                "$value": { "value": 33.33333333333333, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-4"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-4"
+                        }
                     }
                 }
             },
             "5": {
-                "$value": 41.66666666666667,
+                "$value": { "value": 41.66666666666667, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-5"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-5"
+                        }
                     }
                 }
             },
             "6": {
-                "$value": 50,
+                "$value": { "value": 50, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-6"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-6"
+                        }
                     }
                 }
             },
             "7": {
-                "$value": 58.333333333333336,
+                "$value": { "value": 58.333333333333336, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-7"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-7"
+                        }
                     }
                 }
             },
             "8": {
-                "$value": 66.66666666666666,
+                "$value": { "value": 66.66666666666666, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-8"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-8"
+                        }
                     }
                 }
             },
             "9": {
-                "$value": 75,
+                "$value": { "value": 75, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-9"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-9"
+                        }
                     }
                 }
             },
             "10": {
-                "$value": 83.33333333333334,
+                "$value": { "value": 83.33333333333334, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-10"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-10"
+                        }
                     }
                 }
             },
             "11": {
-                "$value": 91.66666666666666,
+                "$value": { "value": 91.66666666666666, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-11"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-11"
+                        }
                     }
                 }
             },
             "12": {
-                "$value": 100,
+                "$value": { "value": 100, "unit": "%" },
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-layout-grid-widths-12"]
+                        "legacyName": {
+                            "publicVar": "$system-layout-grid-widths-12"
+                        }
                     }
                 }
             }
@@ -152,10 +176,11 @@ used by USWDS's grid utility classes.
     }
     ```
 
-    Note on `$type: "percentage"`: DTCG does not define a `percentage` type natively.
-    Use `$type: "number"` and record the unit context in `$description` ("percentage of
-    container width"), or use `$type: "dimension"` with a `%` unit if Style Dictionary
-    handles it. Confirm at build time; use whatever emits the correct `%` suffix in CSS.
+    Note on `$type`: DTCG does not define a `percentage` type natively, so this group
+    uses `$type: "dimension"` with `unit: "%"` instead. This reuses the existing
+    `getTokenValueWithUnit` transform in `config/style-dictionary.config.js` as-is — it
+    already concatenates `value` + `unit` for any dimension-typed token — so no new
+    build logic is required to emit the `%` suffix.
 
 2. **Register in `tokens/index.js` and `config/style-dictionary.config.js`** —
    add `system/grid` as a source group, add a platform file entry with destination
@@ -174,7 +199,7 @@ used by USWDS's grid utility classes.
 - [ ] `npm test` exits 0
 - [ ] 12 entries (`--usa-layout-grid-widths-1` through `--usa-layout-grid-widths-12`) in `build/css/system/grid.css`
 - [ ] Values match `uswds-properties-tokens.csv` exactly (spot-check: `widths-6` = `50%`, `widths-12` = `100%`)
-- [ ] `$type` choice confirmed: CSS output emits percentage values with `%` suffix
+- [ ] `$type: "dimension"` + `unit: "%"` confirmed: CSS output emits percentage values with `%` suffix via the existing `getTokenValueWithUnit` transform
 - [ ] All 27 color families + spacing + typography + utility + grid groups accounted for — Phase 1 primitive tier is **complete**
 - [ ] `build/` output committed alongside source changes
 

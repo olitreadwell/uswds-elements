@@ -11,8 +11,13 @@
 Migrate the token source from the current **category-first** layout
 (`tokens/{colors,spacing,breakpoints}/*.json`) to the **tier-first** layout
 (`tokens/<tier>/<category>/…`) defined in ADR-0010. Update the build config to
-match: per-platform `prefix`, `generateTokenName` dropping the tier path segment,
-and per-tier-per-category output files.
+match: per-platform `prefix` and per-tier-per-category output files.
+
+`generateTokenName` needs no change. Tier is directory/metadata only
+(ADR-0010 Decision 5): each file's JSON content nests directly under its category
+key (`color.blue.5`), never under a tier key, so `token.path` never contains a tier
+segment to drop — the existing `${prefix}-${token.path.join("-")}` already produces
+the correct output names.
 
 No new tokens are added. No token values change. This is purely structural.
 
@@ -20,17 +25,15 @@ No new tokens are added. No token values change. This is purely structural.
 
 ## Files touched
 
-| Action  | Path                                                                                                                                        |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Move    | `tokens/colors/*.json` → `tokens/system/color/*.json`                                                                                       |
-| Move    | `tokens/spacing/spacing.json` → `tokens/system/spacing/spacing.json`                                                                        |
-| Move    | `tokens/breakpoints/breakpoints.json` → `tokens/system/breakpoints/breakpoints.json`                                                        |
-| Delete  | `tokens/colors/`, `tokens/spacing/`, `tokens/breakpoints/` (now empty)                                                                      |
-| Modify  | `tokens/index.js` — update group discovery to reflect new paths                                                                             |
-| Modify  | `config/style-dictionary.config.js` — per-platform `prefix`, tier-aware file filters, per-tier-per-category output destinations             |
-| Modify  | `internals/token-helpers/index.ts` — `generateTokenName` drops the tier segment (`system`/`theme`/`state`) from `token.path` before joining |
-| Modify  | `internals/token-helpers/index.test.ts` — update/add cases for tier-segment dropping; existing passthrough cases still pass                 |
-| Rebuild | `build/css/`, `build/scss/` — committed output; filenames change to per-tier-per-category (e.g. `build/css/system/color.css`)               |
+| Action  | Path                                                                                                                            |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Move    | `tokens/colors/*.json` → `tokens/system/color/*.json`                                                                           |
+| Move    | `tokens/spacing/spacing.json` → `tokens/system/spacing/spacing.json`                                                            |
+| Move    | `tokens/breakpoints/breakpoints.json` → `tokens/system/breakpoints/breakpoints.json`                                            |
+| Delete  | `tokens/colors/`, `tokens/spacing/`, `tokens/breakpoints/` (now empty)                                                          |
+| Modify  | `tokens/index.js` — update group discovery to reflect new paths                                                                 |
+| Modify  | `config/style-dictionary.config.js` — per-platform `prefix`, tier-aware file filters, per-tier-per-category output destinations |
+| Rebuild | `build/css/`, `build/scss/` — committed output; filenames change to per-tier-per-category (e.g. `build/css/system/color.css`)   |
 
 ---
 
@@ -53,30 +56,7 @@ No new tokens are added. No token values change. This is purely structural.
     - `source` glob: `tokens/**/*.json` continues to match; no change needed here.
     - `files` array: update `filter` paths and `destination` paths to reflect `system/<category>` structure (e.g. destination `system/color.css`, filter `tokens/system/color/`).
 
-5. **Update `generateTokenName`** (`internals/token-helpers/index.ts`)
-
-    Current implementation (line 7):
-
-    ```ts
-    return `${options.prefix}-${token.path.join("-")}`;
-    ```
-
-    New implementation — strip the tier segment before joining:
-
-    ```ts
-    const TIERS = new Set(["system", "theme", "state"]);
-    const segments = token.path.filter((s) => !TIERS.has(s));
-    return `${options.prefix}-${segments.join("-")}`;
-    ```
-
-    Result: `["system","color","red","vivid","60"]` → `usa-color-red-vivid-60` (unchanged output name for existing tokens; the structural move is invisible to consumers).
-
-6. **Update unit tests** (`internals/token-helpers/index.test.ts`)
-    - Add a case: path `["system","color","blue","5"]` → `"usa-color-blue-5"` (tier stripped).
-    - Add a case: path `["system","breakpoints","desktop-lg"]` → `"usa-breakpoint-desktop-lg"` (tier stripped, prefix applied).
-    - Existing cases must still pass (they have no tier segment, so the filter is a no-op).
-
-7. **Run build and commit output**
+5. **Run build and commit output**
     ```bash
     npm run build:tokens
     git add build/ tokens/ config/ internals/ && git commit
@@ -88,8 +68,7 @@ No new tokens are added. No token values change. This is purely structural.
 
 - [ ] `git mv` used for all moved files (history preserved, verify with `git log --follow`)
 - [ ] `npm run build:tokens` exits 0
-- [ ] `npm test` exits 0 (all existing + new transform tests pass)
-- [ ] New tier-segment-drop test cases in `index.test.ts` are green
+- [ ] `npm test` exits 0 (all existing transform tests pass unchanged — `generateTokenName` is untouched)
 - [ ] Output token names in `build/css/system/color.css` are **identical** to pre-restructure names (grep spot-check: `--usa-color-blue-5` still present, value unchanged)
 - [ ] No `tokens/colors/`, `tokens/spacing/`, `tokens/breakpoints/` directories remain
 - [ ] `build/` output committed alongside source changes

@@ -47,9 +47,10 @@ No token values change. No existing names are removed.
 
 2. **Add `$extensions.uswds.legacyName` to vivid tokens**
 
-    For every vivid entry in `tokens/system/color/*.json`, add the `legacyName` list
-    recording the USWDS-core forms that map back to this canonical token. Example in
-    `tokens/system/color/red.json`:
+    For every vivid entry in `tokens/system/color/*.json`, add the `legacyName` keyed
+    object (ADR-0010 Decision 3: `shortcode`/`privateVar`/`publicVar`/`mapKey`, populate
+    only what applies) recording the USWDS-core forms that map back to this canonical
+    token. Example in `tokens/system/color/red.json`:
 
     ```json
     "vivid": {
@@ -58,7 +59,11 @@ No token values change. No existing names are removed.
         "$extensions": {
           "uswds": {
             "tier": "system",
-            "legacyName": ["red-60v", "$color-red-60v", "$red-60v"]
+            "legacyName": {
+              "shortcode": "red-60v",
+              "privateVar": "$color-red-60v",
+              "publicVar": "$red-60v"
+            }
           }
         }
       }

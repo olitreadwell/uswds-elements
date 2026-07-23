@@ -21,10 +21,13 @@ in PR 1 touches only families with vivid grades. This PR:
    `gray-warm.json` include grades 1–4; this PR verifies and commits the reconciliation evidence).
 3. Confirms **`-90v` vivid slots are absent** per ADR-0008 (nonexistent in USWDS core; the
    `-90v` shortcodes in `uswds-system-tokens.csv` resolve to `false` sentinels — they are
-   explicitly omitted with a recorded disposition, not accidentally missing).
-4. Records the disposition of the 25 entries in `uswds-system-tokens.csv` that are
-   shortcodes resolving to `false` (the `-90v` family) as `$extensions.uswds.disabled: true`
-   entries so the CSV reconciliation script can account for them.
+   omitted entirely, matching ADR-0008 Role 1: they are not tokens, so a map lookup on them
+   should simply miss, the same way uswds-core's own `$system-color-shortcodes` map lacks
+   these keys).
+4. Gives `internals/scripts/reconcile-colors.js` an explicit skip-list of the 25 entries in
+   `uswds-system-tokens.csv` that are shortcodes resolving to `false` (the `-90v` family), so
+   the reconciliation script knows these CSV rows are expected to have **no** corresponding
+   built token, instead of expecting JSON to carry a disabled placeholder for them.
 
 No new token values are added. No names change.
 
@@ -32,12 +35,12 @@ No new token values are added. No names change.
 
 ## Files touched
 
-| Action  | Path                                                                                                                                |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Modify  | `tokens/system/color/*.json` — add `$extensions.uswds` block (`tier: "system"`, `legacyName: [...]`) to every non-vivid token entry |
-| New     | `internals/scripts/reconcile-colors.js` — CSV reconciliation script (name→value equality check)                                     |
-| Modify  | `package.json` — add `"reconcile:colors"` script                                                                                    |
-| Rebuild | `build/css/system/color.css`, `build/scss/system/_color.scss`                                                                       |
+| Action  | Path                                                                                                                                                                               |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modify  | `tokens/system/color/*.json` — add `$extensions.uswds` block (`tier: "system"`, `legacyName: {...}`) to every existing token entry (nonexistent `-90v` grades get no entry at all) |
+| New     | `internals/scripts/reconcile-colors.js` — CSV reconciliation script (name→value equality check)                                                                                    |
+| Modify  | `package.json` — add `"reconcile:colors"` script                                                                                                                                   |
+| Rebuild | `build/css/system/color.css`, `build/scss/system/_color.scss`                                                                                                                      |
 
 ---
 
@@ -54,7 +57,11 @@ No new token values are added. No names change.
       "$extensions": {
         "uswds": {
           "tier": "system",
-          "legacyName": ["blue-10", "$color-blue-10", "$blue-10"]
+          "legacyName": {
+            "shortcode": "blue-10",
+            "privateVar": "$color-blue-10",
+            "publicVar": "$blue-10"
+          }
         }
       }
     }
@@ -64,39 +71,30 @@ No new token values are added. No names change.
     `uswds-system-tokens.csv`'s `$system-color-*` rows), note in `$description` that
     these are USWDS global palette entries without a `$system-color-*` shortcode.
 
-2. **Record `-90v` disabled dispositions**
+2. **Omit `-90v` slots entirely; give the reconciliation script an explicit skip-list**
 
     For each family that has a `-90v` entry in the CSV resolving to `false` (red,
     red-cool, red-warm, orange-warm, orange, gold, yellow, green-warm, green,
-    green-cool, and others per CSV), add a disabled placeholder in the family JSON:
+    green-cool, and others per CSV), add **no JSON entry at all** — per ADR-0008
+    Role 1, these are not tokens, so e.g. `tokens/system/color/red.json`'s `vivid`
+    group simply has no `"90"` key, exactly matching uswds-core's own map.
 
-    ```json
-    "vivid": {
-      "90": {
-        "$value": "none",
-        "$extensions": {
-          "uswds": {
-            "tier": "system",
-            "disabled": true,
-            "legacyName": ["red-90v", "$color-red-90v", "$red-90v"]
-          }
-        }
-      }
-    }
-    ```
-
-    Style Dictionary's filter in `config/style-dictionary.config.js` must exclude
-    tokens where `$extensions.uswds.disabled === true` from all build outputs.
+    `internals/scripts/reconcile-colors.js` (step 3) carries the exception list
+    directly by reading the CSV's own `false` value per row, so it knows which CSV
+    rows are expected to have **no** corresponding built token — no placeholder JSON
+    entry is needed to make the script's job possible.
 
 3. **Write `internals/scripts/reconcile-colors.js`**
 
     This script:
     - Parses `plans/token-migration/uswds-system-tokens.csv`
     - Walks `tokens/system/color/**/*.json` (post-build Style Dictionary flat output)
-    - For every non-disabled CSV row: asserts a matching token exists in the built
-      output and the value matches.
-    - For every `disabled: true` JSON entry: asserts the CSV row is present and the
-      default value is `false`.
+    - For every CSV row whose value is **not** `false`: asserts a matching token
+      exists in the built output and the value matches.
+    - For every CSV row whose value **is** `false` (the `-90v` family, ADR-0008
+      Role 1): asserts **no** corresponding token exists in the built output — a
+      present token here is itself a reconciliation failure, since these were never
+      meant to be tokens.
     - Exits non-zero and prints a diff table on mismatch.
 
     Add to `package.json`:
@@ -105,16 +103,7 @@ No new token values are added. No names change.
     "reconcile:colors": "node internals/scripts/reconcile-colors.js"
     ```
 
-4. **Update `config/style-dictionary.config.js`** — add a filter to exclude disabled
-   tokens from all output platforms:
-
-    ```js
-    filter: (token) =>
-      !token.$extensions?.uswds?.disabled &&
-      token.filePath?.includes(`tokens/system/color/`),
-    ```
-
-5. **Run build and reconciliation**
+4. **Run build and reconciliation**
     ```bash
     npm run build:tokens
     node internals/scripts/reconcile-colors.js
@@ -129,6 +118,6 @@ No new token values are added. No names change.
 - [ ] `node internals/scripts/reconcile-colors.js` exits 0 (all non-disabled CSV rows matched, all disabled rows accounted for)
 - [ ] Every token in `tokens/system/color/*.json` has `$extensions.uswds.tier` set to `"system"`
 - [ ] Every non-vivid token has `legacyName` populated (spot-check: `blue.10`, `gray.5`, `gray-cool.1`)
-- [ ] No `-90v` values appear in `build/css/system/color.css` (disabled filter confirmed)
-- [ ] Reconciliation count: non-excluded CSV color rows = built output token count
+- [ ] No `-90v` keys appear anywhere in `tokens/system/color/*.json` or `build/css/system/color.css` — omitted entirely, not filtered
+- [ ] Reconciliation count: CSV rows whose value is not `false` = built output token count; `false`-valued CSV rows have no corresponding built token
 - [ ] `build/` output committed alongside source changes

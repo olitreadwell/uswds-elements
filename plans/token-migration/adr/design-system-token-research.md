@@ -390,15 +390,17 @@ simplify?
                             ↓
 ┌─────────────────────────────────────────────────────────────┐
 │ TIER 2: SEMANTIC TOKENS                                     │
-│ Source: tokens/colors/semantic.json                         │
+│ Source: tokens/theme/color/*.json (branding roles),         │
+│         tokens/state/color/*.json (feedback roles)          │
+│ (per-role files, split by tier — see ADR-0010)              │
 │ Prefix: --usa-color-                                        │
-│ Uses light-dark() for theming:                             │
-│   --usa-color-base-lightest: light-dark(                   │
+│ Uses light-dark() for theming:                              │
+│   --usa-color-base-lightest: light-dark(                    │
 │     var(--usa-color-gray-5),                                │
 │     var(--usa-color-gray-90)                                │
 │   );                                                        │
-│   --usa-color-primary: light-dark(                         │
-│     var(--usa-color-blue-vivid-60),                        │
+│   --usa-color-primary: light-dark(                          │
+│     var(--usa-color-blue-vivid-60),                         │
 │     var(--usa-color-blue-40)                                │
 │   );                                                        │
 └─────────────────────────────────────────────────────────────┘
@@ -408,10 +410,10 @@ simplify?
 │ Source: Component CSS :host {} blocks                       │
 │ Prefix: --usa-{component}-                                  │
 │ Examples:                                                   │
-│   --usa-alert-border-color: var(--usa-color-info);         │
-│   --usa-link-hover-color: var(--usa-color-primary-dark);   │
+│   --usa-alert-border-color: var(--usa-color-info);          │
+│   --usa-link-hover-color: var(--usa-color-primary-dark);    │
 │                                                             │
-│ No inline fallbacks — require global stylesheet            │
+│ No inline fallbacks — require global stylesheet             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -419,7 +421,7 @@ simplify?
 
 **Phase 1: Expand Style Dictionary (builds on plan-01 PRs)**
 
-1. Add light/dark values to semantic.json using `light-dark()` syntax
+1. Add light/dark values to the theme/state color token files (`tokens/theme/color/*.json`, `tokens/state/color/*.json`) using `light-dark()` syntax
 2. Update style-dictionary config to output `light-dark()` format
 3. Add `color-scheme: light dark` to :root
 

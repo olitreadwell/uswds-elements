@@ -55,7 +55,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-z-index-bottom"]
+                        "legacyName": { "publicVar": "$system-z-index-bottom" }
                     }
                 }
             },
@@ -64,7 +64,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-z-index-0"]
+                        "legacyName": { "publicVar": "$system-z-index-0" }
                     }
                 }
             },
@@ -73,7 +73,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-z-index-100"]
+                        "legacyName": { "publicVar": "$system-z-index-100" }
                     }
                 }
             },
@@ -82,7 +82,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-z-index-200"]
+                        "legacyName": { "publicVar": "$system-z-index-200" }
                     }
                 }
             },
@@ -91,7 +91,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-z-index-300"]
+                        "legacyName": { "publicVar": "$system-z-index-300" }
                     }
                 }
             },
@@ -100,7 +100,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-z-index-400"]
+                        "legacyName": { "publicVar": "$system-z-index-400" }
                     }
                 }
             },
@@ -109,7 +109,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-z-index-500"]
+                        "legacyName": { "publicVar": "$system-z-index-500" }
                     }
                 }
             },
@@ -118,7 +118,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-z-index-top"]
+                        "legacyName": { "publicVar": "$system-z-index-top" }
                     }
                 }
             },
@@ -127,7 +127,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-z-index-auto"]
+                        "legacyName": { "publicVar": "$system-z-index-auto" }
                     }
                 }
             }
@@ -145,10 +145,10 @@ covered by PR 4 (typography sources), not this PR.
     {
       "opacity": {
         "$type": "number",
-        "0":   { "$value": 0,   "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-opacity-0"] } } },
-        "10":  { "$value": 0.1, "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-opacity-10"] } } },
+        "0":   { "$value": 0,   "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-opacity-0" } } } },
+        "10":  { "$value": 0.1, "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-opacity-10" } } } },
         ...
-        "100": { "$value": 1,   "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-opacity-100"] } } }
+        "100": { "$value": 1,   "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-opacity-100" } } } }
       }
     }
     ```
@@ -167,7 +167,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-box-shadow-none"]
+                        "legacyName": { "publicVar": "$system-box-shadow-none" }
                     }
                 }
             },
@@ -176,7 +176,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-box-shadow-1"]
+                        "legacyName": { "publicVar": "$system-box-shadow-1" }
                     }
                 }
             },
@@ -185,7 +185,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-box-shadow-2"]
+                        "legacyName": { "publicVar": "$system-box-shadow-2" }
                     }
                 }
             },
@@ -194,7 +194,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-box-shadow-3"]
+                        "legacyName": { "publicVar": "$system-box-shadow-3" }
                     }
                 }
             },
@@ -203,7 +203,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-box-shadow-4"]
+                        "legacyName": { "publicVar": "$system-box-shadow-4" }
                     }
                 }
             },
@@ -212,7 +212,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-box-shadow-5"]
+                        "legacyName": { "publicVar": "$system-box-shadow-5" }
                     }
                 }
             }
@@ -227,27 +227,27 @@ covered by PR 4 (typography sources), not this PR.
     {
       "flex": {
         "$type": "string",
-        "1":    { "$value": "1 1 0%",    "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-flex-1"] } } },
+        "1":    { "$value": "1 1 0%",    "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-flex-1" } } } },
         ...
-        "12":   { "$value": "12 1 0%",   "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-flex-12"] } } },
-        "fill": { "$value": "1 1 0%",    "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-flex-fill"] } } },
-        "auto": { "$value": "0 1 auto",  "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-flex-auto"] } } }
+        "12":   { "$value": "12 1 0%",   "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-flex-12" } } } },
+        "fill": { "$value": "1 1 0%",    "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-flex-fill" } } } },
+        "auto": { "$value": "0 1 auto",  "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-flex-auto" } } } }
       },
       "flex-direction": {
-        "row":    { "$value": "row",    "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-flex-direction-row"] } } },
-        "column": { "$value": "column", "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-flex-direction-column"] } } }
+        "row":    { "$value": "row",    "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-flex-direction-row" } } } },
+        "column": { "$value": "column", "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-flex-direction-column" } } } }
       },
       "flex-wrap": {
-        "wrap":    { "$value": "wrap",   "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-flex-wrap-wrap"] } } },
-        "no-wrap": { "$value": "nowrap", "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-flex-wrap-no-wrap"] } } }
+        "wrap":    { "$value": "wrap",   "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-flex-wrap-wrap" } } } },
+        "no-wrap": { "$value": "nowrap", "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-flex-wrap-no-wrap" } } } }
       },
       "order": {
-        "first":   { "$value": -1,       "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-order-first"] } } },
-        "0":       { "$value": 0,        "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-order-0"] } } },
+        "first":   { "$value": -1,       "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-order-first" } } } },
+        "0":       { "$value": 0,        "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-order-0" } } } },
         ...
-        "11":      { "$value": 11,       "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-order-11"] } } },
-        "last":    { "$value": 999,      "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-order-last"] } } },
-        "initial": { "$value": "initial","$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-order-initial"] } } }
+        "11":      { "$value": 11,       "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-order-11" } } } },
+        "last":    { "$value": 999,      "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-order-last" } } } },
+        "initial": { "$value": "initial","$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-order-initial" } } } }
       }
     }
     ```
@@ -266,7 +266,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-0"]
+                        "legacyName": { "publicVar": "$system-gap-0" }
                     }
                 }
             },
@@ -275,7 +275,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-2px"]
+                        "legacyName": { "publicVar": "$system-gap-2px" }
                     }
                 }
             },
@@ -284,7 +284,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-05"]
+                        "legacyName": { "publicVar": "$system-gap-05" }
                     }
                 }
             },
@@ -293,7 +293,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-1"]
+                        "legacyName": { "publicVar": "$system-gap-1" }
                     }
                 }
             },
@@ -302,7 +302,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-2"]
+                        "legacyName": { "publicVar": "$system-gap-2" }
                     }
                 }
             },
@@ -311,7 +311,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-3"]
+                        "legacyName": { "publicVar": "$system-gap-3" }
                     }
                 }
             },
@@ -320,7 +320,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-4"]
+                        "legacyName": { "publicVar": "$system-gap-4" }
                     }
                 }
             },
@@ -329,7 +329,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-5"]
+                        "legacyName": { "publicVar": "$system-gap-5" }
                     }
                 }
             },
@@ -338,7 +338,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-6"]
+                        "legacyName": { "publicVar": "$system-gap-6" }
                     }
                 }
             },
@@ -347,7 +347,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-sm"]
+                        "legacyName": { "publicVar": "$system-gap-sm" }
                     }
                 }
             },
@@ -356,7 +356,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-md"]
+                        "legacyName": { "publicVar": "$system-gap-md" }
                     }
                 }
             },
@@ -365,7 +365,7 @@ covered by PR 4 (typography sources), not this PR.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-gap-lg"]
+                        "legacyName": { "publicVar": "$system-gap-lg" }
                     }
                 }
             }

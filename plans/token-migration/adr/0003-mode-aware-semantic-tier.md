@@ -101,3 +101,17 @@ Mechanical rename of the existing 7-step ramp to intensity words:
 - `color-scheme: light dark` ships in the token stylesheet; consumers can force a scheme via `color-scheme` on `:root` or a subtree
 - USWDS core is unaffected until it opts into the adaptive tier — the ADR-0005 SCSS output exposes only light values initially
 - The `on-{role}` names are net-new (no USWDS precedent); they fill the "text on solid fill" gap the ramp never covered
+
+## Future work: standard `.resolver.json` bridge
+
+`$extensions.uswds.dark` is a proprietary vendor extension, not the DTCG Resolver
+Module's standard `.resolver.json` format (`sets` + `modifiers` + `resolutionOrder`)
+that external tools (Figma variables, Tokens Studio, Terrazzo) expect for multi-context
+tokens. The custom extension is kept here deliberately — it's what lets a Style
+Dictionary transform compile directly to `light-dark()` CSS, which is this ADR's actual
+goal. A `generate-resolvers.js` script that derives a standard-compliant
+`.resolver.json` from the same `$extensions.uswds.dark`/light `$value` data is planned
+as a **fast-follow PR**, landing separately and shortly after this ADR's rollout merges
+— not a blocking requirement on it. This keeps "ship working adaptive CSS" and
+"external-tool interop" independently reviewable instead of coupling a CSS-output
+concern to a tooling-interop concern in one PR.

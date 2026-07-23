@@ -51,10 +51,10 @@ No web component CSS changes. No existing names are affected.
     {
       "font-size": {
         "$type": "dimension",
-        "1":  { "$value": { "value": 12, "unit": "px" }, "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-type-scale-1"] } } },
-        "2":  { "$value": { "value": 13, "unit": "px" }, "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-type-scale-2"] } } },
+        "1":  { "$value": { "value": 12, "unit": "px" }, "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-type-scale-1" } } } },
+        "2":  { "$value": { "value": 13, "unit": "px" }, "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-type-scale-2" } } } },
         ...
-        "20": { "$value": { "value": 140, "unit": "px" }, "$extensions": { "uswds": { "tier": "system", "legacyName": ["$system-type-scale-20"] } } }
+        "20": { "$value": { "value": 140, "unit": "px" }, "$extensions": { "uswds": { "tier": "system", "legacyName": { "publicVar": "$system-type-scale-20" } } } }
       }
     }
     ```
@@ -70,7 +70,7 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-line-height-1"]
+                        "legacyName": { "publicVar": "$system-line-height-1" }
                     }
                 }
             },
@@ -79,7 +79,7 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-line-height-2"]
+                        "legacyName": { "publicVar": "$system-line-height-2" }
                     }
                 }
             },
@@ -88,7 +88,7 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-line-height-3"]
+                        "legacyName": { "publicVar": "$system-line-height-3" }
                     }
                 }
             },
@@ -97,7 +97,7 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-line-height-4"]
+                        "legacyName": { "publicVar": "$system-line-height-4" }
                     }
                 }
             },
@@ -106,7 +106,7 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-line-height-5"]
+                        "legacyName": { "publicVar": "$system-line-height-5" }
                     }
                 }
             },
@@ -115,7 +115,7 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-line-height-6"]
+                        "legacyName": { "publicVar": "$system-line-height-6" }
                     }
                 }
             }
@@ -151,11 +151,14 @@ No web component CSS changes. No existing names are affected.
         "letter-spacing": {
             "$type": "dimension",
             "auto": {
+                "$type": "string",
                 "$value": "initial",
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-letter-spacing-ls-auto"]
+                        "legacyName": {
+                            "publicVar": "$system-letter-spacing-ls-auto"
+                        }
                     }
                 }
             },
@@ -164,7 +167,9 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-letter-spacing-ls-1"]
+                        "legacyName": {
+                            "publicVar": "$system-letter-spacing-ls-1"
+                        }
                     }
                 }
             },
@@ -173,7 +178,9 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-letter-spacing-ls-2"]
+                        "legacyName": {
+                            "publicVar": "$system-letter-spacing-ls-2"
+                        }
                     }
                 }
             },
@@ -182,7 +189,9 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-letter-spacing-ls-3"]
+                        "legacyName": {
+                            "publicVar": "$system-letter-spacing-ls-3"
+                        }
                     }
                 }
             },
@@ -191,7 +200,9 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-letter-spacing-ls-neg-1"]
+                        "legacyName": {
+                            "publicVar": "$system-letter-spacing-ls-neg-1"
+                        }
                     }
                 }
             },
@@ -200,7 +211,9 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-letter-spacing-ls-neg-2"]
+                        "legacyName": {
+                            "publicVar": "$system-letter-spacing-ls-neg-2"
+                        }
                     }
                 }
             },
@@ -209,13 +222,28 @@ No web component CSS changes. No existing names are affected.
                 "$extensions": {
                     "uswds": {
                         "tier": "system",
-                        "legacyName": ["$system-letter-spacing-ls-neg-3"]
+                        "legacyName": {
+                            "publicVar": "$system-letter-spacing-ls-neg-3"
+                        }
                     }
                 }
             }
         }
     }
     ```
+
+    Two DTCG-compliance notes on this group:
+    - `"em"` is not one of DTCG's baseline dimension units (`px`/`rem`), but letter-spacing
+      in USWDS Sass is genuinely em-relative — converting to `rem` would lose the
+      font-relative behavior. Treat `em` as a documented USWDS extension of the dimension
+      unit list; the existing `getTokenValueWithUnit` transform in
+      `config/style-dictionary.config.js` already concatenates `value` + `unit` generically
+      for any dimension token, so no new build logic is needed.
+    - `auto` sets its own `"$type": "string"`, overriding the group's inherited
+      `"$type": "dimension"` (per DTCG's type-inheritance rules, a token's own `$type` takes
+      precedence over an ancestor group's). This lets `auto` hold the literal string
+      `"initial"` without needing to satisfy the dimension type's `{value, unit}` object
+      shape.
 
 5. **`tokens/system/font-family/stacks.json`** — DTCG `fontFamily` type (array of
    family names), one entry per named USWDS stack (system, georgia, helvetica,

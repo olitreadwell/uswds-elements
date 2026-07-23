@@ -117,12 +117,27 @@ DTCG-native **`$description`** field, not an extension.
 
 Fields under `$extensions.uswds`:
 
-- **`tier`** — `"system" | "theme" | "state"`. Redundant with the directory, but travels with the
-  token into flattened JSON exports where directory structure is lost.
-- **`legacyName`** — a **list** of every USWDS-core construct this token maps back to (a nested-map
-  key, a flat `$color-*` shortcode, a public `$*` alias, and/or a `$theme-*` settings var). This is
-  the **authoritative input to the ADR-0005 SCSS translation layer** and to any tool answering
-  "what was the old name for this token?"
+- **`tier`** — `"system" | "theme" | "state"`. This is the sole source of tier information a token
+  carries. Tier is expressed by the directory a token's source file sits in
+  (`tokens/<tier>/<category>/…`, Decision 1), but each file's JSON content nests directly under its
+  category key (e.g. `color.blue.5`) — a token's DTCG `path` never contains a tier segment. `tier`
+  here is what travels into flattened JSON exports and lets any tool ask a token's tier without
+  re-deriving it from a file path.
+- **`legacyName`** — a **keyed object**, not an array, of every USWDS-core construct this token maps
+  back to. Fixed key set (a token populates only the keys that historically applied to it, so
+  categories with fewer legacy artifacts are unambiguous rather than padded):
+    - `mapKey` — the bare Sass nested-map lookup key (e.g. spacing's `"05"`)
+    - `privateVar` — the private/internal SCSS variable (e.g. `$color-blue-warm-60v`)
+    - `publicVar` — the public consumer-facing SCSS variable/alias (e.g. `$blue-warm-60v`,
+      `$system-spacing-small-05`)
+    - `shortcode` — the flat USWDS lookup string used in `$system-color-shortcodes` and in
+      `$theme-*` settings string references (e.g. `"blue-warm-60v"`)
+
+    This is the **authoritative input to the ADR-0005 SCSS translation layer** and to any tool
+    answering "what was the old name for this token?" — the translation layer reads `legacyName` by
+    key name, never by position, so a category that only ever had a `publicVar` (typography, utility
+    scale) is just as unambiguous as one with all four (color).
+
 - **`formula`** (ADR-0007) and **`disabled`** (ADR-0008) continue under this same key.
 
 System primitive example (canonical key is `vivid-60`; the `60v` short form is
@@ -137,24 +152,30 @@ recorded in `legacyName` as the USWDS-core legacy name per ADR-0002):
     "$extensions": {
       "uswds": {
         "tier": "system",
-        "legacyName": ["blue-warm-60v", "$color-blue-warm-60v", "$blue-warm-60v"]
+        "legacyName": {
+          "shortcode": "blue-warm-60v",
+          "privateVar": "$color-blue-warm-60v",
+          "publicVar": "$blue-warm-60v"
+        }
       }
     }
   }
 }
 ```
 
-The emitted canonical CSS name is `--usa-color-blue-warm-vivid-60` (path segments joined
-after tier-drop); the legacy `--usa-color-blue-warm-60v` alias is emitted as a `var()`
-reference by the alias-emitting format (ADR-0002).
+The emitted canonical CSS name is `--usa-color-blue-warm-vivid-60` (path segments joined; tier is
+never part of the path — see Decision 5); the legacy `--usa-color-blue-warm-60v` alias is emitted as
+a `var()` reference by the alias-emitting format (ADR-0002).
 
 **Why explicit `legacyName` rather than convention-derived.** The old names are reconstructible from
 the token path _only where naming is regular_. It is not regular: the `vivid` → `60v` suffix
 compression (ADR-0002), `default` stripping, the omitted `-90v` vivid slots (ADR-0008), and the
-theme string-reference form. An explicit per-token list is the robust source that stops the old↔new
+theme string-reference form. An explicit per-token map is the robust source that stops the old↔new
 mapping from being rebuilt by fragile string logic — the exact fallback-drift failure mode the
-enforcement workstream exists to eliminate. A list (not a scalar) is required because one canonical
-token maps back to several USWDS constructs at once.
+enforcement workstream exists to eliminate. A keyed object (not a positional array, not a scalar) is
+required because one canonical token maps back to several USWDS constructs at once, and which
+constructs apply varies by category — a positional array has no way to say "this category has no
+`mapKey`" other than a fragile convention around array length and order.
 
 ## Decision 4: Theme/state alias model (single alias graph)
 
@@ -197,11 +218,14 @@ The build matrix:
 - `prefix` becomes a **per-platform** config value (`usa` for the css/scss-canonical platforms,
   absent for the uswds-core platform), replacing the single hardcoded global constant. The
   uswds-core formats bypass `generateTokenName` entirely and name tokens from `legacyName`.
-- **Tier is NOT in the canonical token name.** `generateTokenName` drops the tier path segment, so
-  names stay `--usa-color-blue-cool-10`, `--usa-color-primary`, `--usa-color-error` — non-breaking,
+- **Tier is NOT in the canonical token name.** Because each tier's JSON files nest content directly
+  under the category key (`color.blue.5`, not `system.color.blue.5`), `token.path` never contains a
+  tier segment in the first place — tier is conveyed by the directory a file lives in (Decision 1)
+  and by `$extensions.uswds.tier` (Decision 3), not by DTCG path nesting. `generateTokenName` needs
+  no tier-aware logic at all: the existing `${prefix}-${token.path.join("-")}` already produces
+  `--usa-color-blue-cool-10`, `--usa-color-primary`, `--usa-color-error` unchanged — non-breaking,
   matching the research doc examples and USWDS's convention that system/theme/state is
-  _organizational_, not part of the CSS var name. The tier remains machine-available via
-  `$extensions.uswds.tier` and the export path.
+  _organizational_, not part of the CSS var name.
 
 **Alternative considered.** _Tier in the name_ (`--usa-color-system-blue-cool-10`,
 `--usa-color-theme-primary`) — rejected: it renames every existing `--usa-color-*` token (breaking),
@@ -221,9 +245,10 @@ records, the name stays clean.
   directory.
 - **Migration source mapping:** `system/color/*` ← `uswds-system-tokens.csv`; `theme/color/*` ← the
   branding `$theme-color-*` rows; `state/color/*` ← the feedback `$theme-color-*` rows.
-- **`generateTokenName` and config changes** are required (per-platform prefix, tier-segment drop),
-  plus the new uswds-core custom formats — tracked as build work, not done in this planning pass.
+- **Per-platform `prefix` config changes** are required, plus the new uswds-core custom formats —
+  tracked as build work, not done in this planning pass. `generateTokenName` itself is unchanged:
+  tier is directory/metadata only (Decision 5) and was never part of `token.path`.
 - **Deferred (out of scope here):** removing inline fallback tokens from the web components.
 - **Enforcement:** a token whose `tier` is not one of `system`/`theme`/`state`, or a `theme`/`state`
-  token whose `$value` is not an alias, or any token missing `legacyName` where the translation
-  layer needs one, is a validation failure — folded into plan-01 Phase 6.
+  token whose `$value` is not an alias, or any token missing a required `legacyName` key where the
+  translation layer needs one, is a validation failure — folded into plan-01 Phase 6.

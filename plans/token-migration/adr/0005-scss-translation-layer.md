@@ -78,6 +78,7 @@ warnings are a later, config-driven switch.
 ## Consequences
 
 - USWDS core's adoption is a file-swap PR per area (colors first), with CSS-diff evidence attached
-- The token package build gains a compile-USWDS integration test (dart-sass compile of uswds-core against `dist/scss/uswds-core/`)
+- The token package build gains a compile-USWDS integration test (dart-sass compile of uswds-core against `dist/scss/uswds-core/`). This test sources USWDS core from the existing `@uswds/uswds` npm dependency already declared in `package.json` (a regular `dependencies` entry, currently `^3.13.0`) — it is already present in `node_modules` on every `npm ci`, including in CI's existing setup step, so no new checkout mechanism, git submodule, or pinned fixture repo is needed. The version is pinned the same way every other dependency in this repo is pinned: via `package.json`'s semver range plus `package-lock.json`'s resolved version.
 - Settings values in generated `_settings-*.scss` stay _string references_ (`"blue-60v"`) — they are DTCG aliases in the source, and the format prints the referenced token's USWDS shortcode name, not the resolved hex, preserving USWDS's theme-override semantics
 - Utility-generator config (`*-settings`, `*-palettes`) is explicitly out of scope and stays hand-authored in uswds-core (ADR-0006)
+- `legacyName` (ADR-0010 Decision 3) is a keyed object (`shortcode`/`privateVar`/`publicVar`/`mapKey`); this translation layer reads it by key name, never by array position, so it can consume categories with different legacy-artifact sets (color's full four keys vs. typography's `publicVar`-only) without per-category special-casing.

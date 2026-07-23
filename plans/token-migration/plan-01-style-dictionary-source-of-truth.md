@@ -7,9 +7,11 @@
 > theme/state emit **references** (`var()`/`$var`) chained `system ← theme ← state`; every token
 > carries `$extensions.uswds` meta (`tier`, `legacyName` list, plus `formula`/`disabled`); the
 > tier does **not** appear in token names. The semantic tier (ADR-0003) lands in `theme/`/`state/`
-> rather than a `semantic/` directory. Where this plan says `tokens/colors/*.json`,
-> `tokens/colors/semantic.json`, `tokens/utility/*`, `tokens/typography/*`, `tokens/grid/*`, read
-> the equivalent `tokens/system/<category>/…` / `tokens/theme/color/…` / `tokens/state/color/…`.
+> rather than a `semantic/` directory: branding-role tokens (base, primary, secondary, accent,
+> emergency) live in `tokens/theme/color/*.json` and feedback-role tokens (error, warning, success,
+> info, disabled) live in `tokens/state/color/*.json`, one file per role. Where this plan says
+> `tokens/colors/*.json`, `tokens/utility/*`, `tokens/typography/*`, `tokens/grid/*`, read the
+> equivalent `tokens/system/<category>/…`.
 > ADR-0010 is authoritative on structure, exports, and metadata.
 
 ## Context
@@ -105,7 +107,7 @@ Each runs `build:tokens` and commits output.
 
 ### Phase 2 — Semantic tier (ADR-0003, 0008)
 
-- Port the 86 `_settings-color.scss` tokens into `tokens/colors/semantic.json` **preserving names** (`base`, `primary-lighter`, `error-dark`, …) as light-mode-fixed aliases of primitives; disabled slots (`primary-lightest`, etc.) carry `$extensions.uswds.disabled` (ADR-0008)
+- Port the 86 `_settings-color.scss` tokens **preserving names** (`base`, `primary-lighter`, `error-dark`, …) as light-mode-fixed aliases of primitives, split by role into `tokens/theme/color/*.json` (branding roles: base, primary, secondary, accent-warm, accent-cool, emergency) and `tokens/state/color/*.json` (feedback roles: error, warning, success, info, disabled), one file per role per ADR-0010 Decision 1; disabled slots (`primary-lightest`, etc.) carry `$extensions.uswds.disabled` (ADR-0008)
 - Add the **adaptive prominence tier** per role (`surface`, `surface-subtle`, `surface-strong`, `border`, `text`, `text-strong`, `on-{role}`) with light/dark primitive pairs and a `light-dark()` CSS transform; `color-scheme: light dark` in the emitted `:root` (ADR-0003). Dark values require design input — start with `base`/`primary`/`error` as the reference set, extend role-by-role
 - Port non-color settings that are true design decisions (`$theme-type-scale-*`, `$theme-line-height-*`, `$theme-site-*` widths/margins, focus tokens) as alias tokens in their categories
 
@@ -165,7 +167,7 @@ Everything from plan-02 (stylelint `custom-property-pattern`, `audit-token-names
 
 - `config/style-dictionary.config.js` — platforms, new formats/filters
 - `internals/token-helpers/index.ts` — `generateTokenName` (`vivid`→`v`, `default` stripping), disabled-token filter, `light-dark()` transform
-- `tokens/colors/*.json`, `tokens/colors/semantic.json`, `tokens/spacing/spacing.json`, `tokens/typography/*` (new), `tokens/system/{z-index,opacity,shadow,flex,gap}/*.json` (new), `tokens/grid/layout-grid-widths.json` (new), `tokens/components/*.json` (new)
+- `tokens/colors/*.json`, `tokens/theme/color/*.json` (new), `tokens/state/color/*.json` (new), `tokens/spacing/spacing.json`, `tokens/typography/*` (new), `tokens/system/{z-index,opacity,shadow,flex,gap}/*.json` (new), `tokens/grid/layout-grid-widths.json` (new), `tokens/components/*.json` (new)
 - `internals/formats/` (new) — uswds-core SCSS map/settings/shortcode formats
 - `plans/token-migration/uswds-{settings,system,properties}-tokens.csv` — migration source data
 - `internals/scripts/extract-properties.js` — Sass-based extractor for `_properties.scss`/`layout-grid-widths.scss`/spacing negatives (Batch 3)

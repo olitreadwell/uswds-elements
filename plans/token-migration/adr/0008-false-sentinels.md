@@ -64,3 +64,16 @@ Split by role:
 - Every output platform gains a shared `filter` that drops `$extensions.uswds.disabled` tokens
 - Docs generation can render disabled slots as "available for theming, off by default"
 - One deviation from current uswds-core internals: the generated vivid submaps omit `90: false` keys instead of carrying them. `map-deep-get` returns `null` rather than `false` for missing keys, and `get-system-color()` passes that through, so `color()`'s not-a-token error still fires; the round-trip compile-and-diff in ADR-0005 verifies no behavioral difference. If a difference surfaces, the map format adds the literal `false` entries back for vivid-90 slots only.
+
+## Deferred: DTCG structured color objects
+
+Color tokens throughout Phase 1/2 (this ADR, PR 1, PR 2) use plain hex strings
+(`"$value": "#eff6fb"`). The DTCG Color Module's stable spec instead wants a
+structured object (`{colorSpace, components, hex}`) to support color-space-aware
+tooling and relative-color math. Converting ~300+ existing color values now would
+add real scope on top of the false-sentinel and family-completion work this ADR and
+PR 2 are already carrying, for a benefit (deeper tooling interop) that isn't a Phase
+1/2 requirement. This is an explicit, tracked deferral, not an oversight: a later
+phase adds a build-time script mapping each hex value to its `srgb` structured form
+(`components` derived from the hex, `hex` retained as the fallback), so DTCG-strict
+consumers can be satisfied without changing the authored source format now.

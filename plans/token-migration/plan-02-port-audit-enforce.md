@@ -1,5 +1,12 @@
 # Plan: Token Infrastructure — Port, Audit, Enforce
 
+> **Amendment (2026-07-21, ADR-0010):** The tier-first restructure
+> (`tokens/<tier>/<category>/…`) supersedes the single-file plan described below. Semantic roles
+> split by tier: branding roles (`base`, `primary`, `secondary`, `accent-warm`, `accent-cool`,
+> `emergency`) live one-per-file in `tokens/theme/color/*.json`; feedback roles (`error`,
+> `warning`, `success`, `info`, `disabled`) live one-per-file in `tokens/state/color/*.json`.
+> ADR-0010 is authoritative on structure; this plan's Objective 1.1 is superseded by it.
+
 ## Context
 
 USWDS Elements has a partial style-dictionary setup (`tokens/`, `config/style-dictionary.config.js`) that produces primitive color, spacing, and breakpoint tokens. However:
@@ -25,40 +32,41 @@ The CSS consumption pattern (how components import and use tokens at runtime) is
 
 ### 1.1 Add Semantic Color Tokens
 
-**New file:** `tokens/colors/semantic.json`
+**New files, one per role, split by tier (ADR-0010):**
 
-Maps USWDS semantic roles to primitive palette tokens using style-dictionary alias references:
+- `tokens/theme/color/base.json`, `primary.json`, `secondary.json`, `accent-warm.json`, `accent-cool.json`, `emergency.json` — branding roles
+- `tokens/state/color/error.json`, `warning.json`, `success.json`, `info.json`, `disabled.json` — feedback roles
+
+Maps USWDS semantic roles to primitive palette tokens using style-dictionary alias references.
+Example (`tokens/theme/color/base.json`):
 
 ```json
 {
-  "color": {
-    "base": {
-      "$type": "color",
-      "lightest": { "$value": "{color.gray.5}" },
-      "lighter": { "$value": "{color.gray-cool.10}" },
-      "light": { "$value": "{color.gray-cool.30}" },
-      "default": { "$value": "{color.gray-cool.50}" },
-      "dark": { "$value": "{color.gray-cool.60}" },
-      "darker": { "$value": "{color.gray-cool.70}" },
-      "darkest": { "$value": "{color.gray.90}" }
-    },
-    "primary": { ... },
-    "info": { ... },
-    "error": { ... },
-    "warning": { ... },
-    "success": { ... },
-    "emergency": { ... }
-  }
+    "color": {
+        "base": {
+            "$type": "color",
+            "lightest": { "$value": "{color.gray.5}" },
+            "lighter": { "$value": "{color.gray-cool.10}" },
+            "light": { "$value": "{color.gray-cool.30}" },
+            "default": { "$value": "{color.gray-cool.50}" },
+            "dark": { "$value": "{color.gray-cool.60}" },
+            "darker": { "$value": "{color.gray-cool.70}" },
+            "darkest": { "$value": "{color.gray.90}" }
+        }
+    }
 }
 ```
 
-Exact values derived from the `settings-tokens.csv` extraction (e.g., `$theme-color-base-lightest` maps to `"gray-5"`).
+Each other role (`primary`, `info`, `error`, `warning`, `success`, `emergency`, …) follows the same
+per-role-file shape in its own file under `tokens/theme/color/` or `tokens/state/color/` per the
+tier it belongs to. Exact values derived from the `settings-tokens.csv` extraction (e.g.,
+`$theme-color-base-lightest` maps to `"gray-5"`).
 
 ### 1.2 Add Component Token Files
 
 **New directory:** `tokens/components/`
 
-One file per component, declaring the component's public custom properties with alias references to semantic/primitive tokens:
+One file per component, declaring the component's public custom properties with alias references to theme/state/primitive tokens:
 
 - `tokens/components/alert.json` — info/error/warning/success backgrounds, border, icon colors
 - `tokens/components/link.json` — link-color, visited-color, hover-color, active-color
@@ -192,12 +200,12 @@ Integrated into the existing lint pipeline so PRs that introduce naming violatio
 
 ### PR 1: Add semantic color tokens to style-dictionary
 
-**Scope:** New file only — no component changes.
+**Scope:** New files only — no component changes.
 
-- Create `tokens/colors/semantic.json`
+- Create per-role files under `tokens/theme/color/*.json` (branding roles) and `tokens/state/color/*.json` (feedback roles)
 - Update `internals/token-helpers/index.ts` to omit "default" path segment
 - Run `build:tokens`, commit updated `build/` output
-- **Review surface:** 2 files changed, ~80 lines
+- **Review surface:** several new files, ~80 lines total
 
 ### PR 2: Add missing spacing token
 
@@ -295,7 +303,7 @@ Across all PRs: usa-banner CSS is unchanged (it stays self-contained).
 - `config/style-dictionary.config.js`
 - `config/stylelint.config.mjs`
 - `internals/token-helpers/index.ts`
-- `tokens/colors/semantic.json` (new)
+- `tokens/theme/color/*.json`, `tokens/state/color/*.json` (new)
 - `tokens/components/alert.json` (new)
 - `tokens/components/link.json` (new)
 - `internals/scripts/audit-token-names.js` (new)
