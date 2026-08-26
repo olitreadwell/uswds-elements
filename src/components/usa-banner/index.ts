@@ -261,7 +261,11 @@ export class UsaBanner extends LitElement {
               </button>
             </div>
           </header>
-          <div class="content usa-accordion__content" ?hidden="${!this.isOpen}">
+          <div
+            id="gov-banner-default"
+            class="content usa-accordion__content"
+            ?hidden="${!this.isOpen}"
+          >
             <div class="grid-row grid-gap-lg">
               <div class="guidance tablet:grid-col-6">
                 ${this.domainTemplate(tld)}
