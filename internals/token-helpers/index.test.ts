@@ -88,7 +88,7 @@ describe("generateTokenName", () => {
     expect(result).toBe("usa-font-base-size");
   });
 
-  it("should strip the 'system' tier segment from path (ADR-0010)", () => {
+  it("should strip the 'system' tier segment from path", () => {
     const result = generateTokenName(
       createToken({
         filePath: "tokens/system/color/blue.json",
@@ -99,7 +99,7 @@ describe("generateTokenName", () => {
     expect(result).toBe("usa-color-blue-5");
   });
 
-  it("should strip the 'system' tier segment for breakpoints (ADR-0010)", () => {
+  it("should strip the 'system' tier segment for breakpoints", () => {
     const result = generateTokenName(
       createToken({
         filePath: "tokens/system/breakpoints/breakpoints.json",
@@ -110,7 +110,7 @@ describe("generateTokenName", () => {
     expect(result).toBe("usa-breakpoint-desktop-lg");
   });
 
-  it("should strip the 'theme' tier segment from path (ADR-0010)", () => {
+  it("should strip the 'theme' tier segment from path", () => {
     const result = generateTokenName(
       createToken({
         filePath: "tokens/theme/color/primary.json",
@@ -121,7 +121,7 @@ describe("generateTokenName", () => {
     expect(result).toBe("usa-color-primary");
   });
 
-  it("should strip the 'state' tier segment from path (ADR-0010)", () => {
+  it("should strip the 'state' tier segment from path", () => {
     const result = generateTokenName(
       createToken({
         filePath: "tokens/state/color/error.json",
