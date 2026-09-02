@@ -34,122 +34,111 @@ function createToken(
 }
 
 describe("generateTokenName", () => {
-  it("should generate token name for breakpoint prefix", () => {
-    const result = generateTokenName(baseToken, options);
-    expect(result).toBe("usa-breakpoint-desktop-lg");
-  });
-
-  it("should generate token name for spacing prefix", () => {
-    const result = generateTokenName(
-      createToken({ path: ["site-margins", "width"] }),
-      options,
-    );
-    expect(result).toBe("usa-site-margins-width");
-  });
-
-  it("should generate token name for color with single nested key", () => {
-    const result = generateTokenName(
-      createToken({
+  it.each<{
+    name: string;
+    overrides: Partial<TransformedToken>;
+    expected: string;
+  }>([
+    {
+      name: "breakpoint prefix",
+      overrides: {},
+      expected: "usa-breakpoint-desktop-lg",
+    },
+    {
+      name: "spacing prefix",
+      overrides: { path: ["site-margins", "width"] },
+      expected: "usa-site-margins-width",
+    },
+    {
+      name: "color with single nested key",
+      overrides: {
         filePath: "tokens/colors/global.json",
         path: ["color", "black"],
-      }),
-      options,
-    );
-    expect(result).toBe("usa-color-black");
-  });
-
-  it("should generate token name for color with multiple nested keys", () => {
-    const result = generateTokenName(
-      createToken({
+      },
+      expected: "usa-color-black",
+    },
+    {
+      name: "color with multiple nested keys",
+      overrides: {
         filePath: "tokens/colors/blue.json",
         path: ["color", "blue", "5"],
-      }),
-      options,
-    );
-    expect(result).toBe("usa-color-blue-5");
-  });
-
-  it("should generate token name for color with vivid variant", () => {
-    const result = generateTokenName(
-      createToken({
+      },
+      expected: "usa-color-blue-5",
+    },
+    {
+      name: "color with vivid variant",
+      overrides: {
         filePath: "tokens/colors/blue.json",
         path: ["color", "blue", "vivid", "50"],
-      }),
-      options,
-    );
-    expect(result).toBe("usa-color-blue-vivid-50");
-  });
-
-  it("should generate token name fallback for other cases", () => {
-    const result = generateTokenName(
-      createToken({ path: ["font", "base-size"] }),
-      options,
-    );
-    expect(result).toBe("usa-font-base-size");
-  });
-
-  it("should strip the 'system' tier segment from path", () => {
-    const result = generateTokenName(
-      createToken({
+      },
+      expected: "usa-color-blue-vivid-50",
+    },
+    {
+      name: "fallback for other cases",
+      overrides: { path: ["font", "base-size"] },
+      expected: "usa-font-base-size",
+    },
+    {
+      name: "the 'system' tier segment stripped from path",
+      overrides: {
         filePath: "tokens/system/color/blue.json",
         path: ["system", "color", "blue", "5"],
-      }),
-      options,
-    );
-    expect(result).toBe("usa-color-blue-5");
-  });
-
-  it("should strip the 'system' tier segment for breakpoints", () => {
-    const result = generateTokenName(
-      createToken({
+      },
+      expected: "usa-color-blue-5",
+    },
+    {
+      name: "the 'system' tier segment stripped for breakpoints",
+      overrides: {
         filePath: "tokens/system/breakpoints/breakpoints.json",
         path: ["system", "breakpoint", "desktop-lg"],
-      }),
-      options,
-    );
-    expect(result).toBe("usa-breakpoint-desktop-lg");
-  });
-
-  it("should strip the 'theme' tier segment from path", () => {
-    const result = generateTokenName(
-      createToken({
+      },
+      expected: "usa-breakpoint-desktop-lg",
+    },
+    {
+      name: "the 'theme' tier segment stripped from path",
+      overrides: {
         filePath: "tokens/theme/color/primary.json",
         path: ["theme", "color", "primary"],
-      }),
-      options,
-    );
-    expect(result).toBe("usa-color-primary");
-  });
-
-  it("should strip the 'state' tier segment from path", () => {
-    const result = generateTokenName(
-      createToken({
+      },
+      expected: "usa-color-primary",
+    },
+    {
+      name: "the 'state' tier segment stripped from path",
+      overrides: {
         filePath: "tokens/state/color/error.json",
         path: ["state", "color", "error"],
-      }),
-      options,
-    );
-    expect(result).toBe("usa-color-error");
+      },
+      expected: "usa-color-error",
+    },
+  ])("should generate token name for $name", ({ overrides, expected }) => {
+    const result = generateTokenName(createToken(overrides), options);
+    expect(result).toBe(expected);
   });
 });
 
 describe("getTokenValueWithUnit", () => {
-  it("should return value + unit for dimension tokens with object value", () => {
-    const result = getTokenValueWithUnit(baseToken);
-    expect(result).toBe("75rem");
-  });
-
-  it("should return value string when unit is missing in dimension object", () => {
-    const result = getTokenValueWithUnit(
-      createToken({ $value: { value: "30" } }),
-    );
-    expect(result).toBe("30");
-  });
-
-  it("should return raw value if token type is not dimension", () => {
-    const result = getTokenValueWithUnit(
-      createToken({ $value: "#fff2f5", $type: "color" }),
-    );
-    expect(result).toBe("#fff2f5");
+  it.each<{
+    name: string;
+    overrides: Partial<TransformedToken>;
+    expected: string;
+  }>([
+    {
+      name: "value + unit for dimension tokens with object value",
+      overrides: {},
+      expected: "75rem",
+    },
+    {
+      name: "value string when unit is missing in dimension object",
+      overrides: { $value: { value: "30" } },
+      expected: "30",
+    },
+    {
+      name: "raw value if token type is not dimension",
+      overrides: { $value: "#fff2f5", $type: "color" },
+      expected: "#fff2f5",
+    },
+  ])("should return $name", ({ overrides, expected }) => {
+    const result = getTokenValueWithUnit(createToken(overrides));
+    expect(result).toBe(expected);
   });
 });
