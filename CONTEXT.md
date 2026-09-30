@@ -1,35 +1,73 @@
 # uswds/uswds-elements context
-> refreshed 2026-08-26 | upstream default: develop @ 76b80b1
+> refreshed 2026-09-30 | upstream default: develop @ c427831
 
 ## Identity & policies
-- upstream: uswds/uswds-elements, default branch develop, TypeScript (Lit web components), English-first? yes (all issues/docs/PRs English)
+- upstream: uswds/uswds-elements, default branch develop, TypeScript (Lit web components; npm workspaces: `packages/elements` + `packages/tokens`), English-first? yes (all issues/docs/PRs English)
 - CLA/DCO: none found in CONTRIBUTING
-- AI-assisted PR policy: unstated in CONTRIBUTING (no explicit AI ban/require)
+- AI-assisted PR policy: unstated in CONTRIBUTING and the PR template (no AI ban, no AI-disclosure requirement)
 - signed commits required: no
 - PR template: .github/PULL_REQUEST_TEMPLATE.md (present; "Web components: <summary>" title convention)
 - external tracker: GitHub
+- CI: GitHub Actions (formatting.yml, ui-test.yml, playwright.yml, codeql.yml)
 
-## Maintainer / contribution gate — HARD BLOCKER (drop reason)
-CONTRIBUTING.md (updated 2025-12-10, still current in HEAD @ 76b80b1) says, verbatim:
+## Maintainer / contribution gate — STILL A HARD BLOCKER (drop reason)
+CONTRIBUTING.md (last updated 2025-12-10, still current in HEAD @ c427831) says, verbatim:
 - "**This repo is currently in beta and not yet ready for community code contributions.**"
 - "we'd prefer you do not submit pull requests unless you're in active partnership with us"
 - "In this repo, we're not accepting code contributions from the broader community yet
   (other than the aforementioned limited partnerships). Check back later in 2026 for more info."
 
-Verified against live data 2026-08-26:
-- All merged PRs (last ~50 closed) are core team (ethangardner, annepetersen, ericsorenson,
-  sfrederick-gsa-gov, heymatthenry) or bots (dependabot, github-actions). ZERO external community merges.
-- The only external PRs (e.g. #40, 2024-07) remain open/unmerged for ~2 years — external PRs are ignored.
-- Open issues are core-team task tracking (Q4 2025 labels); the single Help-wanted issue (#246) is a
-  core-team docs task, not an invitation for community PRs.
+The docs-site contributor page `packages/elements/storybook/contributing.mdx` (imports
+CONTRIBUTING.md verbatim) opens with: "This information is for USWDS Core team members
+contribute to the USWDS Elements project."
+
+CONFLICT noted (2026-09-30): README.md (last revised 2026-07-21) says "Contributions are now
+welcome, though the USWDS Elements review process prioritizes USWDS Open Source Community member
+and USWDS partnership contributions." That line invites contributions, but the CONTRIBUTING /
+storybook policy files — and config's trivial gate says "check CONTRIBUTING" — still state that
+community code PRs are not accepted yet, and no external PR has been merged to show the README
+line is operative.
+
+Verified against live data 2026-09-30 (HEAD c427831):
+- All merged PRs in the last 60 days are core team (ryparker, ethangardner, annepetersen) or
+  dependabot / github-actions release bot. ZERO external community merges.
+- External PRs stay closed/unmerged: #40 (2024-07, still open), #186 and #244 (caseywatts, closed unmerged).
+- Open issues are core-team task tracking; the single open Help-wanted issue (#246
+  "Add accessibility process to tools in README", 2026-02-24) is a core-team docs task.
 
 ## Decision
-DROP. Maintainers explicitly, currently do not accept community code contributions. A fork-staged
-PR here is unwelcome and unpromotable. Re-visit only if CONTRIBUTING.md is updated to invite community
-PRs (its own note says "check back later in 2026"). Logged 2026-08-26 as dropped-maintainers-ban-community-prs.
+SKIP (still blocked; same call as 2026-08-26). CONTRIBUTING explicitly does not accept community
+code contributions yet, so a fork-staged trivial PR here would be unpromotable. Re-visit only when
+CONTRIBUTING.md drops the "not accepting community code contributions yet" banner (its own note
+says "check back later in 2026"). README / CONTRIBUTING conflict flagged for Oli.
+
+## Conventions (verified from merged PRs)
+- branch naming: mixed topic branches (`al/add-...`, `cm/lit-card`, `fix/...`); type/desc is a safe fallback.
+- PR title: "Web components: <summary>"
+- tests: repo root `npm run test:ci` (vitest workspaces); build `npm run build`; prettier via `npm run prettier:md` / `prettier:js`.
+- how outside PRs actually get merged: they don't (core team + bots only).
+
+## Maintainer picture
+- active core team: ethangardner, ryparker, annepetersen, ericsorenson, sfrederick-gsa-gov, heymatthenry
+- actively working on: repo-wide npm-workspaces restructure (Sept 2026), tokens tier layout, PR-template updates
+
+## Issue-area health
+- #246 (Help wanted, 2026-02-24, docs) — core-team docs task; #125 (2025-01) feature request.
+- closed/unmerged external PRs #186, #244 — external PRs are not being merged.
 
 ## Gap ledger (dedupe)
 - 2026-08-26 self-found-gap — n/a (repo closed to community contributions) — dropped-maintainers-ban-community-prs
+- 2026-09-30 self-found trivial-fix pass (scheduled by loop-trivial.sh) — outcome skipped (repo still closed to community PRs; not a fix-count problem) — found >=3 genuine meaning-preserving fixes but did not open a PR.
 
-## Mined gaps
-(none — repo closed to community PRs)
+## Mined gaps (discovered, not yet attempted)
+- 2026-09-30 two dead links in `packages/elements/storybook/contributing.mdx` (lines 22 and 130):
+  `https://github.com/uswds/uswds-elements/tree/develop/e2e` returns 404 (the directory moved to
+  `packages/elements/e2e` in the Sept 2026 restructure) — status: proposed (blocked on repo opening)
+- 2026-09-30 README.md CAUTION block: `[OMB Memo M-23-22](<[url](url)>)` is a malformed nested
+  markdown link (the link target is itself a markdown link, so it renders broken) — status: proposed (blocked)
+- 2026-09-30 README.md install step 4 heading says "Add `@uswds/uswds` to your project's package.json"
+  but the command installs `@uswds/elements` — status: proposed (blocked)
+- 2026-09-30 typo "documentaton" -> "documentation" in `packages/elements/CHANGELOG.md:13`
+  (generated by changesets; edit with care) — status: proposed (blocked)
+- codespell false positives to ignore in this repo: "oficial" (correct Spanish in usa-banner `es` strings),
+  "informations" (correct French in usa-banner stories).
