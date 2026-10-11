@@ -30,6 +30,9 @@ interface UsaBannerTranslations {
     text2: string;
     text3: string;
   };
+  lock: {
+    label: string;
+  };
 }
 
 type SupportedLanguage = "en" | "es";
@@ -59,6 +62,9 @@ const USA_BANNER_TRANSLATIONS: Record<
       text3:
         "website. Share sensitive information only on official, secure websites.",
     },
+    lock: {
+      label: "Locked padlock",
+    },
   },
   es: {
     banner: {
@@ -80,6 +86,9 @@ const USA_BANNER_TRANSLATIONS: Record<
         "o <strong>https://</strong> significa que usted se conectó de forma segura a un sitio web",
       text3:
         "Comparta información sensible sólo en sitios web oficiales y seguros.",
+    },
+    lock: {
+      label: "Candado cerrado",
     },
   },
 };
@@ -174,7 +183,7 @@ export class UsaBanner extends LitElement {
       <span
         class="icon-lock"
         role="img"
-        aria-label="Locked padlock icon"
+        aria-label=${this._bannerText.lock.label}
       ></span>
     `;
   }
