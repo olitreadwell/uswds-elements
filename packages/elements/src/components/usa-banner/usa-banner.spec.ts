@@ -21,6 +21,14 @@ function getBannerButton(): HTMLButtonElement {
   return button as HTMLButtonElement;
 }
 
+function getLockIcon(): HTMLElement {
+  const lock = getInsideBanner().querySelector(".icon-lock");
+  if (!lock) {
+    throw new Error("Banner lock icon not found");
+  }
+  return lock as HTMLElement;
+}
+
 describe("USA Banner component", async () => {
   beforeEach(async () => {
     document.body.innerHTML = "<usa-banner></usa-banner>";
@@ -49,6 +57,10 @@ describe("USA Banner component", async () => {
 
     expect(bannerButton.ariaExpanded).toBe("true");
   });
+
+  it("labels the lock icon as a locked padlock", () => {
+    expect(getLockIcon().getAttribute("aria-label")).toBe("Locked padlock");
+  });
 });
 
 describe("Spanish variant", async () => {
@@ -61,6 +73,10 @@ describe("Spanish variant", async () => {
       "Un sitio oficial del Gobierno de Estados Unidos",
     );
   });
+
+  it("localizes the lock icon aria-label", () => {
+    expect(getLockIcon().getAttribute("aria-label")).toBe("Candado cerrado");
+  });
 });
 
 describe("MIL variant", async () => {
@@ -72,5 +88,20 @@ describe("MIL variant", async () => {
     expect(getInsideBanner().querySelector(".content")?.textContent).toContain(
       ".mil",
     );
+  });
+});
+
+describe("ARIA", async () => {
+  beforeEach(async () => {
+    document.body.innerHTML = "<usa-banner></usa-banner>";
+  });
+
+  it("links the toggle button to the content region via aria-controls", () => {
+    const button = getBannerButton();
+    const controlsId = button.getAttribute("aria-controls");
+    expect(controlsId).toBeTruthy();
+
+    const content = getInsideBanner().getElementById(controlsId ?? "");
+    expect(content).not.toBeNull();
   });
 });
